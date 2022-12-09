@@ -1,0 +1,34 @@
+<h2 class="title-nbs title-items-list">ログイン</h2>
+<form action="<!--PHP_SELF-->" method="POST">
+	<input type="hidden" name="mode" value="checkuser">
+	<!--ERROR-->
+	<div id="login">
+		<p>会員登録時に登録したメールアドレスと、パスワードを入力しログインボタンを押してください。<br />
+		自動ログインにチェックを入れますと、ブラウザを終了してもログアウトしないように設定されます。</p>
+		<div class="box-grid box-outline">
+			<div class="box-row">
+				<h4 class="category-name">メールアドレス</h4>
+				<div class="input-section">
+					<input type="text" name="email" value="<!--EMAIL-->" id="reset_email" /> (半角)</td>
+				</div>
+			</div>
+			<div class="box-row">
+				<h4 class="category-name">パスワード</h4>
+				<div class="input-section">
+					<input type="password" maxlength="8" name="pass" value="<!--PASS-->" id="reset_pass"/> (半角)</td>
+				</div>
+			</div>
+			<div class="box-row">
+				<h4 class="category-name">自動ログイン</h4>
+				<div class="input-section">
+					<td><input type="checkbox" name="check" value="1" id="reset_checkbox" <!--CHECKED--> /><span>:自動ログインする</span></td>
+				</div>
+			</div>
+		</div>
+		<div class="button_gui increase-space">
+			<input type="submit" class="submit" value="ログイン" />
+			<input type="button" class="submit" value="リセット" OnClick="form_reset();" return false; />
+		</div>
+		<p class="center increase-space">会員登録をしていない方は<a href="/member/"><span class="important">こちら</span></a>から登録してください。<br/><a href="/member/" class="important arrow">会員登録</a></p>
+	</div><!--login-->
+</form>

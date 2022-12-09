@@ -1,0 +1,35 @@
+<h2 class="list_title">会員脱会</h2>
+<!--ERRORMSG-->
+<div class="member_summary">
+  <form action="<!--PHP_SELF-->" method="POST">
+    <input type="hidden" name="mode" value="dakai" />
+    <input type="hidden" name="action" value="check" />
+    <table class="login-table">
+      <tr>
+        <th colspan="2">
+          会員脱会を希望される方は、確認のためメールアドレスとパスワードを入力後、
+          <mark class="emphasis">会員脱会する</mark>を押して下さい。
+        </th>
+      </tr>
+      <tr>
+        <th>メールアドレス</th>
+        <td>
+          <input size="40" type="text" name="email" value="<!--EMAIL-->" />
+        </td>
+      </tr>
+      <tr>
+        <th>パスワード</th>
+        <td>
+          <input size="20" type="password" name="pass" />
+        </td>
+      </tr>
+    </table>
+    <div class="form-control">
+      <input
+        type="submit"
+        value="会員脱会する"
+        OnClick="return confirm('会員脱会の手続きをさせていただきますが\nよろしいですか？')"
+      />
+    </div>
+  </form>
+</div>

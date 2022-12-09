@@ -1,0 +1,35 @@
+# php cgi
+AddType text/html .htm
+AddOutputFilter INCLUDES .htm
+
+php_flag display_errors on
+php_value error_reporting 6133
+php_flag register_globals on
+php_flag short_open_tag on
+php_value post_max_size 64M
+php_value upload_max_filesize 64M
+
+RewriteEngine on
+RewriteBase /
+RewriteRule goods/(.*)$ goods.php/$1 [NC,L]
+RewriteRule aff_link/(.*)$ aff_link.php/$1 [NC,L]
+RewriteRule pic/(.*)$ pic.php/$1 [NC,L]
+RewriteRule aff/(.*)$ aff.php/$1 [NC,L]
+RewriteRule goods2/(.*)$ goods2.php/$1 [NC,L]
+ErrorDocument 404 /notfound.htm
+
+# # substitution
+# SetOutputFilter SUBSTITUTE
+# Substitute "s|https?://(www\.)?futboljersey.com|http://dev.neighbors.local:81|i"
+# # fake referer from ���ִĶ�
+# RequestHeader edit Referer dev.neighbors.local futboljersey.com
+# # prevent redirects
+# Header edit Location https?://(www\.)?futboljersey.com http://dev.neighbors.local:81
+
+# substitution
+#SetOutputFilter SUBSTITUTE
+Substitute "s|https?://(www\.)?futboljersey.com|http://dev.neighbors.local|i"
+# fake referer from ���ִĶ�
+RequestHeader edit Referer dev.neighbors.local futboljersey.com
+# prevent redirects
+Header edit Location https?://(www\.)?futboljersey.com http://dev.neighbors.local

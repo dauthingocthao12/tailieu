@@ -1,0 +1,28 @@
+<h2 class="title-nbs title-items-list">ポイント獲得履歴</h2>
+
+<!--ERRORMSG-->
+<form action="<!--PHP_SELF-->" method="POST">
+<input type="hidden" name="mode" value="p_update">
+<input type="hidden" name="action" value="p_update_change">
+<table class="aff_table list-table">
+	<tr>
+		<td colspan="6" class="border_none">
+			変換手続きが完了していない申請を変更する場合は、手続きをする申請番号をクリックして下さい。<br />
+			※<!--CHENGETYPE2L-->の場合での、変換金額は、振込手数料を差し引いた金額になります。
+		</td>
+	</tr>
+	<tr class="list-table-pc">
+		<th>申請番号</th>
+		<th>申請日</th>
+		<th>変換種類</th>
+		<th>変換申請ポイント</th>
+		<th>変換ポイント・金額</th>
+		<th>状態・変換日</th>
+	</tr>
+	<!--AFPLIST-->
+</table>
+</form>
+<form action="<!--PHP_SELF-->" method="POST" class="edit-button">
+	<input type="submit" class="submit" value="アフィリエイトTOPに戻る">
+</form>
+

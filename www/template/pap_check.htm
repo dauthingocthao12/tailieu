@@ -1,0 +1,87 @@
+<h2 class="title-nbs title-items-list">ネイバーズスポーツ アフィリエイトポイント変換申請</h2>
+
+<!--ERRORS-->
+<!--MODIFY-->
+<form action="<!--PHP_SELF-->" method="POST">
+	<div>
+		<input type="hidden" name="mode" value="<!--MODE-->">
+		<input type="hidden" name="action" value="p_update_change">
+		内容を修正する場合は「修正する」ボタンを押してください<input type="submit" class="submit" value="修正する">
+	</div>
+</form>
+<!--/MODIFY-->
+<form action="<!--PHP_SELF-->" method="POST">
+	<input type="hidden" name="mode" value="<!--MODE-->">
+	<input type="hidden" name="action" value="<!--ACTION-->">
+<table class="aff_table  point-conversion-table">
+	<tr>
+		<td class="af_title">
+			変換ポイント<br />
+			（可能ポイント：<!--POINT-->pt）
+		</td>
+		<td class="af_form1">
+			<!--INPUTPOINT-->pt
+		</td>
+	</tr>
+	<tr>
+		<td class="af_title">
+			変換種類
+		</td>
+		<td class="af_form1">
+			<!--CHENGETYPEL-->
+		</td>
+	</tr>
+</table>
+<!--CHANGETYPE2-->
+<table class="aff_table  point-conversion-table">
+	<tr>
+		<td rowspan="6" class="af_title">
+			お振り込み口座
+		</td>
+	</tr>
+	<tr>
+		<td class="af_subtitle">金融機関名:</td>
+		<td class="af_form2"><!--BANKNAME--></td>
+	</tr>
+	<tr>
+		<td class="af_subtitle">支店名:</td>
+		<td class="af_form2"><!--STORENAME--></td>
+	</tr>
+	<tr>
+		<td class="af_subtitle">振込先科目:</td>
+		<td class="af_form2"><!--DEPOSIT--></td>
+	</tr>
+	<tr>
+		<td class="af_subtitle">振込先口座番号:</td>
+		<td class="af_form2"><!--ACCONUTNUM--></td>
+	</tr>
+	<tr>
+		<td class="af_subtitle">受取人名:</td>
+		<td class="af_form2"><!--ACCOUNTNAME--></td>
+	</tr>
+	<tr  class="border_none">
+		<td colspan="3" class="border_none">
+			<span class="red">※お振り込み金額は、お振り込み手数料を引いた金額とさせて頂きます。</span>
+		</td>
+	</tr>
+</table>
+<!--/CHANGETYPE2-->
+<div>
+	<p>以上の内容でよろしければ<span class="important">「<!--STYPE-->」</span>ボタンを押して下さい。</p>
+	<input type="submit" class="submit space-edit" value="<!--STYPE-->">
+</div>
+</form>
+<!--NOTCANCEL-->
+<form action="<!--PHP_SELF-->" method="POST">
+	<input type="hidden" name="mode" value="p_update">
+	<input type="hidden" name="action" value="p_update_change">
+	<div>
+		<p>キャンセルを取り消す場合は<span class="important">「キャンセル取り消し」</span>ボタンを押してください。</p>
+		<input type="submit" class="submit space-edit" value="キャンセル取り消し">
+	</div>
+</form>
+<!--/NOTCANCEL-->
+<form action="<!--PHP_SELF-->" method="POST" class="edit-button">
+	<input type="submit" class="submit" value="アフィリエイトTOPに戻る">
+</form>
+

@@ -2412,6 +2412,11 @@ margin-left: 10px;
 	flex-direction: column;
 	padding: 30px;
 }
+/* パスワード確認 */
+.pass-confirmation p {
+	padding: 5px 0;
+	font-size: 0.9rem;
+}
 
 /* チームオーダー */
 .team_order p {

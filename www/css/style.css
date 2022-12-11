@@ -1594,7 +1594,7 @@ span#yen-10500 {
 
 .how_to_buy .highlight-text {
 	padding: 10px;
-	margin: 5px auto;
+	margin: 5px 0;
 	border: 1px solid #cccc;
 	box-shadow: var(--shadow-setting);
 	width: 400px;
@@ -1981,8 +1981,10 @@ margin-left: 10px;
 
 .agreement-content h4 {
 	font-weight: bold;
-	background-color: #2d5cbc;
+	background-color: var(--secondary);
 	text-align: center;
+	padding: 10px;
+	color: #ffffff;
 }
 
 .agreement-content ol li {
@@ -2007,17 +2009,11 @@ margin-left: 10px;
 /* リンク */
 .link-table {
 	border: 1px solid;
-}
-
-.link-table .link_im {
-	text-align: center;
-
-	width: 100%;
 	display: flex;
 	flex-wrap: wrap;
 }
 
-.link-table .link_im>td {
+.link-table li {
 	width: calc(25% - 10px);
 	height: 120px;
 	position: relative;
@@ -2037,17 +2033,35 @@ margin-left: 10px;
 
 
 /* ショップ案内 */
-.sp02 {
-	text-align: center;
-	border: 1px solid #000000;
-	font-weight: bold;
-	margin-bottom: 10px;
-	padding-bottom: 20px;
+.map-sp02 {
+	display: flex;
 }
-
-.sp02 img {
+.map-sp02 div{
+	width: 50%;
+}
+.map-sp02 img {
 	max-width: 100%;
 }
+.map-sp02 dt {
+    color: var(--secondary);
+}
+.map-sp02 .stripped dt {
+    padding-top: 1em;
+    padding-left: 1em;
+	font-weight: bold;
+}
+.map-sp02 .stripped dd {
+    padding:0 1em 1em 3em;
+}
+.map-sp02 .stripped dt:nth-of-type(odd), 
+.map-sp02 .stripped dd:nth-of-type(odd) {
+    background-color: #F4F4F4;
+}
+ .map-sp02 .sp02-text {
+	font-weight: bold;
+    font-size: 18px;
+    margin: 9px 0;
+ }
 
 .sp01 {
 	color: #FFFFFF;
@@ -2056,43 +2070,6 @@ margin-left: 10px;
 	background-color: var(--accent);
 }
 
-.sp02 .sp02-text {
-	font-size: 15pt;
-	padding-top: 5px;
-	padding-bottom: 5px;
-	font-weight: bold;
-	text-align: center;
-}
-
-.sp02 .text-left {
-	text-align: left;
-}
-
-.sp02 div {
-	padding-bottom: 30px;
-}
-
-#inner .sp02 table {
-	width: 70%;
-	margin: 0 auto;
-	font-size: 1.2rem;
-	font-size: clamp(1rem,3.4vw,1.2rem);
-	box-shadow: var(--shadow-setting);
-	text-align: left;
-	color: #000000;
-}
-
-
-#inner .sp02 table  th {
-	background-color: 	#F5F5F5;
-	border: 1px solid #BBBBBB;
-	color: #000000;
-}
-
-#inner .sp02 table  td {
-	border: 1px solid #BBBBBB;
-	color: #000000;
-}
 
 .category2 td {
 	padding: 5px 0px;
@@ -2294,7 +2271,7 @@ margin-left: 10px;
 /* ログイン */
 
 #login {
-	width: 85%;
+	width: 100%;
 	margin: 0 auto;
 }
 
@@ -2324,37 +2301,6 @@ margin-left: 10px;
     font-size: 1rem;
     line-height: 23px;
 }
-
-.arrow {
-	position: relative;
- 	padding-left: 25px;
-	border-bottom: var(--important);
-}
-/* .arrow::before{
-    content: "";
-	margin: auto;
-	position: absolute;
-	top: 0;
-	bottom: 0;
-	left: 5px;
-	width: 6px;
-	height: 6px;
-	border-top: 3px solid var(--important);
-	border-right: 3px solid var(--important);
-	transform: rotate(45deg);  
-}
-
-.arrow::after {
-	content: "";
-	margin: auto;
-	position: absolute;
-	top: 0;
-	bottom: 0;
-	left: 3px;
-	width: 10px;
-	height: 3px;
-	background: var(--important);
-}  */
 
 #login input[type="text"] {
 	width: 70%;
@@ -2396,9 +2342,9 @@ margin-left: 10px;
     width: 50%;
 }
 
-.login-table #reset_checkbox {
+#login #reset_checkbox {
 	position: relative;
-	top: 1px;
+	top: 2px;
 }
 
 .login-form-section {
@@ -2418,6 +2364,15 @@ margin-left: 10px;
 	font-size: 0.9rem;
 }
 
+.pass-confirmation input[type="submit"] {
+	display: initial;
+	margin: 5px auto;
+}
+
+.pass-confirmation input[type="text"] {
+	width: 200px;
+	padding: 5px;
+}
 /* チームオーダー */
 .team_order p {
 	margin: 10px 0 30px 10px;

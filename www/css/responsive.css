@@ -214,7 +214,7 @@ body.mobile-menu-opened #navigation-mobile #navbox {
 	}
 
 	/* リンクリスト */
-	.link-table .link_im td {
+	.link-table li {
 		width: calc((100% / 3) - 10px);
 	}
 
@@ -238,8 +238,11 @@ body.mobile-menu-opened #navigation-mobile #navbox {
 	}
 
 	/* 店舗情報 */
-	#inner .sp02 table {
-		width: 90%;
+	.map-sp02 {
+		display: block;
+	}
+	.map-sp02 div{
+		width: 100%;
 	}
     /* 商品購入方法 */
 	#shipping-box {
@@ -378,7 +381,7 @@ body.mobile-menu-opened #navigation-mobile #navbox {
 	}
 
 	/* リンクリスト */
-	.link-table .link_im td {
+	.link-table li {
 		width: calc((100% / 2) - 10px);
 		height: 90px;
 	}
@@ -482,17 +485,8 @@ body.mobile-menu-opened #navigation-mobile #navbox {
 		gap: 1px;
 	}
 
-	/* 店舗情報 */
-	#inner .sp02 table td,
-	#inner .sp02 table th {
-		display: block;
-	}
-
-	#inner .sp02 table td {
-		margin: 0 auto;
-		padding-left: 20px;
-	}
-
+	/* ショップ案内 */
+	
 	.marking-details .item-name {
 		flex-basis: 100%;
 	}

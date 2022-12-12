@@ -1,6 +1,7 @@
 <div id="newitem_years">
 	<ul class="clearfix">
-		<li>【<a href="./">2022年</a>】</li>
+		<li>【<a href="./">2023年</a>】</li>
+		<li>【<a href="2022.htm">2022年</a>】</li>
 		<li>【<a href="2021.htm">2021年</a>】</li>
 		<li>【<a href="2020.htm">2020年</a>】</li>
 		<li>【<a href="2019.htm">2019年</a>】</li>

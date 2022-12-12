@@ -340,6 +340,14 @@ body.mobile-menu-opened #navigation-mobile #navbox {
 		border: 1px solid #ffff;
 		margin-bottom: 0px;
 	}
+    
+	.point-conversion-table2 {
+		flex-direction: column;
+	}
+	
+	.point-conversion-table2 .box-row{
+		gap: 0;
+	}
 
 	/* お買い物履歴 詳細 */
 	#rireki .edit-table-text > td ,
@@ -395,6 +403,12 @@ body.mobile-menu-opened #navigation-mobile #navbox {
        width: 80%;
 	   margin: 0 auto;
 	}
+	/*商品発送状況*/
+	#kakunin-form input[type="text"],
+	#kakunin-form input[type="password"] {
+		width: 85%;
+		margin: 0 auto;
+	}
 
 
 }
@@ -417,18 +431,28 @@ body.mobile-menu-opened #navigation-mobile #navbox {
 		width: 62%;
 	}
 
+	.login-table {
+		width: 100%;
+		border: 1px solid;
+	}
+
 	.login-table th,
 	.login-table td {
 		display: block;
 		text-align: center;
+		box-shadow: var(--shadow-setting);
 		border: none;
-		padding: 10px 0;
+	}
+
+	.login-table th {
+		padding: 6px;
 	}
 
 	.login-table input[type="text"],
 	.login-table input[type="password"] {
 		width: 80%;
 	}
+
 
 	/* マーキングページ フォーム入力欄 */
 	.order-form-title {
@@ -517,11 +541,6 @@ body.mobile-menu-opened #navigation-mobile #navbox {
 		max-width: 4rem;
 	}
 
-	.names-on-back {
-		/* align-items: flex-end; */
-		width: 100%;
-	}
-
 	.enter-the-name {
 		flex-direction: column;
 		align-items: normal;
@@ -542,6 +561,9 @@ body.mobile-menu-opened #navigation-mobile #navbox {
 		flex-direction: column;
 	}
 
+	.categories ul li {
+		flex: 0 1 calc(50% - 5px);
+	}
 	.each-goods-background {
 		flex: 1 1 100%;
 	}

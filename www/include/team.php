@@ -238,10 +238,17 @@ function team_order($customer, $ERROR)
 
 
 	//	チームオーダー各詳細入力
-	$result = explode("<>", $customer);
+	$result = explode("<>", rtrim($customer, "<>"));
+	// echo '<pre>'; var_export( $result ); echo '</pre>'; // DBG
+
 	foreach ($result as $val) {
+		// 各商品：
 
 		list($hinban, $title, $kakaku, $buy_n) = explode("::", $val);
+
+		// 商品グループ
+		$html .= "<div class=\"box-outline\">\n";
+		$html .= "	<div class=\"box-grid box-form\">\n";
 
 		if ($val) {
 
@@ -254,27 +261,26 @@ function team_order($customer, $ERROR)
 			// $html .= "	</th>\n";
 			// $html .= "</tr>\n";
 
-			$html .= "	<div class=\"team-order-goods\">\n";
-			$html .= "		<dl>\n";
-			$html .= "			<span>\n";
-			$html .= "				<dt>商品名</dt>\n";
-			$html .= "				<dd>" . $title . "</dd>\n";
-			$html .= "			</span>\n";
-			$html .= "			<span>\n";
-			$html .= "				<dt>商品番号</dt>\n";
-			$html .= "				<dd>" . $hinban . "</dd>\n";
-			$html .= "			</span>\n";
-			$html .= "			<span>\n";
-			$html .= "				<dt>数量</dt>\n";
-			$html .= "				<dd>" . $buy_n . "</dd>\n";
-			$html .= "			</span>\n";
-			$html .= "		</dl>\n";
-			$html .= "	</div>\n";
-
-
+			$html .= "		<div class=\"team-order-goods\">\n";
+			$html .= "			<dl>\n";
+			$html .= "				<span>\n";
+			$html .= "					<dt>商品名</dt>\n";
+			$html .= "					<dd>" . $title . "</dd>\n";
+			$html .= "				</span>\n";
+			$html .= "				<span>\n";
+			$html .= "					<dt>商品番号</dt>\n";
+			$html .= "					<dd>" . $hinban . "</dd>\n";
+			$html .= "				</span>\n";
+			$html .= "				<span>\n";
+			$html .= "					<dt>数量</dt>\n";
+			$html .= "					<dd>" . $buy_n . "</dd>\n";
+			$html .= "				</span>\n";
+			$html .= "			</dl>\n";
+			$html .= "		</div>\n";
 		}
 
 		for ($i = 1; $i <= $buy_n; $i++) {
+			// 商品に対して、各マーキングの着名:
 
 			$hinban_h = preg_replace("/-/", "_", $hinban);
 			$names_ban = $hinban_h . "_ban_" . $i;
@@ -302,20 +308,25 @@ function team_order($customer, $ERROR)
 			// $html .= "	</td>\n";
 			// $html .= "</tr>\n";
 
-			$html .= "	<div class=\"team-order-title\">\n";
+			$html .= "		<div class=\"team-order-title box-row\">\n";
 			$html .= "			<span class=\"first-item\">" . $i . "着目</span>\n";
-			$html .= "		<div class=\"names-on-back\">\n";
-			$html .= "			<div>\n";
-			$html .= "				<label>番号：</label>";
-			$html .= "					<input class=\"uniform-number\" type=\"text\" maxlength=\"3\" name=\"" . $names_ban . "\" value=\"" . $check_names_ban . "\">\n";
-			$html .= "			</div>\n";
-			$html .= "			<div>\n";
-			$html .= "				<label>背ネーム：</label>";
-			$html .= "					<input type=\"text\" class=\"uniform-name\" maxlength=\"20\" name=\"" . $names_name . "\" value=\"" . $check_names_name . "\">\n";
+			$html .= "			<div class=\"names-on-back\">\n";
+			$html .= "				<div>\n";
+			$html .= "					<label>番号：</label>";
+			$html .= "						<input class=\"uniform-number\" type=\"text\" maxlength=\"3\" name=\"" . $names_ban . "\" value=\"" . $check_names_ban . "\">\n";
+			$html .= "				</div>\n";
+			$html .= "				<div>\n";
+			$html .= "					<label>背ネーム：</label>";
+			$html .= "						<input type=\"text\" class=\"uniform-name\" maxlength=\"20\" name=\"" . $names_name . "\" value=\"" . $check_names_name . "\">\n";
+			$html .= "				</div>\n";
 			$html .= "			</div>\n";
 			$html .= "		</div>\n";
-			$html .= "	</div>\n";
 		}
+
+		$html .= "	</div>\n"; // end box-grid
+		$html .= "</div>\n"; // end box-outline
+
+		// end 商品グループ
 	}
 
 	//	都道府県プルダウン

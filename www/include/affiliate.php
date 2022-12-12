@@ -1017,26 +1017,27 @@ function p_apply_html($af_num,$ERROR) {
 
 	//	※配列の[0]が空白なのでループ処理するとプルダウンに空欄ができてしまう。$CHENGE_TYPE_L(ラジオ)も同様
 	//	変換種類ラジオボタン
-	$chenge_type_html .= "<tr>\n";
-	$chenge_type_html .= "	<td class=\"af_title\">変換種類</td>\n";
-	$chenge_type_html .= "	<td class=\"af_form1\">\n";
+	$chenge_type_html .= "<div class=\"box-row\">\n";
+	$chenge_type_html .= "	<p class=\"category-name\">変換種類</p>\n";
+	$chenge_type_html .= "	<div class=\"input-section\">\n";
 	$chenge_type_html .= "		<input type=\"radio\" name=\"change_type\" value=\"1\" ".$checked1." onclick=\"hyouji('on');\">：".$CHENGE_TYPE_L[1]."<br />\n";
 	$chenge_type_html .= "		<input type=\"radio\" name=\"change_type\" value=\"2\" ".$checked2." onclick=\"hyouji('off');\">：".$CHENGE_TYPE_L[2]."\n";
-	$chenge_type_html .= "	</td>\n";
-	$chenge_type_html .= "</tr>\n";
+	$chenge_type_html .= "	</div>\n";
+	$chenge_type_html .= "	</div>\n";
+
 
 	//	振込先科目プルダウン
-	$deposit_html .= "<tr>\n";
-	$deposit_html .= "	<td class=\"af_subtitle\">振込先科目：</td>\n";
-	$deposit_html .= "	<td class=\"af_form2\">\n";
+	$deposit_html .= "<div class=\"box-row\">\n";
+	$deposit_html .= "<div class=\"category-name\">\n";
+	$deposit_html .= "	<p class=\"af_subtitle\">振込先科目</p>\n";
+	$deposit_html .= "</div>\n";
+	$deposit_html .= "	<div class=\"input-section\">\n";
 	$deposit_html .= "		<select name=\"deposit\">\n";
 	$deposit_html .= "			<option value=\"1\" ".$selected21.">".$DEPOSIT_L[1]."</option>\n";
 	$deposit_html .= "			<option value=\"2\" ".$selected22.">".$DEPOSIT_L[2]."</option>\n";
 	$deposit_html .= "		</select>\n";
-	$deposit_html .= "	</td>\n";
-	$deposit_html .= "</tr>\n";
-
-
+	$deposit_html .= "	</div>\n";
+	$deposit_html .= "	</div>\n";
 
 	$DEL_INPUTS['PAPPLICHANGE'] = 1;				//	テンプレのポイント変換変更ページ部分を削除
 	$DEL_INPUTS['LISTBACK'] = 1;					//	テンプレのポイント変換変更ページ部分を削除
@@ -1767,26 +1768,28 @@ function p_update_change_html($af_num,$ERROR){
 
 	//	※配列の[0]が空白なのでループ処理するとプルダウンに空欄ができてしまう。$CHENGE_TYPE_L(ラジオ)も同様
 	//	変換種類ラジオボタン
-	$chenge_type_html .= "<tr>\n";
-	$chenge_type_html .= "	<td class=\"af_title\">変換種類</td>\n";
-	$chenge_type_html .= "	<td class=\"af_form1\">\n";
+
+	$chenge_type_html .= "<div class=\"box-row\">\n";
+	$chenge_type_html .= "	<p class=\"category-name\">変換種類</p>\n";
+	$chenge_type_html .= "	<div class=\"input-section\">\n";
 	$chenge_type_html .= "		<input type=\"radio\" name=\"change_type\" value=\"1\" ".$checked1." onclick=\"hyouji('on');\">：".$CHENGE_TYPE_L[1]."<br />\n";
 	$chenge_type_html .= "		<input type=\"radio\" name=\"change_type\" value=\"2\" ".$checked2." onclick=\"hyouji('off');\">：".$CHENGE_TYPE_L[2]."\n";
-	$chenge_type_html .= "	</td>\n";
-	$chenge_type_html .= "</tr>\n";
+	$chenge_type_html .= "	</div>\n";
+	$chenge_type_html .= "	</div>\n";
 
 	//	振込先科目プルダウン
-	$deposit_html .= "<tr>\n";
-	$deposit_html .= "	<td class=\"af_subtitle\">振込先科目：</td>\n";
-	$deposit_html .= "	<td class=\"af_form2\">\n";
+
+	$deposit_html .= "<div class=\"box-row\">\n";
+	$deposit_html .= "<div class=\"category-name\">\n";
+	$deposit_html .= "	<p class=\"af_subtitle\">振込先科目</p>\n";
+	$deposit_html .= "</div>\n";
+	$deposit_html .= "	<div class=\"input-section\">\n";
 	$deposit_html .= "		<select name=\"deposit\">\n";
 	$deposit_html .= "			<option value=\"1\" ".$selected21.">".$DEPOSIT_L[1]."</option>\n";
 	$deposit_html .= "			<option value=\"2\" ".$selected22.">".$DEPOSIT_L[2]."</option>\n";
 	$deposit_html .= "		</select>\n";
-	$deposit_html .= "	</td>\n";
-	$deposit_html .= "</tr>\n";
-
-
+	$deposit_html .= "	</div>\n";
+	$deposit_html .= "	</div>\n";
 
 	$DEL_INPUTS['PAPPLI'] = 1;						//	テンプレのポイント変換申請部分を削除
 

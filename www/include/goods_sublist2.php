@@ -68,9 +68,11 @@ function goods_sublist2($VALUE, $CHECK) {
 		}
 		if ($sc_html) {
 			$html  = "<h2 class=\"title-nbs\">".$cate_name."　".$sc_name." カテゴリー 一覧</h2>\n";
-			$html .= "<table id=\"category-list\">\n";
+			$html .= "<div class='categories'>\n";
+			$html .= "	<ul>\n";
 			$html .= $sc_html;
-			$html .= "</table>\n";
+			$html .= "	</ul>\n";
+			$html .= "</div>\n";
 			// $html .= "<br />\n";
 		} else {
 			unset($html);
@@ -138,7 +140,8 @@ function subcategory($CATE, $mc_num, $LIST2, $CHECK) {
 
 //	サブカテゴリー2表示
 function sub2category($CATE, $mc_num, $sc_num, $LIST3) {
-global $index;
+	global $index;
+	$html = ""; // return
 
 	//	add ookawara 2015/01/29
 	if ($mc_num == 99) {
@@ -147,45 +150,17 @@ global $index;
 
 	if (!$index) { unset($index); }
 
-	$i = 1;
-	$flag = 0;
 	foreach ($LIST3 AS $VAL) {
 		$VAL = trim($VAL);
 		if (!$VAL) { continue; }
 		list($h_num, $s2c_num, $s2c_name, $s2c_file) = explode("<>", $VAL);
 		if ($CATE[$mc_num][$sc_num][$s2c_num]) {
-			$flag = 1;
-			$amari = $i % 3;
-			if ($amari == 1 && $amari != "$b_amari") {
-					$html .= "  <tr>\n";
-			}
 			$link = (int)sprintf("%02d",$sc_num);
 			$link2 = (int)sprintf("%02d",$s2c_num);
-			$html .= "    <td><a href=\""."/".GOODS_SCRIPT."/".$mc_num."/".$link."/".$link2."/".$index."\" title=\"".$s2c_name."\">".$s2c_name."</a></td>\n";
-			if ($amari == 0 && $amari != "$b_amari") {
-				$html .= "  </tr>\n";
-			}
-		} else {
-			continue;
+			$html .= "		<li><a href=\""."/".GOODS_SCRIPT."/".$mc_num."/".$link."/".$link2."/".$index."\" title=\"".$s2c_name."\">".$s2c_name."</a></li>\n";
 		}
-
-		$b_amari = $amari;
-		$i++;
-	}
-	++$b_amari;
-	if ($b_amari == 3) { $b_amari = 0; }
-	if ($flag != 1) {
-		unset($html);
-	}
-	elseif ($amari != 0 && $amari != "$b_amari") {
-		$max = 3 - $amari;
-		for ($ii=1; $ii<=$max; $ii++) {
-			$html .= "    <td>&nbsp;</td>\n";
-		}
-		$html .= "  </tr>\n";
 	}
 
 	return $html;
 
 }
-?>

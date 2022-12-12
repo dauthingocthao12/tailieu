@@ -59,12 +59,7 @@ function goods_mainlist($VALUE, $CHECK) {
 			$cate_name = $CLASS_M_L[$KEY]['cate_name'];
 			if ($CATE[$mc_num]) {
 				//	メインカテゴリー表示
-				$c_html  = "  <tr>\n";
-				// $c_html .= "    <th colspan=\"3\" class=\"cate1\"><A href=\""."/".GOODS_SCRIPT."/".$mc_num."/".$index."\" title=\"".$cate_name."\">".$cate_name."</a></th>\n";
-				$c_html .= "    <th colspan=\"3\" class=\"cate-1\"><A href=\""."/".GOODS_SCRIPT."/".$mc_num."/".$index."\" title=\"".$cate_name."\">".$cate_name."</a></th>\n";
-				$c_html .= "  </tr>\n";
-
-
+				$c_html .= "    <div class=\"cate-1\"><A href=\""."/".GOODS_SCRIPT."/".$mc_num."/".$index."\" title=\"".$cate_name."\">".$cate_name."</a></div>\n";
 
 				//	サブカテゴリー表示
 				unset($LIST2);
@@ -77,10 +72,10 @@ function goods_mainlist($VALUE, $CHECK) {
 			}
 			if ($sc_html) {
 				// $html .= "<table id=\"category-table\">\n";
-				$html .= "<table id=\"category-list\">\n";
+				$html .= "<div class='categories'>\n";
 				$html .= $c_html;
 				$html .= $sc_html;
-				$html .= "</table>\n";
+				$html .= "</div>\n";
 				$html .= "<br />\n";
 
 				$flag = 1;
@@ -113,10 +108,8 @@ function subcategory($CATE,$mc_num,$LIST2) {
 		list($h_num2,$sc_num,$sc_name,$cate_title2) = explode("<>",$VAL2);
 		if ($CATE[$mc_num][$sc_num]) {
 			$link = (int)sprintf("%02d",$sc_num);
-			$html .= "  <tr>\n";
-			// $html .= "    <th colspan=\"3\" class=\"cate2\"><a href=\""."/".GOODS_SCRIPT."/".$mc_num."/".$link."/".$index."\" title=\"".$sc_name."\">".$sc_name."</a></th>\n";
-			$html .= "    <th colspan=\"3\" class=\"cate-2\"><a href=\""."/".GOODS_SCRIPT."/".$mc_num."/".$link."/".$index."\" title=\"".$sc_name."\">".$sc_name."</a></th>\n";
-			$html .= "  </tr>\n";
+
+			$html .= "    <div class=\"cate-2\"><a href=\""."/".GOODS_SCRIPT."/".$mc_num."/".$link."/".$index."\" title=\"".$sc_name."\">".$sc_name."</a></div>\n";
 
 			unset($LIST3);
 			unset($ssc_html);
@@ -139,47 +132,28 @@ function subcategory($CATE,$mc_num,$LIST2) {
 //	サブカテゴリー2表示
 function sub2category($CATE,$mc_num,$sc_num,$LIST3) {
 	global $index;
+	$html = ""; // return
 
 	//	add ookawara 2015/01/29
 	if ($mc_num == 99) {
 		return;
 	}
 
-	$i = 1;
-	$flag = 0;
 	foreach ($LIST3 AS $VAL) {
 		$VAL = trim($VAL);
 		if (!$VAL) { continue; }
 		list($h_num, $s2c_num, $s2c_name, $s2c_file) = explode("<>", $VAL);
 		if ($CATE[$mc_num][$sc_num][$s2c_num]) {
-			$flag = 1;
-			$amari = $i % 3;
-			if ($amari == 1 && $amari != "$b_amari") {
-					$html .= "  <tr>\n";
-			}
 			$link = (int)sprintf("%02d",$sc_num);
 			$link2 = (int)sprintf("%02d",$s2c_num);
-			$html .= "    <td><a href=\""."/".GOODS_SCRIPT."/".$mc_num."/".$link."/".$link2."/".$index."\" title=\"".$s2c_name."\">".$s2c_name."</a></td>\n";
-			if ($amari == 0 && $amari != "$b_amari") {
-				$html .= "  </tr>\n";
-			}
+			$html .= "    <li><a href=\""."/".GOODS_SCRIPT."/".$mc_num."/".$link."/".$link2."/".$index."\" title=\"".$s2c_name."\">".$s2c_name."</a></li>\n";
 		} else {
 			continue;
 		}
-
-		$b_amari = $amari;
-		$i++;
 	}
-	++$b_amari;
-	if ($b_amari == 3) { $b_amari = 0; }
-	if ($flag != 1) {
-		unset($html);
-	} elseif ($amari != 0 && $amari != "$b_amari") {
-		$max = 3 - $amari;
-		for ($ii=1; $ii<=$max; $ii++) {
-			$html .= "    <td>&nbsp;</td>\n";
-		}
-		$html .= "  </tr>\n";
+
+	if($html) {
+		$html = "<ul>$html</ul>";
 	}
 
 	return $html;

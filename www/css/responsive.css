@@ -395,13 +395,17 @@ body.mobile-menu-opened #navigation-mobile #navbox {
 	}
 	/* ロクイン */
 	#login {
-		width: 100%;
+		width: 95%;
 	}
 	
 	#login input[type="text"],
 	#login input[type="password"] {
        width: 80%;
 	   margin: 0 auto;
+	}
+
+	#login .category-name {
+		justify-content: left;
 	}
 	/*商品発送状況*/
 	#kakunin-form input[type="text"],

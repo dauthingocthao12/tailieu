@@ -2302,12 +2302,14 @@ margin-left: 10px;
 /* ログイン */
 
 #login {
-	width: 100%;
-	margin: 0 auto;
+	width: 75%;
+	margin: 20px auto;
+	word-break: keep-all;
 }
 
 #login .input-section {
 	display: inline-block;
+	line-height: 23px;
 }
 
 #login input {
@@ -2321,25 +2323,17 @@ margin-left: 10px;
 	gap: 11px;
 }
 
-
-#login p {
-	margin: 10px 0;
-	line-height: 1.1rem;
-}
-
 #login .increase-space {
 	margin: 20px 0;
     font-size: 1rem;
     line-height: 23px;
 }
 
-#login input[type="text"] {
-	width: 70%;
+#login input[type="text"],
+#login input[type="password"] {
+	width: 80%;
 }
 
-#login input[type="password"] {
-    width: 50%;
-}
 
 .login-table input,
 #login input {

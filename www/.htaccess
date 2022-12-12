@@ -27,7 +27,7 @@ ErrorDocument 404 /notfound.htm
 # Header edit Location https?://(www\.)?futboljersey.com http://dev.neighbors.local:81
 
 # substitution
-#SetOutputFilter SUBSTITUTE
+SetOutputFilter SUBSTITUTE
 #Substitute "s|https?://(www\.)?futboljersey.com|http://dev.neighbors.local|i"
 # fake referer from ���ִĶ�
 RequestHeader edit Referer dev.neighbors.local futboljersey.com

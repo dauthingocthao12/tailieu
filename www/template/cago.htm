@@ -21,11 +21,12 @@
 	</table> -->
 
 
-	<section class="caution-section">
-		<h4 class="sub-title-simple">
-			現在選択されている商品はありません。
-		</h4>
-		<div class="caution">
+	<h4 class="error-alert">
+		現在選択されている商品はありません。
+	</h4>
+
+	<section class="box-outline">
+		<div class="box-content">
 			<span>現在選択されている商品はありません。</span>
 			<span>もし、お買い物商品が買い物かごに入らない場合は、<b class="bold"> <a
 						href="/cautions.htm">問題解決方法</a></b>のページをご覧下さい。</span><br />
@@ -61,9 +62,9 @@
 		</tr>
 	</table> -->
 
-	<section class="caution-section">
-		<h4 class="sub-title-simple">注意</h4>
-		<div class="cago-caution">
+	<section class="box-outline">
+		<h4 class="box-title box-title-big">注意</h4>
+		<div class="box-content">
 			<span>同じ商品を複数ご購入される場合は、その数量を変更し数量変更ボタンを押して下さい。</span><br>
 			<spna>お求めの商品が決まり、マーキングする方は、マーキングを利用するボタンを。</spna><br>
 			<spna>商品のみご購入の方は、ご購入ボタンを押して下さい。</spna><br>
@@ -155,83 +156,83 @@
 		!--/SOURYOUARI--
 	</table> -->
 
-	<section class="cago-form">
+	<div class="cago-form">
 		<div class="cago-goods">
 			<!--GOODS-->
 		</div>
 		<div class="cago-marking">
 			<!--MARKING-->
 		</div>
-	</section>
-
-	<div class="total-amount">
-		<!--WARIBIKIDEL-->
-		<div class="discount">
-			<span class="important">特別会員割引(
-				<!--WARIBIKI-->% )
-			</span>
-			<span class="important">
-				<!--NEBIKI-->
-			</span>円
-		</div>
-		<!--/WARIBIKIDEL-->
-		<!--WARIBIKI2DEL-->
-		<div class="discount">
-			<span class="important">割引(
-				<!--WARIBIKI2-->% )
-			</span>
-			<span class="important">
-				<!--NEBIKI-->
-			</span>円
-		</div>
-		<!--/WARIBIKI2DEL-->
-		<!--PAERSENTDEL-->
-		<div class="discount">
-			<span class="important">割引(
-				<!--PAERSENT-->% )
-			</span>
-			<span class="important">
-				<!--NEBIKI-->
-			</span>円
-		</div>
-		<!--/PAERSENTDEL-->
-		<!--SOURYOUMURYOU-->
-		<div class="total-price">
-			<div class="postage">
-				<div class="postage-detail">
-					<span>送料</span>
-					<span class="important">サービス</span>
-				</div>
-				<div class="postage-detail">
-					<span>手数料</span>
-					<span>未定</span>
-				</div>
-				<div class="postage-detail bold">
-					<span>合計金額</span>
-					<span>
-						<!--PRICEALL--> 円 + 手数料
-					</span>
-				</div>
-			</div>
-		</div>
-		<!--/SOURYOUMURYOU-->
-		<!--SOURYOUARI-->
-		<div class="total-price">
-			<div class="postage">
-				<div class="postage-detail">
-					<span class="first-item">送料・手数料</span>
-					<span>未定</span>
-				</div>
-				<div class="postage-detail bold">
-					<span class="first-item">合計金額</span>
-					<span>
-						<!--PRICEALL--> 円 + 送料・手数料
-					</span>
-				</div>
-			</div>
-		</div>
-		<!--/SOURYOUARI-->
 	</div>
+
+	<!--WARIBIKIDEL-->
+	<h4 class="order-headline">諸経費・合計</h4>
+	<div class="discount">
+		<span class="important">特別会員割引(
+			<!--WARIBIKI-->% )
+		</span>
+		<span class="important">
+			<!--NEBIKI-->
+		</span>円
+	</div>
+	<!--/WARIBIKIDEL-->
+	<!--WARIBIKI2DEL-->
+	<h4 class="order-headline">諸経費・合計</h4>
+	<div class="discount">
+		<span class="important">割引(
+			<!--WARIBIKI2-->% )
+		</span>
+		<span class="important">
+			<!--NEBIKI-->
+		</span>円
+	</div>
+	<!--/WARIBIKI2DEL-->
+	<!--PAERSENTDEL-->
+	<h4 class="order-headline">諸経費・合計</h4>
+	<div class="discount">
+		<span class="important">割引(
+			<!--PAERSENT-->% )
+		</span>
+		<span class="important">
+			<!--NEBIKI-->
+		</span>円
+	</div>
+	<!--/PAERSENTDEL-->
+	<!--SOURYOUMURYOU-->
+	<div class="box-outline">
+		<h4 class="order-headline">諸経費・合計</h4>
+		<div class="postage-detail">
+			<span>送料</span>
+			<span class="important">サービス</span>
+		</div>
+		<div class="postage-detail">
+			<span>手数料</span>
+			<span>未定</span>
+		</div>
+		<div class="postage-detail">
+			<span>合計金額</span>
+			<span>
+				<!--PRICEALL--> 円 + 手数料
+			</span>
+		</div>
+	</div>
+	<!--/SOURYOUMURYOU-->
+	<!--SOURYOUARI-->
+	<div class="box-outline">
+		<h4 class="order-headline">諸経費・合計</h4>
+		<div class="box-row total-area content-spacing">
+			<div class="postage-detail">
+				送料・手数料：未定
+			</div>
+			<div class="postage-detail">
+				合計金額：
+				<span class="total-amount">
+					<!--PRICEALL--> 円 + 送料・手数料
+				</span>
+			</div>
+		</div>
+	</div>
+	<!--/SOURYOUARI-->
 
 
 	<!-- 2022/12/5 レスポンシブ対応につき、コメントアウト uenishi -->
@@ -311,13 +312,13 @@
 	<section class="cago-purchase-section">
 		<form action="marking.php" method="post">
 			<div class="order-button">マーキングを利用する方はこちら
-				<input type="submit" value="マーキング" class="submit" />
+				<input type="submit" value="マーキング" class="btn-standard" />
 				<span class="red">注意:ネーム付きユニフォームをご注文の方は、マーキングを指定する必要はございません。</span>
 			</div>
 		</form>
 		<form action="./team.php" method="post">
 			<div class="order-button">チームオーダーの御見積はこちら
-				<input type="submit" value="チームオーダー" class="submit" />
+				<input type="submit" value="チームオーダー" class="btn-standard" />
 			</div>
 		</form>
 		<!--TOUROKU-->
@@ -326,7 +327,7 @@
 				<span class="red">割引ポイントが貯まる、お得な会員になりませんか？<br />
 					<!--今登録しても買い物中のかごの商品は消えません。<br />-->
 				</span>
-				<input type="submit" value="会員登録" class="submit" />
+				<input type="submit" value="会員登録" class="btn-standard" />
 			</div>
 		</form>
 		<!--/TOUROKU-->
@@ -341,7 +342,7 @@
 				<form action="<!--PHP_SELF-->" method="post">
 					<input type="hidden" name="mode" value="user_data" />
 					<input type="hidden" name="action" />
-					<input type="submit" value="ご購入" class="submit" />
+					<input type="submit" value="ご購入" class="btn-standard" />
 				</form>
 			</div>
 			<!--/KOUNYUU1-->
@@ -352,7 +353,7 @@
 				<form action="<!--PHP_SELF-->" method="post">
 					<input type="hidden" name="mode" value="user_data" />
 					<input type="hidden" name="action" value="idpass" />
-					<input type="submit" value="ご購入（会員）" class="submit" />
+					<input type="submit" value="ご購入（会員）" class="btn-standard" />
 				</form>
 			</div>
 			<!-- <span>非会員の方で、ご購入はこちら</span>
@@ -361,14 +362,14 @@
 				<form action="<!--PHP_SELF-->" method="post">
 					<input type="hidden" name="mode" value="user_data" />
 					<input type="hidden" name="action" value="not_idpass" />
-					<input type="submit" value="ご購入（非会員）" class="submit" />
+					<input type="submit" value="ご購入（非会員）" class="btn-standard" />
 				</form>
 			</div>
 		</div>
 		<!--/KOUNYUU2-->
 		<form action="<!--REFERE-->">
 			<div class="order-button">
-				<input type="submit" value="買い物をつづける" class="submit continue-button" />
+				<input type="submit" value="買い物をつづける" class="btn-standard continue-button" />
 				<span class="red">
 					買い物を続ける場合は、上のボタンをクリックして下さい。
 				</span>

@@ -500,14 +500,14 @@ function pc_defaults_html($af_num){
 		$a_pay_point += $pay_point;
 //		$a_now_point += $now_point;
 
-		$html .= "	<tr>\n";
-		$html .= "		<td class=\"af_align\" data-label=\"年\"><input type=\"submit\" class=\"submit\" name=\"year\" value=\"".$year."\">年</td>\n";
-		$html .= "		<td data-label=\"クリック数\">".$click_."件</td>\n";
-		$html .= "		<td data-label=\"売上件数\">".$count_."件</td>\n";
-		$html .= "		<td data-label=\"予定ポイント\">".$indent_point_."pt</td>\n";
-		$html .= "		<td data-label=\"確定ポイント\">".$point_."pt</td>\n";
-		$html .= "		<td data-label=\"変換ポイント\">".$pay_point_."pt</td>\n";
-		$html .= "	</tr>\n";
+		$html .= "	<div class=\"box-row\">\n";
+		$html .= "		<div class=\"aff-point-content\" data-label=\"年\"><input type=\"submit\" class=\"btn-standard\" name=\"year\" value=\"".$year."\">年</div>\n";
+		$html .= "		<div class=\"aff-point-content\" data-label=\"クリック数\">".$click_."件</div>\n";
+		$html .= "		<div class=\"aff-point-content\" data-label=\"売上件数\">".$count_."件</div>\n";
+		$html .= "		<div class=\"aff-point-content\" data-label=\"予定ポイント\">".$indent_point_."pt</div>\n";
+		$html .= "		<div class=\"aff-point-content\" data-label=\"確定ポイント\">".$point_."pt</div>\n";
+		$html .= "		<div class=\"aff-point-content\" data-label=\"変換ポイント\">".$pay_point_."pt</div>\n";
+		$html .= "	</div>\n";
 	}
 
 	$a_click = number_format($a_click);
@@ -695,7 +695,7 @@ function pc_mon_html($af_num){
 		$mon = sprintf('%02d',$mon);
 
 		$html .= "<tr>\n";
-		$html .= "	<td class=\"af_align\" data-label=\"月\" ><input type=\"submit\" class=\"submit\" name=\"mon\" value=\"".$mon."\">月</td>\n";
+		$html .= "	<td class=\"af_align\" data-label=\"月\" ><input type=\"submit\" class=\"btn-standard\" name=\"mon\" value=\"".$mon."\">月</td>\n";
 		$html .= "	<td data-label=\"クリック数\">".$click_."件</td>\n";
 		$html .= "	<td data-label=\"売上件数\">".$count_."件</td>\n";
 		$html .= "	<td data-label=\"予定ポイント\">".$indent_point_."pt</td>\n";
@@ -1018,7 +1018,7 @@ function p_apply_html($af_num,$ERROR) {
 	//	※配列の[0]が空白なのでループ処理するとプルダウンに空欄ができてしまう。$CHENGE_TYPE_L(ラジオ)も同様
 	//	変換種類ラジオボタン
 	$chenge_type_html .= "<div class=\"box-row\">\n";
-	$chenge_type_html .= "	<p class=\"category-name\">変換種類</p>\n";
+	$chenge_type_html .= "	<p class=\"item-name\">変換種類</p>\n";
 	$chenge_type_html .= "	<div class=\"input-section\">\n";
 	$chenge_type_html .= "		<input type=\"radio\" name=\"change_type\" value=\"1\" ".$checked1." onclick=\"hyouji('on');\">：".$CHENGE_TYPE_L[1]."<br />\n";
 	$chenge_type_html .= "		<input type=\"radio\" name=\"change_type\" value=\"2\" ".$checked2." onclick=\"hyouji('off');\">：".$CHENGE_TYPE_L[2]."\n";
@@ -1028,7 +1028,7 @@ function p_apply_html($af_num,$ERROR) {
 
 	//	振込先科目プルダウン
 	$deposit_html .= "<div class=\"box-row\">\n";
-	$deposit_html .= "<div class=\"category-name\">\n";
+	$deposit_html .= "<div class=\"item-name\">\n";
 	$deposit_html .= "	<p class=\"af_subtitle\">振込先科目</p>\n";
 	$deposit_html .= "</div>\n";
 	$deposit_html .= "	<div class=\"input-section\">\n";
@@ -1457,7 +1457,6 @@ function point_checks($af_num) {
 		$list = pg_fetch_array($result);
 		(int)$dec_point = $list['dec_point'];
 	}
-
 	//	支払い情報(全て)
 	$sql =  "SELECT SUM(af_point) AS pay_point FROM $application_table" .
 			" WHERE af_num='$af_num' AND state!='2';";
@@ -1465,13 +1464,11 @@ function point_checks($af_num) {
 		$list = pg_fetch_array($result);
 		(int)$pay_point = $list['pay_point'];
 	}
-
 	//	獲得確定ポイント
 	$point = $dec_point - $pay_point;
 	if ($point < 1) { $point = 0; }
 
 	return $point;
-
 }
 //------------------//
 // カタカナチェック //
@@ -1722,6 +1719,8 @@ function p_update_change_html($af_num,$ERROR){
 
 	if (!$ERROR) {
 		//	変換可能獲得ポイント
+		// var_dump($now_point);
+		// var_dump($point);
 		$total_point = $now_point + $point;
 		//	セッション埋め込み
 		$_SESSION['BANK']['appli_num'] = $appli_num;
@@ -1770,7 +1769,7 @@ function p_update_change_html($af_num,$ERROR){
 	//	変換種類ラジオボタン
 
 	$chenge_type_html .= "<div class=\"box-row\">\n";
-	$chenge_type_html .= "	<p class=\"category-name\">変換種類</p>\n";
+	$chenge_type_html .= "	<p class=\"item-name\">変換種類</p>\n";
 	$chenge_type_html .= "	<div class=\"input-section\">\n";
 	$chenge_type_html .= "		<input type=\"radio\" name=\"change_type\" value=\"1\" ".$checked1." onclick=\"hyouji('on');\">：".$CHENGE_TYPE_L[1]."<br />\n";
 	$chenge_type_html .= "		<input type=\"radio\" name=\"change_type\" value=\"2\" ".$checked2." onclick=\"hyouji('off');\">：".$CHENGE_TYPE_L[2]."\n";
@@ -1780,7 +1779,7 @@ function p_update_change_html($af_num,$ERROR){
 	//	振込先科目プルダウン
 
 	$deposit_html .= "<div class=\"box-row\">\n";
-	$deposit_html .= "<div class=\"category-name\">\n";
+	$deposit_html .= "<div class=\"item-name\">\n";
 	$deposit_html .= "	<p class=\"af_subtitle\">振込先科目</p>\n";
 	$deposit_html .= "</div>\n";
 	$deposit_html .= "	<div class=\"input-section\">\n";
@@ -1898,6 +1897,8 @@ function p_update_check($af_num,&$ERROR){
 		//	獲得ポイント
 		$point_ = point_checks($af_num);
 		if ($point_ < $point) {
+			var_dump($point_);
+			var_dump($point);
 			$ERROR[] = "入力されたポイントが獲得ポイントを越えております。";
 		}
 	}

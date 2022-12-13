@@ -8,6 +8,7 @@
 	.box-row {
 		flex-direction: column;
 	}
+
 	.box-form .box-row {
 		gap: 0;
 	}
@@ -71,7 +72,7 @@ body.mobile-menu-opened #navigation-mobile #navbox {
 }
 
 #navigation-header {
-	background-color: var(--primary);
+	background-color: var(--header);
 	border-bottom: 2px solid #00006a;
 }
 
@@ -215,7 +216,7 @@ body.mobile-menu-opened #navigation-mobile #navbox {
 
 	/* リンクリスト */
 	.link-table li {
-		width: calc((100% / 3) - 10px);
+		width: calc(100% / 3);
 	}
 
 	/* チームオーダー */
@@ -244,10 +245,12 @@ body.mobile-menu-opened #navigation-mobile #navbox {
 	.map-sp02 div{
 		width: 100%;
 	}
-    /* 商品購入方法 */
+
+	/* 商品購入方法 */
 	#shipping-box {
 		display: block;
 	}
+
 	#shipping-box div {
 		width: 100%;
 		text-align: left;
@@ -265,6 +268,7 @@ body.mobile-menu-opened #navigation-mobile #navbox {
 }
 
 @media(min-width: 551px) {
+
 	/* PC の場合は */
 	.item-list {
 		box-shadow: var(--shadow-setting);
@@ -272,6 +276,7 @@ body.mobile-menu-opened #navigation-mobile #navbox {
 }
 
 @media(max-width: 550px) {
+
 	/* 商品一覧 */
 	.item-list {
 		background: transparent;
@@ -302,10 +307,41 @@ body.mobile-menu-opened #navigation-mobile #navbox {
 		flex-basis: calc((100% / 2) - (5px /2));
 	}
 
-	/* アフィリエイト・ポイント */
-	.list-table .list-table-pc {
-		display: none;
+	/* 買い物かご */
+	.box-content.box-item {
+		flex-direction: row;
+	}
 
+	.product-info {
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+	}
+
+	.product-detail-name {
+		justify-content: normal;
+	}
+
+	.sub-total {
+		flex-direction: column;
+		align-items: flex-end;
+		gap: 10px;
+	}
+
+	.box-row.fixed-row {
+		flex-direction: row;
+	}
+
+	.amount {
+		flex-direction: column;
+		gap: 10px;
+		align-items: flex-end;
+		justify-content: normal;
+	}
+
+	/* アフィリエイト・ポイント */
+	.list-table-pc {
+		display: none;
 	}
 
 	.list-table tr {
@@ -319,28 +355,45 @@ body.mobile-menu-opened #navigation-mobile #navbox {
 		border-bottom: none;
 	}
 
-	.list-table tr > td:not(.border_none,.edit-table-text > td),
-	.aff_table .responsive-design th {
+	.list-table tr>td:not(.border_none, .edit-table-text > td) {
 		display: block;
 		text-align: right;
 		padding: 0.4em 1em;
 	}
+    .aff-point-form .box-grid {
+		background-color: #ffffff;
+		border: none;
+		box-shadow: none;
+	} 
 
-	.list-table tr > td[data-label]:before,
-	.list-table .responsive-design > th[data-label]:before {
+	.list-table-pc {
+		display: none;
+	}
+
+	.aff-point-form .box-row {
+		background-color: var(--accent);
+		border: 1px solid var(--accent);
+		margin: 5px 0;
+		box-shadow: var(--shadow-setting);
+	}
+
+	.aff-point-content {
+		justify-content: space-between;
+		padding: 7px;
+	}
+
+	.aff-point-form .aff-point-content[data-label]:before {
 		content: attr(data-label);
-		float: left;
 		font-weight: bold;
 		min-width: 70px;
 		display: flex;
 		align-items: center;
 	}
 
-	.aff_table .responsive-design th {
-		border: 1px solid #ffff;
-		margin-bottom: 0px;
+	.aff-content .aff_url {
+		width: 100%;
 	}
-    
+
 	.point-conversion-table2 {
 		flex-direction: column;
 	}
@@ -350,23 +403,23 @@ body.mobile-menu-opened #navigation-mobile #navbox {
 	}
 
 	/* お買い物履歴 詳細 */
-	#rireki .edit-table-text > td ,
-	.kakunin .edit-table-text > td {
+	#rireki .edit-table-text>td,
+	.kakunin .edit-table-text>td {
 		display: flex;
 		gap: 20px;
 		padding: 0.4em 1em;
 		text-align: left;
 		word-break: inherit;
 	}
-    
+
 	#rireki .detail-text {
 		line-height: 20px;
-	} 
+	}
 
 	.list-title {
 		width: 100%;
 	}
-    
+
 	/*ネイバーズスポーツ アフィリエイトポイント変換申請*/
 	.point-conversion-table tr td,
 	#msg1 tr td {
@@ -390,37 +443,43 @@ body.mobile-menu-opened #navigation-mobile #navbox {
 
 	/* リンクリスト */
 	.link-table li {
-		width: calc((100% / 2) - 10px);
+		width: calc(100% / 2);
 		height: 90px;
 	}
 	/* ロクイン */
-	#login {
+	#login-content {
 		width: 95%;
 	}
 	
-	#login input[type="text"],
-	#login input[type="password"] {
+	#login-content input[type="text"],
+	#login-content input[type="password"] {
        width: 80%;
 	   margin: 0 auto;
 	}
 
-	#login .category-name {
+	#login-content .item-name {
 		justify-content: left;
 	}
 	/*商品発送状況*/
+	#kakunin-form .input-section{
+		text-align: center;
+	}
+
 	#kakunin-form input[type="text"],
 	#kakunin-form input[type="password"] {
-		width: 85%;
+		width: 80%;
 		margin: 0 auto;
 	}
 
-
+	#newitem_years {
+		--count: 3;
+	}
 }
 
 @media(max-width: 500px) {
 
 	/* エラーメッセージ */
-	.error-area {
+	.error-alert {
 		padding-left: 10px;
 		padding-right: 5px;
 	}
@@ -514,14 +573,10 @@ body.mobile-menu-opened #navigation-mobile #navbox {
 	}
 
 	/* ショップ案内 */
-	
 	.marking-details .item-name {
 		flex-basis: 100%;
 	}
 
-	.postage-detail>span {
-		flex: 1 1 53.5%;
-	}
 
 	.cago-purchase-section {
 		align-items: normal;
@@ -540,12 +595,16 @@ body.mobile-menu-opened #navigation-mobile #navbox {
 		max-width: 3rem;
 	}
 
+	.input-short{
+		max-width: 3rem;
+	}
+
 	/* チームオーダー */
 	.phone-number input {
 		max-width: 4rem;
 	}
 
-	.enter-the-name {
+	.enter-the-name, .input-field.row {
 		flex-direction: column;
 		align-items: normal;
 		gap: 10px;
@@ -560,7 +619,6 @@ body.mobile-menu-opened #navigation-mobile #navbox {
 		gap: 15px;
 	}
 
-
 	#category-goods-list {
 		flex-direction: column;
 	}
@@ -568,7 +626,12 @@ body.mobile-menu-opened #navigation-mobile #navbox {
 	.categories ul li {
 		flex: 0 1 calc(50% - 5px);
 	}
+
 	.each-goods-background {
 		flex: 1 1 100%;
+	}
+
+	#newitem_years {
+		--count: 2;
 	}
 }

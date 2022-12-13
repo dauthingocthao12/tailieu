@@ -1,44 +1,44 @@
-<h2 class="title-nbs title-items-list">ネイバーズスポーツ アフィリエイトポイント変換申請</h2>
+<h2 class="title-nbs">ネイバーズスポーツ アフィリエイトポイント変換申請</h2>
 
 <!--ERRORS-->
+<section class="point-conversion-table">
 <!--MODIFY-->
-<section class="aff_table point-conversion-table">
-<form action="<!--PHP_SELF-->" method="POST">
-	<div class="increase-space">
+	<form action="<!--PHP_SELF-->" method="POST">
+		<div class="edit-button">
+			<input type="hidden" name="mode" value="<!--MODE-->">
+			<input type="hidden" name="action" value="p_update_change">
+			内容を修正する場合は「修正する」ボタンを押してください<input type="submit" class="btn-standard" value="修正する">
+		</div>
+	</form>
+	<!--/MODIFY-->
+	<form action="<!--PHP_SELF-->" method="POST">
 		<input type="hidden" name="mode" value="<!--MODE-->">
-		<input type="hidden" name="action" value="p_update_change">
-		内容を修正する場合は「修正する」ボタンを押してください<input type="submit" class="submit" value="修正する">
-	</div>
-</form>
-<!--/MODIFY-->
-<form action="<!--PHP_SELF-->" method="POST">
-	<input type="hidden" name="mode" value="<!--MODE-->">
-	<input type="hidden" name="action" value="<!--ACTION-->">
-	<div class="box-grid box-outline">
-		<div class="box-row">
-			<p class="category-name">変換ポイント<br />
-			（可能ポイント：<!--POINT-->pt）</p>
-			<div class="input-section">
-				<!--INPUTPOINT-->pt
+		<input type="hidden" name="action" value="<!--ACTION-->">
+		<div class="box-grid box-outline">
+			<div class="box-row">
+				<p class="item-name">変換ポイント<br />
+				（可能ポイント：<!--POINT-->pt）</p>
+				<div class="input-section">
+					<!--INPUTPOINT-->pt
+				</div>
 			</div>
-		</div>
 
-		<div class="box-row">
-			<p class="category-name">変換種類</p>
-			<div class="input-section">
-				<!--CHENGETYPEL-->
+			<div class="box-row">
+				<p class="item-name">変換種類</p>
+				<div class="input-section">
+					<!--CHENGETYPEL-->
+				</div>
 			</div>
 		</div>
-	</div>
 </section>
 
 <!--CHANGETYPE2-->
 <section class="box-outline" id="msg1">
 	<div class="point-conversion-table2">
-		<h4 class="category-name2">お振り込み口座</h4>
+		<h4 class="item-name2">お振り込み口座</h4>
 		<div class="box-column">
 			<div class="box-row">
-				<div class="category-name">
+				<div class="item-name">
 					金融機関名
 				</div>
 				<div class="input-section">
@@ -46,7 +46,7 @@
 				</div>
 			</div>
 			<div class="box-row">
-				<div class="category-name">
+				<div class="item-name">
 					支店名
 				</div>
 				<div class="input-section">
@@ -54,7 +54,7 @@
 				</div>
 			</div>
 			<div class="box-row">
-				<div class="category-name">
+				<div class="item-name">
 					振込先科目
 				</div>
 				<div class="input-section">
@@ -62,7 +62,7 @@
 				</div>
 			</div>
 			<div class="box-row">
-				<div class="category-name">
+				<div class="item-name">
 					振込先口座番号
 				</div>
 				<div class="input-section">
@@ -70,7 +70,7 @@
 				</div>
 			</div>
 			<div class="box-row">
-				<div class="category-name">
+				<div class="item-name">
 					受取人名
 				</div>
 				<div class="input-section">
@@ -82,22 +82,22 @@
 </section>
 <span class="red">※お振り込み金額は、お振り込み手数料を引いた金額とさせて頂きます。</span>
 <!--/CHANGETYPE2-->
-<div class="increase-space">
-	<p>以上の内容でよろしければ<span class="important">「<!--STYPE-->」</span>ボタンを押して下さい。</p>
-	<input type="submit" class="submit space-edit" value="<!--STYPE-->">
+<p class="increase-space">以上の内容でよろしければ<span class="important">「<!--STYPE-->」</span>ボタンを押して下さい。</p>
+<p>キャンセルを取り消す場合は<span class="important">「キャンセル取り消し」</span>ボタンを押してください。</p>
+<div class="increase-space edit-button">
+	<input type="submit" class="btn-standard" value="<!--STYPE-->">
 </div>
 </form>
 <!--NOTCANCEL-->
 <form action="<!--PHP_SELF-->" method="POST">
 	<input type="hidden" name="mode" value="p_update">
 	<input type="hidden" name="action" value="p_update_change">
-	<div>
-		<p>キャンセルを取り消す場合は<span class="important">「キャンセル取り消し」</span>ボタンを押してください。</p>
-		<input type="submit" class="submit space-edit" value="キャンセル取り消し">
+	<div class="edit-button">
+		<input type="submit" class="btn-standard" value="キャンセル取り消し">
 	</div>
 </form>
 <!--/NOTCANCEL-->
 <form action="<!--PHP_SELF-->" method="POST" class="edit-button">
-	<input type="submit" class="submit" value="アフィリエイトTOPに戻る">
+	<input type="submit" class="btn-standard" value="アフィリエイトTOPに戻る">
 </form>
 

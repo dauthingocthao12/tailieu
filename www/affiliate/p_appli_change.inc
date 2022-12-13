@@ -471,8 +471,7 @@ global $PHP_SELF,$set_point_mon,$change_point;
 		elseif (!isZenKkana($account_name)) { $ERROR[] = "受取人名に、カタカナ以外の文字が含まれております。"; }
 	}
 	elseif ($change_type != 1) { $ERROR[] = "変換種類が確認出来ません。"; }
-   echo "aaaa";
-   echo $point;
+
 	if (!$ERROR) {
 		//	獲得ポイント
 		$point_ = point_checks($af_num);

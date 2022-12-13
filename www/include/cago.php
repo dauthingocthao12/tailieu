@@ -372,14 +372,6 @@ function cago_goods_html($KAGOS , $OPTIONS , $ERROR){
 		// $html .= "		<th class=\"sakuzyo\">商品名</th>\n";
 		// $html .= "	</tr>\n";
 
-		$html .= "<div class=\"marking-title-section\">\n";
-		$html .= "	<div class=\"marking-title\">\n";
-		$html .= "		<span class=\"item-name\">商品名</span>\n";
-		$html .= "		<span>単価</span>\n";
-		$html .= "  	<span>数量</span>\n";
-		$html .= "  	<span>小計</span>\n";
-		$html .= "	</div>\n";
-		$html .= "</div>\n";
 
 		foreach ($KAGOS AS $val) {
 			$syoukei = 0;
@@ -443,43 +435,56 @@ function cago_goods_html($KAGOS , $OPTIONS , $ERROR){
 			// $html .= "		<td class=\"cago_title\">".$title_."</td>\n";
 			// $html .= "	</tr>\n";
 
-
-
-			$html .= "<section class=\"goods-total\">\n";
-			$html .= "	<div class=\"goods-title\">\n";
-			$html .= "		<div class=\"item-title\">\n";
-			$html .= "			<span>".$title_."</span>\n";
-			$html .= "		</div>\n";
-			$html .= "		<div class=\"item-delete-button\">\n";
-			$html .= "			<form action=\"".$PHP_SELF."\" method=\"post\">\n";
-			$html .= "				<input type=\"hidden\" name=\"mode\" />\n";
-			$html .= "				<input type=\"hidden\" name=\"action\" value=\"del\" />\n";
-			$html .= "				<input type=\"hidden\" name=\"hinban\" value=\"".$hinban_."\" />\n";
-			$html .= "				<input type=\"submit\" value=\"削除\" class=\"submit\"/>\n";
-			$html .= "			</form>\n";
-			$html .= "		</div>\n";
+			$html .= "<div class=\"box-outline\">\n";
+			$html .= "	<h4 class=\"order-headline text-center\">\n";
+			$html .= "		オーダー内容\n";
+			$html .= "	</h4>\n";
+			$html .= "		<div class=\"box-row\">\n";
+			$html .= "			<div class=\"box-content box-item\">\n";
+			$html .= "				<span class=\"bold\">商品</span>\n";
+			$html .= "				<div>\n";
+			$html .= "					<form action=\"".$PHP_SELF."\" method=\"post\">\n";
+			$html .= "						<input type=\"hidden\" name=\"mode\" />\n";
+			$html .= "						<input type=\"hidden\" name=\"action\" value=\"del\" />\n";
+			$html .= "						<input type=\"hidden\" name=\"hinban\" value=\"".$hinban_."\" />\n";
+			$html .= "						<input type=\"submit\" value=\"削除\" class=\"btn-standard delete-button\"/>\n";
+			$html .= "					</form>\n";
+			$html .= "				</div>\n";
+			$html .= "			</div>\n";
+			$html .= "	 		<div class=\"box-content\">\n";
+			$html .= "				<div class=\"product-detail\">\n";
+			$html .= "					<div class=\"product-info\">\n";
+			$html .= "						<div class=\"box-row fixed-row\">\n";
+			$html .= "						 	<div class=\"product-detail-name\">商品名：　</div>\n";
+			$html .= "                       	<span class=\"bold\">".$title_."</span>\n";
+			$html .= "						</div>\n";
+			$html .= "						<div class=\"box-row fixed-row\">\n";
+			$html .= "		    				<div class=\"product-detail-name\">商品番号：　</div>\n";
+			$html .= "		    				<span class=\"bold\">".$hinban_."</span>\n";
+			$html .= "						</div>\n";
+			$html .= "						<div class=\"box-row fixed-row\">\n";
+			$html .= "							<div class=\"product-detail-name\">単価：　</div>\n";
+			$html .= "							<span class=\"bold\">".$kakaku_h." 円</span>\n";
+			$html .= "						</div>\n";
+			$html .= "					</div>\n";
+			$html .= "					<div class=\"amount\">\n";
+			$html .= "						<form action=\"".$PHP_SELF."\" method=\"post\">\n";
+			$html .= "							<div class=\"box-col-2\">\n";
+			$html .= "								<input type=\"hidden\" name=\"mode\" />\n";
+			$html .= "								<input type=\"hidden\" name=\"action\" value=\"hen\" />\n";
+			$html .= "								<input type=\"hidden\" name=\"hinban\" value=\"".$hinban_."\" />\n";
+			$html .= "								<span>数量：</span><input type=\"number\" name=\"num\" value=\"".$num_."\" class=\"change-quantity\" /><br />\n";
+			$html .= "								<input type=\"submit\" value=\"数量変更\" class=\"btn-standard change-button\"/>\n";
+			$html .= "							</div>\n";
+			$html .= "						</form>\n";
+			$html .= "						<div class=\"sub-total\">\n";
+			$html .= "							小計：　<span class=\"bolder\">".$syoukei." 円</span>\n";
+			$html .= "						</div>\n";
+			$html .= "					</div>\n";
+			$html .= "				</div>\n";
+			$html .= "			</div>\n";
 			$html .= "	</div>\n";
-			$html .= "	<div class=\"goods-detail\">\n";
-			$html .= "			<div class=\"item-name\">\n";
-			$html .= "				<span>商品番号：".$hinban_."</span>\n";
-			$html .= "			</div>\n";
-			$html .= "			<div>\n";
-			$html .= "				<span>".$kakaku_h." 円</span>\n";
-			$html .= "			</div>\n";
-			$html .= "			<div>\n";
-			$html .= "				<form action=\"".$PHP_SELF."\" method=\"post\">\n";
-			$html .= "					<input type=\"hidden\" name=\"mode\" />\n";
-			$html .= "					<input type=\"hidden\" name=\"action\" value=\"hen\" />\n";
-			$html .= "					<input type=\"hidden\" name=\"hinban\" value=\"".$hinban_."\" />\n";
-			$html .= "					<input type=\"number\" name=\"num\" value=\"".$num_."\" class=\"change-quantity\" /><br />\n";
-			$html .= "					<input type=\"submit\" value=\"数量変更\" class=\"submit\"/>\n";
-			$html .= "				</form>\n";
-			$html .= "			</div>\n";
-			$html .= "			<div>\n";
-			$html .= "				<span class=\"bold\">".$syoukei." 円</span>\n";
-			$html .= "			</div>\n";
-			$html .= "	</div>\n";
-			$html .= "</section>\n";
+			$html .= "</div>\n";
 
 		}
 	}
@@ -504,15 +509,6 @@ function cago_goods_html($KAGOS , $OPTIONS , $ERROR){
 		// $html .= "		<th class=\"syoukei\">\n";
 		// $html .= "		</th>\n";
 		// $html .= "	</tr>\n";
-
-		$html .= "<div class=\"marking-title-section\">\n";
-		$html .= "	<div class=\"marking-title\">\n";
-		$html .= "		<span class=\"item-name\">商品名</span>\n";
-		$html .= "		<span>単価</span>\n";
-		$html .= "  	<span>数量</span>\n";
-		$html .= "  	<span>小計</span>\n";
-		$html .= "	</div>\n";
-		$html .= "</div>\n";
 	}
 	if ($OPTIONS) {
 
@@ -544,22 +540,32 @@ function cago_goods_html($KAGOS , $OPTIONS , $ERROR){
 			// $marking_html .= "</tr>\n";
 
 
-			$marking_html .= "<section class=\"marking-total\">\n";
-			$marking_html .= "	<div class=\"marking-total-detail\">\n";
-			$marking_html .= "		<div class=\"marking-item-name\">\n";
-			$marking_html .= "			<div class=\"item-title\">\n";
-			$marking_html .= "				<span class=\"bold\">マーキング 商品名：".$title_."</span>\n";
-			$marking_html .= "			</div>\n";
-			$marking_html .= "			<div class=\"item-delete-button\">\n";
+			$marking_html .= "<div class=\"box-outline\">\n";
+			$marking_html .= "	<h4 class=\"order-headline text-center\">オーダー内容</h4>\n";
+			$marking_html .= "		<div class=\"box-row-nogap\">\n";
+			$marking_html .= "			<div class=\"box-content box-item\">\n";
+			$marking_html .= "				<span class=\"bold\">マーキング商品</span>\n";
 			$marking_html .= "				<form action=\"".$PHP_SELF."\" method=\"post\">\n";
 			$marking_html .= "					<input type=\"hidden\" name=\"mode\" />\n";
 			$marking_html .= "					<input type=\"hidden\" name=\"action\" value=\"del_op\" />\n";
 			$marking_html .= "					<input type=\"hidden\" name=\"op_num\" value=\"".$op_num_."\" />\n";
-			$marking_html .= "					<input type=\"submit\" value=\"削除\" class=\"submit\"/>\n";
+			$marking_html .= "					<input type=\"submit\" value=\"削除\" class=\"btn-standard delete-button\"/>\n";
 			$marking_html .= "				</form>\n";
 			$marking_html .= "			</div>\n";
-			$marking_html .= "		</div>\n";
-			$marking_html .= "	</div>\n";
+			$marking_html .= "		<div class=\"box-stretch\">\n";
+			$marking_html .= "		    <div class=\"box-column\">\n";
+			$marking_html .= "				<div class=\"box-content\">\n";
+			$marking_html .= "               	<span class=\"bold text-center\">".$title_."</span>\n";
+			$marking_html .= "				</div>\n";
+			$marking_html .= "				<div class=\"breakdown\">\n";
+			$marking_html .= "					<span>番号、ネームなど</span>\n";
+			$marking_html .= "					<span>単価</span>\n";
+			$marking_html .= "					<span>数量</span>\n";
+			$marking_html .= "					<span>小計<span>\n";
+			$marking_html .= "				</div>\n";
+
+
+
 
 
 			//	持ち込み手数料
@@ -579,20 +585,12 @@ function cago_goods_html($KAGOS , $OPTIONS , $ERROR){
 				// $marking_html .= "	<td></td>\n";
 				// $marking_html .= "</tr>\n";
 
-				$marking_html .= "<div class=\"marking-details\">\n";
-				$marking_html .= "	<div class=\"item-name\">\n";
-				$marking_html .= "		<span>持ち込み手数料</span>\n";
-				$marking_html .= "	</div>\n";
-				$marking_html .= "	<div>\n";
-				$marking_html .= "		<span>".$kakaku_." 円</span>\n";
-				$marking_html .= "	</div>\n";
-				$marking_html .= "	<div>\n";
-				$marking_html .= "		<span>x1</span>\n";
-				$marking_html .= "	</div>\n";
-				$marking_html .= "	<div>\n";
-				$marking_html .= "		<span class=\"bold\">".$syoukei."円<span>\n";
-				$marking_html .= "	</div>\n";
-				$marking_html .= "</div>\n";
+				$marking_html .= "		<div class=\"box-row box-content content-grid fixed-row\">\n";
+				$marking_html .= "			<span>持ち込み手数料</span>\n";
+				$marking_html .= "			<span>".$kakaku_." 円</span>\n";
+				$marking_html .= "			<span>1</span>\n";
+				$marking_html .= "			<span class=\"bold\">".$syoukei."円<span>\n";
+				$marking_html .= "		</div>\n";
 			}
 
 			//	背番号
@@ -613,20 +611,12 @@ function cago_goods_html($KAGOS , $OPTIONS , $ERROR){
 				// $marking_html .= "	<td></td>\n";
 				// $marking_html .= "</tr>\n";
 
-				$marking_html .= "<div class=\"marking-details\">\n";
-				$marking_html .= "	<div class=\"item-name\">\n";
+				$marking_html .= "	<div class=\"box-row box-content content-grid fixed-row\">\n";
 				$marking_html .= "		<span>背番号".$SEBAN_N[$seban_l_]."：".$seban_num_."</span>\n";
-				$marking_html .= "	</div>\n";
-				$marking_html .= "	<div>\n";
 				$marking_html .= "		<span>".$kakaku_." 円</span>\n";
-				$marking_html .= "	</div>\n";
-				$marking_html .= "	<div>\n";
-				$marking_html .= "		<span>x".$moji_num."</span>\n";
-				$marking_html .= "	</div>\n";
-				$marking_html .= "	<div>\n";
+				$marking_html .= "		<span>".$moji_num."</span>\n";
 				$marking_html .= "		<span class=\"bold\">".$syoukei." 円</span>\n";
 				$marking_html .= "	</div>\n";
-				$marking_html .= "</div>\n";
 			}
 
 			//	背ネーム
@@ -649,20 +639,12 @@ function cago_goods_html($KAGOS , $OPTIONS , $ERROR){
 				// $marking_html .= "	<td></td>\n";
 				// $marking_html .= "</tr>\n";
 
-				$marking_html .= "<div class=\"marking-details\">\n";
-				$marking_html .= "	<div  class=\"item-name\">\n";
+				$marking_html .= "	<div class=\"box-row box-content content-grid fixed-row\">\n";
 				$marking_html .= "		<span>背ネーム ".$SENAME_N[$sename_l_]."：".$sename_name_."</span>\n";
-				$marking_html .= "	</div>\n";
-				$marking_html .= "	<div>\n";
 				$marking_html .= "		<span>".$kakaku_." 円</span>\n";
-				$marking_html .= "	</div>\n";
-				$marking_html .= "	<div>\n";
-				$marking_html .= "		<span>x".$moji_num."</span>\n";
-				$marking_html .= "	</div>\n";
-				$marking_html .= "	<div>\n";
+				$marking_html .= "		<span>".$moji_num."</span>\n";
 				$marking_html .= "		<span class=\"bold\">".$syoukei." 円</span>\n";
 				$marking_html .= "	</div>\n";
-				$marking_html .= "</div>\n";
 			}
 
 			//	胸番号
@@ -683,20 +665,12 @@ function cago_goods_html($KAGOS , $OPTIONS , $ERROR){
 				// $marking_html .= "	<td></td>\n";
 				// $marking_html .= "</tr>\n";
 
-				$marking_html .= "<div class=\"marking-details\">\n";
-				$marking_html .= "	<div  class=\"item-name\">\n";
+				$marking_html .= "	<div class=\"box-row box-content content-grid fixed-row\">\n";
 				$marking_html .= "		<span>胸番号 ".$MUNEBAN_N[$muneban_l_]."：".$muneban_num_."</span>\n";
-				$marking_html .= "	</div>\n";
-				$marking_html .= "	<div>\n";
 				$marking_html .= "		<span>".$kakaku_." 円</span>\n";
-				$marking_html .= "	</div>\n";
-				$marking_html .= "	<div>\n";
-				$marking_html .= "		<span>x".$moji_num."</span>\n";
-				$marking_html .= "	</div>\n";
-				$marking_html .= "	<div>\n";
+				$marking_html .= "		<span>".$moji_num."</span>\n";
 				$marking_html .= "		<span class=\"bold\">".$syoukei." 円</span>\n";
 				$marking_html .= "	</div>\n";
-				$marking_html .= "</div>\n";
 			}
 
 			//	パンツ番号
@@ -717,20 +691,12 @@ function cago_goods_html($KAGOS , $OPTIONS , $ERROR){
 				// $marking_html .= "	<td></td>\n";
 				// $marking_html .= "</tr>\n";
 
-				$marking_html .= "<div class=\"marking-details\">\n";
-				$marking_html .= "	<div  class=\"item-name\">\n";
+				$marking_html .= "	<div class=\"box-row box-content content-grid fixed-row\">\n";
 				$marking_html .= "		<span>パンツ番号 ".$PANT_N[$pant_l_]."：".$pant_num_."</span>\n";
-				$marking_html .= "	</div>\n";
-				$marking_html .= "	<div>\n";
 				$marking_html .= "		<span>".$kakaku_." 円</span>\n";
-				$marking_html .= "	</div>\n";
-				$marking_html .= "	<div>\n";
-				$marking_html .= "		<span>x".$moji_num."</span>\n";
-				$marking_html .= "	</div>\n";
-				$marking_html .= "	<div>\n";
+				$marking_html .= "		<span>".$moji_num."</span>\n";
 				$marking_html .= "		<span class=\"bold\">".$syoukei." 円</span>\n";
 				$marking_html .= "	</div>\n";
-				$marking_html .= "</div>\n";
 			}
 
 			//	バッジ
@@ -750,21 +716,17 @@ function cago_goods_html($KAGOS , $OPTIONS , $ERROR){
 				// $marking_html .= "	<td></td>\n";
 				// $marking_html .= "</tr>\n";
 
-				$marking_html .= "<div class=\"marking-details\">\n";
-				$marking_html .= "	<div  class=\"item-name\">\n";
-				$marking_html .= "		<span>バッジ ".$BACH_N[$bach_l_]."</span>\n";
-				$marking_html .= "	</div>\n";
-				$marking_html .= "	<div>\n";
-				$marking_html .= "		<span>".$kakaku_." 円</span>\n";
-				$marking_html .= "	</div>\n";
-				$marking_html .= "	<div>\n";
-				$marking_html .= "		<span>x".$moji_num."</span>\n";
-				$marking_html .= "	</div>\n";
-				$marking_html .= "	<div>\n";
-				$marking_html .= "		<span class=\"bold\">".$syoukei." 円</span>\n";
+				$marking_html .= "				<div class=\"box-row box-content box-space content-grid fixed-row\">\n";
+				$marking_html .= "					<span>バッジ ".$BACH_N[$bach_l_]."</span>\n";
+				$marking_html .= "					<span>".$kakaku_." 円</span>\n";
+				$marking_html .= "					<span>".$moji_num."</span>\n";
+				$marking_html .= "					<span class=\"bold\">".$syoukei." 円</span>\n";
+				$marking_html .= "				</div>\n";
+				$marking_html .= "			</div>\n";
+				$marking_html .= "		</div>\n";
 				$marking_html .= "	</div>\n";
 				$marking_html .= "</div>\n";
-				$marking_html .= "</section>\n";
+
 			}
 		}
 	}

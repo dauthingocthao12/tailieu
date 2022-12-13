@@ -287,7 +287,7 @@ function member_form($ERROR){
 
 
 	//	都道府県プルダウン
-	$prf_html .= "	<select name=\"prf\">";
+	$prf_html .= "	<select class=\"input-full-length\" name=\"prf\">";
 	$prf_html .= "		<option value=\"\">選択して下さい。</option>\n";
 		for ($i = 1; $i <= 47; $i++) {
 			if ($i == $prf) {

@@ -313,11 +313,11 @@ function team_order($customer, $ERROR)
 			$html .= "			<div class=\"names-on-back\">\n";
 			$html .= "				<div>\n";
 			$html .= "					<label>番号：</label>";
-			$html .= "						<input class=\"uniform-number\" type=\"text\" maxlength=\"3\" name=\"" . $names_ban . "\" value=\"" . $check_names_ban . "\">\n";
+			$html .= "						<input class=\"input-min-length\" type=\"text\" maxlength=\"3\" name=\"" . $names_ban . "\" value=\"" . $check_names_ban . "\">\n";
 			$html .= "				</div>\n";
 			$html .= "				<div>\n";
 			$html .= "					<label>背ネーム：</label>";
-			$html .= "						<input type=\"text\" class=\"uniform-name\" maxlength=\"20\" name=\"" . $names_name . "\" value=\"" . $check_names_name . "\">\n";
+			$html .= "						<input type=\"text\" class=\"input-full-length\" maxlength=\"20\" name=\"" . $names_name . "\" value=\"" . $check_names_name . "\">\n";
 			$html .= "				</div>\n";
 			$html .= "			</div>\n";
 			$html .= "		</div>\n";
@@ -640,9 +640,14 @@ function team_order_confirmation($customer)
 
 
 	//	チームオーダー詳細表示
-	$result = explode("<>", $customer);
+	$result = explode("<>", rtrim($customer, "<>"));
 	foreach ($result as $val) {
 		list($hinban, $title, $kakaku, $buy_n) = explode("::", $val);
+
+		// 商品グループ
+		$goods_kakunin_html .= "<div class=\"box-outline\">\n";
+		$goods_kakunin_html .= "	<div class=\"box-grid box-form\">\n";
+
 
 		if ($val) {
 
@@ -711,6 +716,11 @@ function team_order_confirmation($customer)
 			$goods_kakunin_html .= "		</div>\n";
 			$goods_kakunin_html .= "	</div>\n";
 		}
+
+		$goods_kakunin_html .= "	</div>\n"; // end box-grid
+		$goods_kakunin_html .= "</div>\n"; // end box-outline
+
+		// end 商品グループ
 	}
 	/*
 	if($p_set == 1){

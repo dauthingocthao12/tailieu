@@ -210,7 +210,7 @@ function kakunin_syousai_html() {
 	$html .= "</table>\n";
 	$html .= "	<div class=\"button_gui edit-button\">\n";
 	$html .= "		<form action=\"".$PHP_SELF."\">\n";
-	$html .= "			<input type=\"submit\" class=\"submit\" value=\"戻る\">\n";
+	$html .= "			<input type=\"submit\" class=\"btn-standard\" value=\"戻る\">\n";
 	$html .= "		</form>\n";
 	$html .= "	</div>\n";
 	//$html .= "</div>\n";

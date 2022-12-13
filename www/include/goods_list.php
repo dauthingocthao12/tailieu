@@ -382,7 +382,7 @@ global $index, $waribiki, $TAX_, $DISCOUNT_C,
 					$soldout_msg  = "<select name=\"size_".$code."\" id=\"size_".$code."\">\n";
 					$soldout_msg .= $opt;
 					$soldout_msg .= "</select>\n";
-					$soldout_msg .= "<input type=\"button\" value=\"購入\" class=\"submit buy-button\" OnClick=\"set_goods_data('".$code."', '".$g_name."', '".$s_price."'); return false;\">\n";
+					$soldout_msg .= "<input type=\"button\" value=\"購入\" class=\"btn-standard buy-button\" OnClick=\"set_goods_data('".$code."', '".$g_name."', '".$s_price."'); return false;\">\n";
 				} else {
 					$soldout_msg  = "<b><font color=\"#ff0000\">SOLD OUT</font></b>\n";
 				}

@@ -163,7 +163,7 @@ function get_login($ERROR) {
 		$html .= "「ボーナスポイント」ボタンをクリックして頂くと1回のみプレゼントさせて頂きます。<br>\n";
 
 		$html .= "<br>\n";
-		$html .= "<center><input type=\"submit\" value=\"ボーナスポイント\" /></center>\n";
+		$html .= "<center><input type=\"\" value=\"ボーナスポイント\" /></center>\n";
 		$html .= "<br>\n";
 		$html .= "</form>\n";
 		$html .= "</td>\n";

@@ -95,7 +95,7 @@ function list_html() {
 			$html .= "    <td data-label=\"ご注文番号\">".$sells_num."</td>\n";
 			$html .= "    <td data-label=\"ご注文日\">".$hacyu."</td>\n";
 			$html .= "    <td data-label=\"発送状況\">".$jyou."</td>\n";
-			$html .= "    <td data-label=\"詳細\" class=\"detail-text\"><input type=\"button\" value=\"詳細\" class=\"submit\" OnClick=\"view_rireki('".$sells_num."');\" /></td>\n";
+			$html .= "    <td data-label=\"詳細\" class=\"detail-text\"><input type=\"button\" value=\"詳細\" class=\"btn-standard\" OnClick=\"view_rireki('".$sells_num."');\" /></td>\n";
 			$html .= "  </tr>\n";
 		}
 		$html .= "</table>\n";
@@ -247,7 +247,7 @@ function syousai_html() {
 	$html .= "</table>\n";
 	$html .= "<div class=\"button_gui edit-button\">\n";
 	$html .= "  <form action=\"".$PHP_SELF."\" method=\"POST\">\n";
-	$html .= "  <input type=\"submit\" class=\"submit\" value=\"戻る\" class=\"button\">\n";
+	$html .= "  <input type=\"submit\" class=\"btn-standard\" value=\"戻る\" class=\"button\">\n";
 	$html .= "  </form>\n";
 	$html .= "</div>\n";
 	$html .= "</div>\n";

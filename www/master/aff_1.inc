@@ -1073,7 +1073,7 @@ WAKABA;
 
 		$html .= <<<WAKABA
     <tr bgcolor="#ffffff" align="right">
-      <td align="center"><input type="submit" name="mon"  class="submit" value="{$mon}">月</td>
+      <td align="center"><input type="submit" name="mon"  class="btn-standard" value="{$mon}">月</td>
       <td>{$click_}件</td>
       <td>{$count_}件</td>
       <td>{$indent_point_}pt</td>

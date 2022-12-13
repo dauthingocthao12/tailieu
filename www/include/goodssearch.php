@@ -30,7 +30,7 @@ function goodssearch($word)
 <h2 class="title-nbs">商品検索</h2>
 <FORM action="$PHP_SELF" method="GET">
 <div class="search-box">
-<INPUT type="text" name="word" value="$word" class="search-bar input"><INPUT type="submit" value="検索" class="search-button">
+<INPUT type="text" name="word" value="$word" class="search-bar input"><INPUT type="submit value="検索" class="search-button">
 </div>
 </FORM>
 
@@ -99,14 +99,14 @@ WAKABA;
 		}
 
 		$html .= "<form action=\"" . "/cago.php\" method=\"POST\" id=\"set_cart\">\n";
-		$html .= "<input type=\"hidden\" name=\"action\" value=\"add\" />\n";
-		$html .= "<input type=\"hidden\" name=\"code\" id=\"goods_code\" />\n";
-		$html .= "<input type=\"hidden\" name=\"name\" id=\"goods_name\" />\n";
-		$html .= "<input type=\"hidden\" name=\"kakaku\" id=\"goods_kakaku\" />\n";
-		$html .= "<input type=\"hidden\" name=\"size\" id=\"goods_size\" />\n";
+		$html .= "	<input type=\"hidden\" name=\"action\" value=\"add\" />\n";
+		$html .= "	<input type=\"hidden\" name=\"code\" id=\"goods_code\" />\n";
+		$html .= "	<input type=\"hidden\" name=\"name\" id=\"goods_name\" />\n";
+		$html .= "	<input type=\"hidden\" name=\"kakaku\" id=\"goods_kakaku\" />\n";
+		$html .= "	<input type=\"hidden\" name=\"size\" id=\"goods_size\" />\n";
 
-		$html .= "<span class=\"search-count\">" . $page_msg . "</span>\n";
-		$html .= "<div class=\"item-list\" >\n";
+		$html .= "	<span class=\"search-count\">" . $page_msg . "</span>\n";
+		$html .= "	<div class=\"item-list\" >\n";
 
 		// 2022/11/22 レスポンシブ対応につきコメントアウト　uenishi
 		// $html .= "<table>\n";
@@ -308,7 +308,7 @@ WAKABA;
 					$soldout_msg  = "<select name=\"size_" . $code . "\" id=\"size_" . $code . "\" class=\"roundness\">\n";
 					$soldout_msg .= $opt;
 					$soldout_msg .= "</select>\n";
-					$soldout_msg .= "<input type=\"button\" value=\"購入\" class=\"submit buy-button\" OnClick=\"set_goods_data('" . $code . "', '" . $g_name . "', '" . $s_price . "'); return false;\">\n";
+					$soldout_msg .= "<input type=\"button\" value=\"購入\" class=\"btn-standard buy-button\" OnClick=\"set_goods_data('" . $code . "', '" . $g_name . "', '" . $s_price . "'); return false;\">\n";
 				} else {
 					$soldout_msg  = "<b><font color=\"#ff0000\">SOLD OUT</font></b>\n";
 				}
@@ -320,27 +320,27 @@ WAKABA;
 				}
 
 
-				$html .= "<div class=\"item-entry\">\n";
-				$html .= "<div class=\"item-entry-details\">\n";
-				$html .= "<div class=\"item-entry-pic\">\n";
-				$html .= $as . $IMGF . "<br>\n[商品詳細]" . $af . "\n";
-				$html .= "</div>\n";
-				$html .= "<dl>\n";
-				$html .= "<dt>商品名</dt>\n";
-				$html .= "<dd>" . $souryou_muryou . $g_name . "</dd>\n";
-				$html .= "<dt>商品番号</dt>\n";
-				$html .= "<dd>" . $code . "</dd>\n";
-				$html .= "<dt>ブランド名</dt>\n";
-				$html .= "<dd>" . $B_LINE[$brand] . "</dd>\n";
-				$html .= "</dl>\n";
-				$html .= "</div>\n";
-				$html .= "<div class=\"item-entry-buy\">\n";
-				$html .= "<div class=\"item-entry-price\">\n";
-				$html .= "$price_msg";
-				$html .= "</div>\n";
-				$html .= "$soldout_msg";
-				$html .= "</div>\n";
-				$html .= "</div>\n";
+				$html .= "		<div class=\"item-entry\">\n";
+				$html .= "			<div class=\"item-entry-details\">\n";
+				$html .= "				<div class=\"item-entry-pic\">\n";
+				$html .= 					$as . $IMGF . "<br>\n[商品詳細]" . $af . "\n";
+				$html .= "				</div>\n";
+				$html .= "				<dl>\n";
+				$html .= "					<dt>商品名</dt>\n";
+				$html .= "						<dd>" . $souryou_muryou . $g_name . "</dd>\n";
+				$html .= "					<dt>商品番号</dt>\n";
+				$html .= "						<dd>" . $code . "</dd>\n";
+				$html .= "					<dt>ブランド名</dt>\n";
+				$html .= "						<dd>" . $B_LINE[$brand] . "</dd>\n";
+				$html .= "				</dl>\n";
+				$html .= "			</div>\n";
+				$html .= "			<div class=\"item-entry-buy\">\n";
+				$html .= "				<div class=\"item-entry-price\">\n";
+				$html .= "					$price_msg";
+				$html .= "				</div>\n";
+				$html .= "					$soldout_msg";
+				$html .= "			</div>\n";
+				$html .= "		</div>\n";
 
 				// 2022/11/24 レスポンシブ対応につきコメントアウト uenishi
 				// $html .= "<tr class=\"goods\">\n";
@@ -360,18 +360,16 @@ WAKABA;
 
 
 			// $html .= "</table>\n";
-			$html .= "</div>\n";
+			$html .= "	</div>\n";
 			$html .= "</form>\n";
-			$html .= "</div>\n";
 			$html .= "<br />\n";
 
 			//	ページ処理
 			if ($max_page > 1) {
 
 				$html .= <<<WAKABA
-      <TABLE border="0" width="95%">
-        <TBODY>
-          <TR bgcolor="#ffffff">
+
+		<DIV class="box-row box-content pagenation">
 
 WAKABA;
 
@@ -383,9 +381,9 @@ WAKABA;
 					}
 
 					$html .= <<<WAKABA
-            <TD align="center">
-            <A href="$b_url"><B>前の $search_view 件</B></A>
-            </TD>
+            <DIV>
+            <A href="$b_url" class="btn-standard"><B>前の $search_view 件</B></A>
+            </DIV>
 
 WAKABA;
 				}
@@ -403,18 +401,14 @@ WAKABA;
 						$n_url .= "&page=$page_n";
 					}
 					$html .= <<<WAKABA
-            <TD align="center">
-            <A href="$n_url"><B>次の $view_n 件</B></A>
-            </TD>
+            <DIV">
+            	<A href="$n_url" class="btn-standard"><B>次の $view_n 件</B></A>
+            </DIV>
 
 WAKABA;
 				}
 
 				$html .= <<<WAKABA
-            </TR>
-        </TBODY>
-        </TABLE>
-        <BR>
 
 WAKABA;
 			}

@@ -166,7 +166,7 @@ function error_html($ERROR) {
 		// $html .= "  </tr>\n";
 		// $html .= "</table>\n";
 
-		$html .= "<section class=\"error-area\">\n";
+		$html .= "<section class=\"error-alert\">\n";
 		$html .= "  <span class=\"error-message\">\n";
 		$html .= 		$error_msg."\n";
 		$html .= "  </span>\n";

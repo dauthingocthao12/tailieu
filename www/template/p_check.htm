@@ -1,4 +1,4 @@
-<h2 class="title-nbs title-items-list">ポイント詳細<!--SORT-->ポイント獲得履歴</h2>
+<h2 class="title-nbs">ポイント詳細<!--SORT-->ポイント獲得履歴</h2>
 
 <!--PTRANSITIONS-->
 <table class="aff_table">
@@ -15,8 +15,8 @@
 	</tr>
 </table>
 <!--/PTRANSITIONS-->
-<table class="aff_table list-table">
-	<form action="<!--PHP_SELF-->" method="POST">
+
+	<form action="<!--PHP_SELF-->" method="POST" class="aff-point-form">
 		<!--YEARHIDDEN-->
 		<input type="hidden" name="mode" value="p_check">
 		<input type="hidden" name="action" value="mon">
@@ -26,28 +26,27 @@
 		<input type="hidden" name="action" value="day">
 		<input type="hidden" name="year" value="<!--YEAR-->">
 		<!--/MONHIDDEN-->
-		<tr class="list-table-pc">
-			<th class="af_align"><!--THDATE--></th>
-			<th>クリック数</th>
-			<th>売上件数</th>
-			<th>予定ポイント</th>
-			<th>確定ポイント</th>
-			<th>変換ポイント</th>
-		</tr>
-		<!--POINTLIST-->
-		<tr class="responsive-design">
-			<th>合計</th>
-			<th data-label="クリック数"><!--ACLICK-->件</th>
-			<th data-label="売上件数"><!--ACOUNT-->件</th>
-			<th data-label="予定ポイント"><!--AINDENTPOINT-->pt</th>
-			<th data-label="確定ポイント"><!--APOINT-->pt</th>
-			<th data-label="変換ポイント"><!--APAYPOINT-->pt</th>
-		</tr>
+		<div class="box-outline box-grid">
+			<div class="list-table-pc box-row">
+				<div class="item-name"><!--THDATE--></div>
+				<div class="item-name">クリック数</div>
+				<div class="item-name">売上件数</div>
+				<div class="item-name">予定ポイント</div>
+				<div class="item-name">確定ポイント</div>
+				<div class="item-name">変換ポイント</div>
+			</div>
+			<!--POINTLIST-->
+			<div class="list-table-pc box-row">
+				<div class="item-name">合計</div>
+				<div class="item-name" data-label="クリック数"><!--ACLICK-->件</div>
+				<div class="item-name" data-label="売上件数"><!--ACOUNT-->件</div>
+				<div class="item-name" data-label="予定ポイント"><!--AINDENTPOINT-->pt</div>
+				<div class="item-name" data-label="確定ポイント"><!--APOINT-->pt</div>
+				<div class="item-name" data-label="変換ポイント"><!--APAYPOINT-->pt</div>
+			</div>
+		</div>	
 	</form>
-	<tr>
-		<td colspan="6" class="border_none"><span class="red">※表示されている確定ポイントは、今現在残っている確定ポイントではありません。</span></td>
-	</tr>
-</table>
+<p><span class="red">※表示されている確定ポイントは、今現在残っている確定ポイントではありません。</span></p>
 <!--PBACK-->
 <!--YBACK-->
 <div class="edit-button">
@@ -55,7 +54,7 @@
 		<input type="hidden" name="mode" value="p_check">
 		<input type="hidden" name="action" value="mon">
 		<input type="hidden" name="year" value="<!--YEAR-->">
-		<input type="submit" class="submit" value="<!--YEAR-->年の月一覧に戻る">
+		<input type="submit" class="btn-standard" value="<!--YEAR-->年の月一覧に戻る">
 	</form>
 </div>
 <!--/YBACK-->
@@ -63,12 +62,12 @@
 	<form action="<!--PHP_SELF-->" method="POST">
 		<input type="hidden" name="mode" value="p_check">
 		<input type="hidden" name="action" value="year">
-		<input type="submit" class="submit" value="年一覧に戻る">
+		<input type="submit" class="btn-standard" value="年一覧に戻る">
 	</form>
 </div>
 <!--/PBACK-->
 <div class="edit-button">
 	<form action="<!--PHP_SELF-->" method="POST">
-		<input type="submit" class="submit" value="アフィリエイトTOPに戻る">
+		<input type="submit" class="btn-standard" value="アフィリエイトTOPに戻る">
 	</form>
 </div>

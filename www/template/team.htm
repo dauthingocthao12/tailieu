@@ -21,9 +21,15 @@
 		</tr>
 	</table> -->
 
+	<!--NOTORDER-->
+	<div class="error-alert">
+		<span>チームオーダーする商品を選択してきて下さい。</sapn>
+	</div>
+	<!--/NOTORDER-->
+
 	<div class="box-outline">
 		<div class="box-title box-title-big">クラブ&各国代表モデルチームオーダー </div>
-		<div class="box-content team-order-caution">
+		<div class="box-content text-spacing">
 			<span class="bold">ご希望商品のサイズと枚数を、買い物かごに入れて下さい。</span><br>
 			<span>買い物かごのページからこのページに来ますと、マーキング指定が出来ます。</span><br>
 			<span>マーキング指定が終わりましたら、ご連絡先を入力して、確認ボタンを押して下さい。</span><br>
@@ -32,12 +38,6 @@
 			<span>もしこちらのフォームで御見積依頼が出来ない場合は、<b class="bold">sales@futboljersey.com</b>まで、ご希望の商品名/数量/サイズをお知らせ下さい。</span>
 		</div>
 	</div>
-
-	<!--NOTORDER-->
-	<div class="error-area">
-		<span>チームオーダーする商品を選択してきて下さい。</sapn>
-	</div>
-	<!--/NOTORDER-->
 
 	<!--ORDERKAKUNIN-->
 	<!--ERRORMSG-->
@@ -95,7 +95,7 @@
 			GOODSKAKUNIN
 		</table> -->
 
-		<div class="estimate box-outline">
+		<div class="box-outline">
 			<div class="box-title box-title-big">
 				<span>
 					<!--ENTER-->御見積フォーム
@@ -155,58 +155,56 @@
 
 
 
-		<div class="contact-information-form box-outline">
-			<h4 class="box-title box-title-big">御連絡先</h4>
-			<div class="contact-information-innerBlock">
+		<div class="box-outline">
+			<div class="box-title box-title-big">
+				<h4>御連絡先</h4>
+			</div>
+			<div class="address-form-area">
 				<!--パンツ＆ソックスセット-->
 				<!--PANTSET-->
 				<!--SOCKSSET-->
 				<!--PANTSETN-->
 				<!--SOCKSSETN-->
 				<!--パンツ＆ソックスセットここまで-->
-				<h4 class="sub-title-simple">漢字氏名：（例　山田　太郎）<span class="important">（必記）</span></h4>
-				<div class="enter-the-name">
-					<!--NAMEDEL-->
+				<h4 class="box-title-form">漢字氏名：（例　山田　太郎）<span class="important">（必記）</span></h4>
+				<div class="enter-the-name box-content">
 					<div>
+						<!--NAMEDEL-->
 						<label>姓：</label>
-						<input type="text" name="name_s" value="<!--NAMES-->" placeholder="山田" />
+						<input type="text" name="name_s" value="<!--NAMES-->" class="input-middle-length" placeholder="山田" required/>
 					</div>
 					<div>
 						<label>名：</label>
-						<input type="text" name="name_n" value="<!--NAMEN-->" placeholder="太郎" />
-					</div>
-					<!--/NAMEDEL-->
-					<div>
+						<input type="text" name="name_n" value="<!--NAMEN-->" class="input-middle-length" placeholder="太郎" required/>
+						<!--/NAMEDEL-->
 						<!--NAMESN-->&nbsp;
 						<!--NAMENN-->
 					</div>
 				</div>
-				<h4 class="sub-title-simple">ふりがな：（例　やまだ　たろう）<span class="important">（必記）</span></h4>
-				<div class="enter-the-name">
-					<!--KANADEL-->
+				<h4 class="box-title-form">ふりがな：（例　やまだ　たろう）<span class="important">（必記）</span></h4>
+				<div class="enter-the-name box-content">
 					<div>
+						<!--KANADEL-->
 						<label>姓：</label>
-						<input type="text" name="kana_s" value="<!--KANAS-->" placeholder="やまだ" />
+						<input type="text" name="kana_s" value="<!--KANAS-->" class="input-middle-length" placeholder="やまだ" required/>
 					</div>
 					<div>
 						<label>名：</label>
-						<input type="text" name="kana_n" value="<!--KANAN-->" placeholder="たろう" />
-					</div>
-					<!--/KANADEL-->
-					<div>
+						<input type="text" name="kana_n" value="<!--KANAN-->" class="input-middle-length" placeholder="たろう" required/>
+						<!--/KANADEL-->
 						<!--KANASN-->&nbsp;
 						<!--KANANN-->
 					</div>
 				</div>
-				<h4 class="sub-title-simple">住所<span class="important">（必記）</span></h4>
+				<h4 class="box-title-form">住所<span class="important">（必記）</span></h4>
 				<div class="address-info">
 					<div>
 						<span><b class="bold">●郵便番号</b>：（例 999-9999）</span>
 						<div>
 							<!--ZIPDEL-->
-							〒<input type="text" class="first-post-code" maxlength="3" name="zip1" value="<!--ZIP1-->"
-								placeholder="999" />－<input type="text" class="second-post-code" maxlength="4"
-								name="zip2" value="<!--ZIP2-->" placeholder="9999" />
+							〒<input type="number" class="first-post-code" maxlength="3" name="zip1" value="<!--ZIP1-->"
+								placeholder="999" required/>－<input type="number" class="second-post-code" maxlength="4"
+								name="zip2" value="<!--ZIP2-->" placeholder="9999" required/>
 							<!--/ZIPDEL-->
 							<!--ZIPN-->
 						</div>
@@ -219,15 +217,15 @@
 					<div>
 						<span><b class="bold">●市区町村名：</b>（例　千代田区）</span>
 						<!--CITYDEL-->
-						<input type="text" class="input-address" name="city" value="<!--CITY-->" placeholder="千代田区" />
+						<input type="text" class="input-full-length" name="city" value="<!--CITY-->" placeholder="千代田区" required/>
 						<!--/CITYDEL-->
 						<!--CITYN-->
 					</div>
 					<div>
 						<span>●<b class="bold">所番地</b>：（例　永田町９－９－９）</span>
 						<!--ADD1DEL-->
-						<input type="text" class="input-address" name="add1" value="<!--ADD1-->"
-							placeholder="永田町９－９－９" />
+						<input type="text" class="input-full-length" name="add1" value="<!--ADD1-->"
+							placeholder="永田町９－９－９" required/>
 						<!--/ADD1DEL-->
 						<!--ADD1N-->
 					</div>
@@ -235,41 +233,42 @@
 						<span>●<b class="bold">マンション名など</b>：（例　ネイバーズマンション　１０１号室）</span>
 
 						<!--ADD2DEL-->
-						<input type="text" class="input-address" name="add2" value="<!--ADD2-->"
+						<input type="text" class="input-full-length" name="add2" value="<!--ADD2-->"
 							placeholder="ネイバーズマンション　１０１号室" />
 						<!--/ADD2DEL-->
 						<!--ADD2N-->
 					</div>
 				</div>
-				<h4 class="sub-title-simple">電話番号：（例　012-345-6789）<b class="important">（必記）</b></h4>
-				<div class="phone-number">
-					<!--TELDEL--><input type="text" name="tel1" value="<!--TEL1-->" placeholder="012" />－<input
-						type="text" name="tel2" value="<!--TEL2-->" placeholder="345" />－<input type="text" name="tel3"
-						value="<!--TEL3-->" placeholder="6789" />
+				<h4 class="box-title-form">電話番号：（例　012-345-6789）<b class="important">（必記）</b></h4>
+				<div class="phone-number box-content">
+					<!--TELDEL--><input type="number" name="tel1" value="<!--TEL1-->" placeholder="012" required/>－<input
+						type="number" name="tel2" value="<!--TEL2-->" placeholder="345" required/>－<input type="number" name="tel3"
+						value="<!--TEL3-->" placeholder="6789" required/>
 					<!--/TELDEL-->
 					<!--TELN-->
 				</div>
-				<h4 class="sub-title-simple">FAX番号：（例　012-345-6789）</h4>
-				<div class="phone-number">
+				<h4 class="box-title-form">FAX番号：（例　012-345-6789）</h4>
+				<div class="phone-number box-content">
 					<!--FAXDEL--><input type="text" name="fax1" value="<!--FAX1-->" placeholder="012" />－<input
 						type="text" name="fax2" value="<!--FAX2-->" placeholder="345" />－<input type="text" name="fax3"
 						value="<!--FAX3-->" placeholder="6789" />
 					<!--/FAXDEL-->
 					<!--FAXN-->
 				</div>
-				<h4 class="sub-title-simple">メールアドレス：（例　query@futboljersey.com）<b class="important">（必記）</b></h4>
-				<div class="contact-content">
-					<!--EMAILDEL--><input type="text" class="input-address" name="email" value="<!--EMAIL-->"
-						placeholder="query@futboljersey.com" />
+				<h4 class="box-title-form">メールアドレス：（例　query@futboljersey.com）<b class="important">（必記）</b></h4>
+				<div class="box-content">
+					<!--EMAILDEL--><input type="text" class="input-full-length" name="email" value="<!--EMAIL-->"
+						placeholder="query@futboljersey.com" required/>
 					<!--/EMAILDEL-->
 					<!--EMAILN-->
 				</div>
-				<h4 class="sub-title-simple">ご意見・ご要望など</h4>
-				<div class="contact-content">
+				<h4 class="box-title-form">ご意見・ご要望など</h4>
+				<div class="box-content">
 					<!--MSRDEL--><textarea name="msr" rows="10" class="textarea100"><!--MSR--></textarea>
 					<!--/MSRDEL-->
 					<!--MSRN-->
 				</div>
+				</d>
 			</div>
 		</div>
 
@@ -427,11 +426,11 @@
 
 		<!--KAKUNIN-->
 		<div class="confirmation-button">
-			<input type="submit" value="確認画面へ" class="submit" />
+			<input type="submit" value="確認画面へ" class="btn-standard" />
 	</form>
 
 	<form action="<!--PHP_SELF-->" method="post">
-		<input type="submit" value="やり直す" class="submit" />
+		<input type="submit" value="やり直す" class="btn-standard" />
 	</form>
 </div>
 <!--/KAKUNIN-->
@@ -445,18 +444,18 @@
 		</td>
 	</tr>
     </table> -->
-<div class="decision">
+<div class="confirmation-text">
 	<span>上記でよろしい場合は下記の御見積ボタンを押して下さい。</span>
 	<span>もし修正する場合は、修正ボタンを押して下さい。<span>
 </div>
 <div class="confirmation-button">
 	<form action="<!--PHP_SELF-->" method="post">
 		<input type="hidden" name="modes" value="send" />
-		<input type="button" class="submit" value="お見積り" OnClick="submit_disabled(this);" />
+		<input type="button" class="btn-standard" value="お見積り" OnClick="submit_disabled(this);" />
 	</form>
 	<form action="<!--PHP_SELF-->" method="post">
 		<input type="hidden" name="modes" value="back" />
-		<input type="submit" class="submit" value="修正" />
+		<input type="submit" class="btn-standard" value="修正" />
 	</form>
 </div>
 <!--/OMITUMORI-->

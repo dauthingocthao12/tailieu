@@ -48,14 +48,14 @@
 	</table>
 	<br /> -->
 
-	<section class="caution-section">
-		<h4 class="sub-title-simple">注意</h4>
-		<div class="caution">
+	<section class="box-outline">
+		<h4 class="box-title box-title-big">注意</h4>
+		<div class="box-content">
 			<div class="caution_img">
-				<img src="/image/marking_sample_01.jpg" class="img-responsive" />
-				<img src="/image/marking_sample_02.jpg" class="img-responsive" />
+				<div><img src="/image/marking_sample_01.jpg" class="img-responsive" /></div>
+				<div><img src="/image/marking_sample_02.jpg" class="img-responsive" /></div>
 			</div>
-			<div class="explanation-text">
+			<div class="box-content">
 				<span class="important">
 					マーキング処理をした場合、シャツの色がシートに透けて色が混ざったように見える現象が起こる場合がありますが、
 					昇華防止加工がなされていないシートでは通常起こる現象ですので、昇華したシートが不良品、或いはプリントミスではございません。
@@ -68,26 +68,26 @@
 				<span>フロック：羊毛に似た起毛素材。</span>
 			</div>
 			<div class="explanation-text">
-				<div class="text-area">
+				<div>
 					<span>●</span><span>マーキング素材及びスタイルが分からない方は<b class="important">ご注文前に必ず事前にお問合せ下さい。</b></span><br>
 				</div>
-				<div class="text-area">
+				<div>
 					<span>●</span><span>イングランドプレミアリーグオフィシャル背番号<b class="important">（2色フロック）</b>、スペインリーグLFP付背番号<b
 							class="important">（2色ラバー）</b>、スコットランドプレミアリーグSPL付背番号<b
 							class="important">（2色ラバー）</b></span><br>
 				</div>
-				<div class="text-area">
+				<div>
 					<span>●</span><span>持込マーキングの方も下記フォームから注文して下さい。<b
 							class="important">(銀行振込かクレジットカード決済のみ受付)</b></span><br>
 				</div>
-				<div class="text-area">
+				<div>
 					<span>●</span><span>シャツ持込、選手名以外、番号のみのマーキングは<b class="important">銀行振込かクレジットカード決済のみ</b>でお願いしております。
 						<b class="important">（代金引換はご利用出来ません）</b></span><br>
 				</div>
-				<div class="text-area">
+				<div>
 					<span>●</span><span>殆ど商品のマーキングスタイル（字体）は選手着用モデルと同様のオフィシャルです。オフィシャルマーキングが出来ない商品の場合はご連絡致します。</span><br>
 				</div>
-				<div class="text-area">
+				<div>
 					<span>●</span><span>お問合せは、こちらまでお願い致します。</span>
 				</div>
 			</div>
@@ -172,121 +172,109 @@
 
 
 	<!-- 注文フォーム -->
-	<section class="order-section">
-		<h4 class="sub-title-simple order-form-title">ご注文フォーム</h4>
+	<section class="box-outline box-form">
+		<h4 class="box-title box-title-big">ご注文フォーム</h4>
 		<form action="<!--PHP_SELF-->" method="POST">
 			<input type="hidden" name="mode" value="add">
-			<div class="order-form">
-				<div class="marking-container">
-					<div class="marking-form">
-						<div class="category-name">
-							<h4>マーキング商品</h4>
-						</div>
-						<div class="input-section">
-							<select name="hinban" class="select-type">
-								<option value="" selected>選択して下さい。</option>
-								<!--HINBANLIST-->
-							</select>
-						</div>
+			<div class="box-grid">
+				<div class="box-row">
+					<div class="category-name item-name">
+						<h4>マーキング商品</h4>
+					</div>
+					<div class="input-section">
+						<select name="hinban" class="select-type">
+							<option value="" selected>選択して下さい。</option>
+							<!--HINBANLIST-->
+						</select>
 					</div>
 				</div>
-				<div class="marking-container">
-					<div class="marking-form">
-						<div class="category-name">
-							<h4>背番号</h4>
-						</div>
-						<div class="input-section">
-							<div>
-								<label>タイプ</label>
-								<select name="seban_l" class="select-type">
-									<option value="" selected>無し</option>
-									<!--SEBANLIST-->
-								</select>
-							</div>
-							<div>
-								<label>番号(半角英数字)</label>
-								<input type="number" name="seban_num" value="<!--SEBANNUM-->" placeholder="番号">
-							</div>
-						</div>
+				<div class="box-row">
+					<div class="item-name">
+						<h4>背番号</h4>
 					</div>
-				</div>
-				<div class="marking-container">
-					<div class="marking-form">
-						<div class="category-name">
-							<h4>背ネーム</h4>
-						</div>
-						<div class="input-section">
-							<div>
-								<label>タイプ</label>
-								<select name="sename_l" class="select-type">
-									<option value="">無し</option>
-									<!--SENAMELIST-->
-								</select>
-							</div>
-							<div>
-								<label>ネーム(半角英数字)</label>
-								<input type="text" name="sename_name" value="<!--SENAMENAME-->" placeholder="ネーム"
-									class="input-name">
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="marking-container">
-					<div class="marking-form">
-						<div class="category-name">
-							<h4>胸番号</h4>
-						</div>
-						<div class="input-section">
-							<div>
-								<label>タイプ</label>
-								<select name="muneban_l" class="select-type">
-									<option value="" selected>無し</option>
-									<!--MUNEBANLIST-->
-								</select>
-							</div>
-							<div>
-								<label>番号(半角英数字)</label>
-								<input type="number" name="muneban_num" value="<!--MUNEBANNUM-->" placeholder="番号">
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="marking-container">
-					<div class="marking-form">
-						<div class="category-name">
-							<h4>パンツ番号</h4>
-						</div>
-						<div class="input-section">
-							<div>
-								<label>タイプ</label>
-								<select name="pant_l" class="select-type">
-									<option value="" selected>無し</option>
-									<!--PANTLIST-->
-								</select>
-							</div>
-							<div>
-								<label>番号(半角英数字)</label>
-								<input type="number" name="pant_num" value="<!--PANTNUM-->" placeholder="番号">
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="marking-container">
-					<div class="marking-form">
-						<div class="category-name">
-							<h4>バッジ</h4>
-						</div>
-						<div class="input-section">
-							<select name="bach_l" class="select-batch">
+					<div class="input-section">
+						<div>
+							<label>タイプ</label>
+							<select name="seban_l" class="select-type">
 								<option value="" selected>無し</option>
-								<!--BACHLIST-->
+								<!--SEBANLIST-->
 							</select>
 						</div>
+						<div>
+							<label>番号(半角英数字)</label>
+							<input type="number" name="seban_num" value="<!--SEBANNUM-->" placeholder="番号">
+						</div>
+					</div>
+				</div>
+				<div class="box-row">
+					<div class="item-name">
+						<h4>背ネーム</h4>
+					</div>
+					<div class="input-section">
+						<div>
+							<label>タイプ</label>
+							<select name="sename_l" class="select-type">
+								<option value="">無し</option>
+								<!--SENAMELIST-->
+							</select>
+						</div>
+						<div>
+							<label>ネーム(半角英数字)</label>
+							<input type="text" name="sename_name" value="<!--SENAMENAME-->" placeholder="ネーム"
+								class="input-name">
+						</div>
+					</div>
+				</div>
+				<div class="box-row">
+					<div class="item-name">
+						<h4>胸番号</h4>
+					</div>
+					<div class="input-section">
+						<div>
+							<label>タイプ</label>
+							<select name="muneban_l" class="select-type">
+								<option value="" selected>無し</option>
+								<!--MUNEBANLIST-->
+							</select>
+						</div>
+						<div>
+							<label>番号(半角英数字)</label>
+							<input type="number" name="muneban_num" value="<!--MUNEBANNUM-->" placeholder="番号">
+						</div>
+					</div>
+				</div>
+				<div class="box-row">
+					<div class="item-name">
+						<h4>パンツ番号</h4>
+					</div>
+					<div class="input-section">
+						<div>
+							<label>タイプ</label>
+							<select name="pant_l" class="select-type">
+								<option value="" selected>無し</option>
+								<!--PANTLIST-->
+							</select>
+						</div>
+						<div>
+							<label>番号(半角英数字)</label>
+							<input type="number" name="pant_num" value="<!--PANTNUM-->" placeholder="番号">
+						</div>
+					</div>
+				</div>
+				<div class="box-row">
+					<div class="item-name">
+						<h4>バッジ</h4>
+					</div>
+					<div class="input-section">
+						<select name="bach_l" class="select-batch">
+							<option value="" selected>無し</option>
+							<!--BACHLIST-->
+						</select>
 					</div>
 				</div>
 				<div class="submit-section">
-					<input type="submit" value="買い物かごに入れる" class="submit">
-					<input type="reset" class="submit">
+					<input type="submit" value="買い物かごに入れる" class="btn-standard">
+					<input type="reset" class="btn-standard">
 				</div>
 			</div>
 		</form>
@@ -316,21 +304,25 @@
 		</tr>
 	</table> -->
 
-	<section class="ex-section">
-		<h4 class="sub-title-simple">ネームプリント例</h4>
-		<div class="name-print-ex">
-			<div class="name-image"><img src="/image/PRINTING-STYLE-7SHEVCHENKO.jpg"></div>
-			<div class="name-image"><img src="/image/PRINTING-STYLE-13CANNAVARO.jpg"></div>
-			<div class="name-image"><img src="/image/PRINTING-STYLE-16KEANE.jpg"></div>
+	<section class="box-outline marking-neighbors-example">
+		<h4 class="box-title box-title-big">ネームプリント例</h4>
+		<div class="box-grid">
+			<div class="box-row">
+				<div class="box-content"><img src="/image/PRINTING-STYLE-7SHEVCHENKO.jpg"></div>
+				<div class="box-content"><img src="/image/PRINTING-STYLE-13CANNAVARO.jpg"></div>
+				<div class="box-content"><img src="/image/PRINTING-STYLE-16KEANE.jpg"></div>
+			</div>
 		</div>
 	</section>
-	<section class="ex-section">
-		<h4 class="sub-title-simple">スリープバッチ例</h4>
-		<div class="sleep-batch-ex">
-			<div class="sleep-image"><img src="/image/2007-ASIACUP-BADGE.gif"></div>
-			<div class="sleep-image"><img src="/image/04-PREMIERLEAGUE-BADGE.gif"></div>
-			<div class="sleep-image"><img src="/image/SPL-BADGE.jpg"></div>
-			<div class="sleep-image"><img src="/image/03-CHAMPIONSLEAGUE-BADGE.gif"></div>
+	<section class="box-outline marking-neighbors-example">
+		<h4 class="box-title box-title-big">スリープバッチ例</h4>
+		<div class="box-grid">
+			<div class="box-row">
+				<div class="box-content"><img src="/image/2007-ASIACUP-BADGE.gif"></div>
+				<div class="box-content"><img src="/image/04-PREMIERLEAGUE-BADGE.gif"></div>
+				<div class="box-content"><img src="/image/SPL-BADGE.jpg"></div>
+				<div class="box-content"><img src="/image/03-CHAMPIONSLEAGUE-BADGE.gif"></div>
+			</div>
 		</div>
 	</section>
 

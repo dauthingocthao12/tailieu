@@ -41,8 +41,10 @@ function goods_disp_list($VALUE, $CHECK, $VC) {
 
 	$count = 0;
 	$sql  = "SELECT count(distinct category.g_num) AS count FROM category category".
+			" LEFT JOIN goods goods ON  category.g_num=goods.g_num".
 			" WHERE category.display='1'".
 			" AND category.cate1 NOT IN ('99')".	//	add ookawara 2015/01/29
+			" AND goods.g_num>0".			//	add ookawara 2016/01/27
 			$where.";";
 	if ($result = pg_query(DB, $sql)) {
 		$list = pg_fetch_array($result);

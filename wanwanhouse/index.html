@@ -9,17 +9,70 @@
     <script type="text/javascript" src="shared/js/jquery-1.11.0.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="shared/js/resposive.js"></script>
-    <script src="shared/js/slick.js"></script>
     <link rel="stylesheet" href="shared/css/index.css">
-    <link rel="stylesheet" href="shared/css/slider.css">
+    <link href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="shared/css/min.css">
+    <script src="shared/js/slick.js"></script>
     <title>WAN WAN HOUSE</title>
 </head>
 
 <body>
     <!-- Header Start -->
     <header>
+        <nav>
+            <div class="navbar">
+              <i class="bx bx-menu"></i>
+              <div class="logo"><a href="#">CodingLab</a></div>
+              <div class="nav-links">
+                <div class="sidebar-logo">
+                  <span class="logo-name">CodingLab</span>
+                  <i class="bx bx-x" ></i>
+                </div>
+                <ul class="links">
+                  <li><a href="#">HOME</a></li>
+                  <li>
+                    <a href="#">HTML & CSS</a>
+                    <i class="bx bxs-chevron-down htmlcss-arrow arrow  "></i>
+                    <ul class="htmlCss-sub-menu sub-menu">
+                      <li><a href="#">Web Design</a></li>
+                      <li><a href="#">Login Forms</a></li>
+                      <li><a href="#">Card Design</a></li>
+                      <li class="more">
+                        <span><a href="#">More</a>
+                        <i class="bx bxs-chevron-right arrow more-arrow"></i>
+                      </span>
+                        <ul class="more-sub-menu sub-menu">
+                          <li><a href="#">Neumorphism</a></li>
+                          <li><a href="#">Pre-loader</a></li>
+                          <li><a href="#">Glassmorphism</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#">JAVASCRIPT</a>
+                    <i class="bx bxs-chevron-down js-arrow arrow "></i>
+                    <ul class="js-sub-menu sub-menu">
+                      <li><a href="#">Dynamic Clock</a></li>
+                      <li><a href="#">Form Validation</a></li>
+                      <li><a href="#">Card Slider</a></li>
+                      <li><a href="#">Complete Website</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#">ABOUT US</a></li>
+                  <li><a href="#">CONTACT US</a></li>
+                </ul>
+              </div>
+              <div class="search-box">
+                <i class="bx bx-search"></i>
+                <div class="input-box">
+                  <input type="text" placeholder="Search...">
+                </div>
+              </div>
+            </div>
+          </nav>
         <div class="site-header">
-            <div class="header-container site-header-wrapper">
+            <!-- <div class="header-container site-header-wrapper">
                 <h1 class="font-sans-serif">
                     <a href="#" class="brand">WAN WAN HOUSE</a>
                 </h1>
@@ -46,7 +99,7 @@
                         </a>
                     </div>
                 </div>
-            </div>
+            </div> -->
         </div>
         <div class="top-header">
             <div class="header-content">
@@ -87,7 +140,7 @@
             </div>
         </div>
     </header>
-    <div id="content-container">
+    <!-- <div id="content-container">
         <!-- Header End -->
         <!-- Main Start -->
         <main>
@@ -193,7 +246,8 @@
                         </li>
                     </ul>
                     <div class="read-more increase-padding-top">
-                        <a href="#">more</a>
+                        <a href="#">More</a>
+                        <span class="dli-arrow-right"></span>
                     </div>
                 </div>
             </section>
@@ -202,8 +256,26 @@
                 <div class="content-container  section-padding"></div>
             </section>
 
-            <section style="height:350px; background-color: var(--bg-light);">
-                <div class="content-container  section-padding"></div>
+            <section class="bg-light message-content">
+                <div class="content-container  section-padding">
+                    <h2>メッセージ</h2>
+                    <p class="text-left increase-space">群馬県前橋市で自家繁殖の犬を直接販売する犬専門のペットショップとして創業したワンワンハウス。現在は事業内容が変
+                        わり、犬専門のトリミング、ペットホテル、移動美容室、グッズのネット販売などを展開。地域の愛犬家の皆様に親しまれ
+                        ながら43年目を迎えることができました。さらに飼い主様のご要望にお応えするため、2022年3月には国土交通省陸運局
+                        許可営業ナンパーを取得。犬のペットタクシー事業も開始しました。どのサービスも「お願いしてよかった」「料金以上の価
+                        値がある」など飼い主様からの嬉しいお声を多数いただいております。<br>
+                        これからも地域社会で一緒に暮らす愛犬との生活がますます豊かになるように、またお忙しい飼い主様の負担が少しでも軽減されるように、スタッフー同努めて参ります。<br>
+                        皆様のご来店、お問い合わせを心よりお待ちしております 。
+                    </p>
+                    <p class="text-right">有限会社 ワンワンハウス<br>
+                        代表取締役樺澤功生
+                    </p>
+
+                    <div class="read-more increase-padding-top">
+                        <a href="#">Concept</a>
+                        <span class="dli-arrow-right"></span>
+                    </div>
+                </div>
             </section>
 
             <section class="section-type1 contact-area">
@@ -220,7 +292,7 @@
                         <div class="tel-contact col-2">
                             <a><i class="fa fa-phone icon"></i></a>
                             <div class="contact-text">
-                                <p>TEL<span class="important"> 027-234-5400</span></p>
+                                <p>TEL<span class="text-lg"> 027-234-5400</span></p>
                                 <p>営業時間 : 9:00~19:00／定休日 : 毎週水・木曜日</p>
                                 <div class="border-bottom"></div>
                             </div>
@@ -249,10 +321,7 @@
                         </ul>
                     </div>
                     <div class="facebook">
-                        <iframe id="fbiframe"
-                            src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FFacebook%2F&tabs=timeline&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId"
-                            width="340" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
-                        </iframe>
+                        <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Ffacebook&tabs=timeline&width=290&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="290" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
                     </div>
                 </div>
             </section>
@@ -261,33 +330,36 @@
     <!-- Main End -->
     <footer>
         <div class="footer-container">
+            <h3 class="sp-nav menu-title">
+                <a href="#">TOP ≫</a>
+            </h3>
             <div class="content-container footer-nav">
-                <div class="col-7">
-                    <h3><a href="#">TOP</a></h3>
+                <div class="col-7 pc-nav">
+                    <h3>TOP</h3>
                 </div>
                 <div class="col-7">
-                    <h3><a href="#">about</a></h3>
-                </div>    
+                    <h3>about</h3>
+                </div>
                 <div class="col-7">
-                    <h3><a href="#">service</a></h3>
-                </div>  
+                    <h3>service</h3>
+                </div>
                 <div class="col-7">
-                    <h3><a href="#">Q&A</a></h3>
-                </div>   
+                    <h3>Q&A</h3>
+                </div>
                 <div class="col-7">
-                    <h3><a href="#">blog</a></h3>
-                </div>    
+                    <h3>blog</h3>
+                </div>
                 <div class="col-7">
-                    <h3><a href="#">recruit</a></h3>
-                </div>    
+                    <h3>recruit</h3>
+                </div>
                 <div class="col-7">
-                    <h3><a href="#">contact</a></h3>
-                </div> 
-                 
+                    <h3>contact</h3>
+                </div>
+
             </div>
             <div class="border"></div>
             <div class="content-container footer-nav">
-                <div class="col-7"></div>
+                <div class="col-7 pc-nav"></div>
                 <div class="col-7">
                     <h3 class="footer-heading mobile-nav">about</h3>
                     <ul>
@@ -358,11 +430,34 @@
                 </div>
 
             </div>
+
+            <ul class="content-container privacy-policy">
+                <li>
+                    <a href="#">プライバシーポリシー</a>
+                </li>
+            </ul>
+
+            <div class="content-container">
+                <div class="top-header-icon text-light">
+                    <span class="fa-stack">
+                        <i class="fa fa-circle fa-stack-2x"></i>
+                        <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <i class="fa fa-instagram"></i>
+                </div>
+            </div>
         </div>
-        <div class="footer-container content-container">
+        <div class="footer-last-content">
+            <div class="content-container section-padding">
+                <h2 class="font-sans-serif">WAN WAN HOUSE</h2>
+                <p class="increase-space">ワンワンハウス</p>
+                <p>〒371-0035  群馬県前橋市岩神町 3-12-49<br>
+                    営業時間 : 9:00~19:00／定休日 : 毎週水・木曜日<br>
+                    TEL 027-234-5400
+                </p>
+            </div>
         </div>
-        <!-- <p class="copyright"><a href="#"><small>&copy;Wan Wan House</small></a></p> -->
-    </footer>
+    </footer> -->
 </body>
 
 </html>

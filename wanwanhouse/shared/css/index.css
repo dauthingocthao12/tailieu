@@ -74,7 +74,10 @@
     display: inline-block;
     line-height: 1;
 }
-
+/* message-content */
+.message-content {
+    font-weight: bold;
+}
 /* contact-area */
 .contact-area .contact-content {
     padding-top: 50px;

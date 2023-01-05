@@ -14,55 +14,64 @@ $(document).ready(function () {
     }
   });
 });
+// var windowWidth = $(window).width();
+//   $(window).resize(function () {
+//     if (windowWidth <= 500) {
+//       var width="290";
+//     }else{
+//       var width="340";
+//     }
+//     var src = "https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FFacebook%2F&tabs=timeline&width="+width+"&height=500&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=false&appId"
+//     $("#fbiframe").attr("src", "");
+//     $("#fbiframe").attr("src", src);
+//     $("#fbiframe").attr("width", width);
+//     // $("#fbiframe").width(width);
+//   });
 
-  var first_width = $(window).width();
-  $(window).resize(function () {
-    if (first_width <= 500) {
-      console.log("AAAA");
-      var width="290";
-    }else{
-      var width="340";
+
+
+
+
+
+
+// search-box open close js code
+window.onload = function() {
+  let navbar = document.querySelector(".navbar");
+  let searchBox = document.querySelector(".search-box .bx-search");
+  // let searchBoxCancel = document.querySelector(".search-box .bx-x");
+
+  searchBox.addEventListener("click", ()=>{
+    navbar.classList.toggle("showInput");
+    if(navbar.classList.contains("showInput")){
+      searchBox.classList.replace("bx-search" ,"bx-x");
+    }else {
+      searchBox.classList.replace("bx-x" ,"bx-search");
     }
-    var src = "https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FFacebook%2F&tabs=timeline&width="+width+"&height=500&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=false&appId"
-    $("#fbiframe").attr("src", "");
-    $("#fbiframe").attr("src", src);
-    $("#fbiframe").attr("width", width);
   });
 
+  // sidebar open close js code
+  let navLinks = document.querySelector(".nav-links");
+  let menuOpenBtn = document.querySelector(".navbar .bx-menu");
+  let menuCloseBtn = document.querySelector(".nav-links .bx-x");
+  menuOpenBtn.onclick = function() {
+  navLinks.style.left = "0";
+  }
+  menuCloseBtn.onclick = function() {
+  navLinks.style.left = "-100%";
+  }
 
 
-  // fbiframe_reload();
-//   jQuery(function($){
-//     var first_width = $(window).width();
-     
-//     var timer = false;
-//     $(window).resize(function() {
-//         if (timer !== false) {
-//             clearTimeout(timer);
-//         }
-//         timer = setTimeout(function() {
-//             //resize完了時の動作
-//             var width = $(window).width();
-//             if(width!=first_width){
-     
-//                 //console.log('resized');
-//                 fbiframe_reload();
-//                 first_width=width;
-//             }
-//         }, 200);
-//     });
-     
-//     function fbiframe_reload(){//facebookウィジェットの再描画
-     
-//             var width = $(".facebook").width();//親要素のID,class要変更
-     
-//             var src = "https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FFacebook%2F&tabs=timeline&width="+width+"&height=500&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=false&appId"
-     
-//             $("#fbiframe").attr("src","");       
-//             $("#fbiframe").attr("src",src); 
-     
-//             $("#fbiframe").attr("width",width); 
-//     };
-     
-//     fbiframe_reload();
-//     });
+  // sidebar submenu open close js code
+  let htmlcssArrow = document.querySelector(".htmlcss-arrow");
+  htmlcssArrow.onclick = function() {
+  navLinks.classList.toggle("show1");
+  }
+  let moreArrow = document.querySelector(".more-arrow");
+  moreArrow.onclick = function() {
+  navLinks.classList.toggle("show2");
+  }
+  let jsArrow = document.querySelector(".js-arrow");
+  jsArrow.onclick = function() {
+  navLinks.classList.toggle("show3");
+  }
+}

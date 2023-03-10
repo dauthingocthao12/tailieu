@@ -1,0 +1,4 @@
+display_errors=On
+error_reporting=6133
+register_globals=On
+short_open_tag=On

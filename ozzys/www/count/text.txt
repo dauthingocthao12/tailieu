@@ -1,0 +1,57 @@
+?・・
+javascriptｖ榊窮
+
+<SCRIPT language=JavaScript1.2>
+<!--
+    var link = document.referrer;
+    document.write('<img src="http://www.jutaku-navi.com/count/access.cgi?ref=' + link + '&name=top');
+    document.write('" height="1" width="1" border="0">');
+// -->
+</SCRIPT>
+<NOSCRIPT>
+<IMG src="http://www.jutaku-navi.com/count/access.cgi" height=1 width=1 border=0> 
+</NOSCRIPT>
+
+フレーム用1
+<SCRIPT language=JavaScript1.2>
+<!--
+    var link = parent.document.referrer;
+    document.write('<img src="http://www.jutaku-navi.com/count/access.cgi?ref=' + link + '&name=top');
+    document.write('" height="1" width="1" border="0">');
+// -->
+</SCRIPT>
+
+フレーム用2
+<html>
+<head>
+  <title>トップページ</title>
+</head>
+
+<SCRIPT Language="JavaScript">
+<!--
+document.write("<frameset cols='140,*,1'>");
+document.write("<frame src='A.html'>");
+document.write("<frame src='B.html'>");
+document.write("<frame src='cgi-bin/report.cgi?");
+document.write(document.referrer);
+document.write("' width=1 height=1>");
+document.write("<noframes>");
+document.write("フレーム利用ｓ!・楳％・夕a href='B.html'>ｉ!閏/a>り¨リック");
+document.write("</noframes>");
+document.write("</frameset>");
+// -->
+</SCRIPT>
+</html>
+
+
+
+ssiｖ榊窮
+
+<!--#include virtual="./count/access.cgi?h=1"-->
+
+
+
+###################################################################################################
+h=1り・・ム・刀Jウンターｅ貼ｦｋ!梳・・B
+mode=counterり・・ム・刀Jウンターｅｅ・楳・楳艨鴻Oｅ鵜録ｊ!蛟梳・・B
+

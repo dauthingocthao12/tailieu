@@ -1,0 +1,34 @@
+AddHandler php53-script .php
+
+AuthUserFile /home/ozzys/ozzys00001/develop/www/.sppdpasswd
+AuthGroupFile /dev/null
+AuthName Member
+AuthType Basic
+require valid-user
+<Files ~ "^.sppdpasswd$">
+Order allow,deny
+Deny from all
+</Files>
+
+# original .htaccess
+AddType text/html .htm
+AddOutputFilter INCLUDES .htm
+php_flag display_errors on
+php_value error_reporting 6133
+php_flag register_globals on
+php_flag short_open_tag on
+
+
+# rewrite rules
+RewriteEngine on
+
+# maintenance
+#RewriteCond %{REMOTE_ADDR} !^202\.171\.139\.14
+#RewriteCond %{REQUEST_URI} !/maintenance.html$ [NC]
+#RewriteCond %{REQUEST_URI} !\.(jpe?g?|png|gif) [NC]
+#RewriteRule .* /maintenance.html [R=302,L]
+
+# urls
+RewriteBase /
+RewriteRule goods/(\.*)/(\.*)/$ goods
+ErrorDocument 404 /notfound.htm

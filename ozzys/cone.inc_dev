@@ -1,0 +1,24 @@
+<?PHP
+
+	$dbname 	= "ozzys00002";
+	$user		= "ozzys00002";
+	$password	= "Uf5mHmhv";
+
+	$conn_id = $db = pg_connect ("dbname=$dbname user=$user password=$password");
+
+	if (!$db) {
+	echo ("しばらくお待ちください。");
+	exit;
+	}
+
+	//	2011/08/23
+	define(DBNAME, $dbname);
+	define(DB, $db);
+
+// >>> add simon 2018-12-10
+// PostgresSQL 8->9 に更新なった時に書きの設定がからうぃました。
+// それで、insertのクエリーに[']文字が映入るとエラーになります。
+// 仕組みの修正をしない為、以下のクエリーでセッションで設定することができます。
+pg_query(DB, "SET standard_conforming_strings = Off");
+// <<<
+?>

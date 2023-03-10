@@ -1,0 +1,9 @@
+AuthUserFile /home/ozzys/ozzys00001/www/master/.sppdpasswd
+AuthGroupFile /dev/null
+AuthName Member
+AuthType Basic
+require valid-user
+<Files ~ "^.sppdpasswd$">
+Order allow,deny
+Deny from all
+</Files>

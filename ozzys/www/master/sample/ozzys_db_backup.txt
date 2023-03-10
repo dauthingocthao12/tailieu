@@ -1,0 +1,23 @@
+create table goods_bak as
+  select
+    *
+  from goods
+
+
+create table goods2_bak as
+  select
+    *
+  from goods2
+
+
+create table kari_bak as
+  select
+    *
+  from kari
+
+
+select maker, count(*) FROM goods
+ GROUP BY maker;
+
+
+

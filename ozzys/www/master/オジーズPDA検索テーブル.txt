@@ -1,0 +1,88 @@
+オジーズPDA検索テーブル
+
+pda_search
+
+PDA検索用テーブル
+
+
+
+
+
+pluid			character(13)
+stock			integer
+price			integer
+class_m			character(3)
+maker			character varying(255)
+goods_name		character varying(255)
+color			character varying(255)
+size			character varying(255)
+list_num		integer
+l_goods_name	character varying(255)
+l_size			character varying(255)
+l_color			character varying(255)
+maker_name		character varying(255)
+maker_num		integer
+search_word		text
+
+
+
+
+
+
+$TB_GOODS[$pluid]['pluid']
+$TB_GOODS[$pluid]['stock']
+$TB_GOODS[$pluid]['price']
+$TB_GOODS[$pluid]['class_m']
+$TB_GOODS[$pluid]['maker']
+$TB_GOODS[$pluid]['goods']
+$TB_GOODS[$pluid]['color']
+$TB_GOODS[$pluid]['size']
+$TB_LIST[$pluid]['list_num']
+$TB_LIST[$pluid]['l_goods_name']
+$TB_LIST[$pluid]['l_size']
+$TB_LIST[$pluid]['l_color']
+$TB_MAKER[$maker]
+$TB_GOODS[$pluid]['pluid'] $TB_GOODS[$pluid]['maker'] $TB_GOODS[$pluid]['goods'] $TB_GOODS[$pluid]['color'] $TB_GOODS[$pluid]['size'] $TB_LIST[$pluid]['l_goods_name'] $TB_LIST[$pluid]['l_size'] $TB_LIST[$pluid]['l_color'] $TB_MAKER[$maker]
+
+
+
+
+
+CREATE TABLE "public"."pda_search" (
+"pluid" character(13) NOT NULL DEFAULT 0,
+ "stock" integer NOT NULL DEFAULT 0,
+ "price" integer NOT NULL DEFAULT 0,
+ "class_m" character(3) NOT NULL DEFAULT 0,
+ "maker" character varying(255),
+ "goods_name" character varying(255),
+ "color" character varying(255),
+ "size" character varying(255),
+ "list_num" integer NOT NULL DEFAULT 0,
+ "l_goods_name" character varying(255),
+ "l_size" character varying(255),
+ "l_color" character varying(255),
+ "maker_name" character varying(255),
+ "maker_num" integer NOT NULL DEFAULT 0,
+ "search_word" text,
+ PRIMARY KEY ("pluid")
+)
+
+
+CREATE TABLE "public"."test_pda_search" (
+"pluid" character(13) NOT NULL DEFAULT 0,
+ "stock" integer NOT NULL DEFAULT 0,
+ "price" integer NOT NULL DEFAULT 0,
+ "class_m" character(3) NOT NULL DEFAULT 0,
+ "maker" character varying(255),
+ "goods_name" character varying(255),
+ "color" character varying(255),
+ "size" character varying(255),
+ "list_num" integer NOT NULL DEFAULT 0,
+ "l_goods_name" character varying(255),
+ "l_size" character varying(255),
+ "l_color" character varying(255),
+ "maker_name" character varying(255),
+ "maker_num" integer NOT NULL DEFAULT 0,
+ "search_word" text,
+ PRIMARY KEY ("pluid")
+)

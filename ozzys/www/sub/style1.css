@@ -1,0 +1,221 @@
+ol,ul {
+	list-style:none;
+}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,p,blockquote,th,td,img {
+	margin:0;
+	padding:0;
+}
+/* ログイン表示 */
+#login{
+height: 42px;
+width: 100%;
+background: #FFCC00 url('/images/bottom.gif') no-repeat center bottom;
+}
+#loginname{
+font-size: 14px;
+color: #000000;
+padding-top: 5px;
+padding-right: 3px;
+padding-left: 10px;
+float: left;
+}
+
+#loginmenu{
+color: #FFFFFF;
+text-align: right;
+padding-bottom: 3px;
+float: right;
+}
+
+#loginmenu li{
+float: left;
+}
+/* 商品検索 */
+
+#search{
+margin-left: 10px;
+margin-bottom: 8px;
+padding: 0px;
+height: 80px;
+width: 155px;
+background-color: #FFCC00;
+}
+
+#searchin{
+margin-top: 10px;
+margin-bottom: 5px;
+margin-left: 4px;
+}
+
+
+.input01{
+margin-top: -4px;
+margin-bottom: 3px;
+width: 11em;
+}
+
+
+/* ボタン、サブミットの幅（基本仕様） */
+.button4{
+width: 4em;
+}
+
+.button6{
+width:6em;}
+
+.button8{
+width: 8em;
+}
+
+.button10{
+width:10em;}
+
+.button12{
+width
+:12em;}
+
+.button14{
+width:14em;}
+
+.button16{
+width:16em;}
+/* ボタン、サブミットの幅ここまで */
+
+/* カテゴリ */
+
+#category01,#category02,#category03{
+margin-top: 0;
+margin-left: 10px;
+padding-bottom: 8px;
+list-style-type: none;
+width: 155px;
+}
+#category01 h2{
+font-size: 10pt;
+text-indent: -1000px;
+margin-bottom: 0;
+height: 25px;
+width: 155px;
+background-color: #0000FF;
+background-image: url('/images/header_category.gif');
+}
+
+#category01 ul,#category02 ul,#category03 ul,{
+margin: 0px;
+padding: 0px;
+list-style-type: none;
+}
+#category01 li a{
+font-size: 10pt;
+color: #0000FF;
+line-height: 16px;
+text-indent: 8px;
+margin: 0px;
+padding-top: 3px;
+padding-bottom: 3px;
+border-top: 1px solid #FFFF99;
+border-bottom: 1px solid #996600;
+width: 155px;
+background-color: #FFCC00;
+display: block;
+}
+#category02 li a{
+font-size: 10pt;
+color: #660099;
+line-height: 16px;
+text-indent: 8px;
+padding-top: 3px;
+padding-bottom: 3px;
+border-top: 1px solid #FFFF99;
+border-bottom: 1px solid #996600;
+width: 155px;
+background-color: #FFCC00;
+display: block;
+}
+#category03 li a{
+font-size: 10pt;
+color: #003300;
+line-height: 16px;
+text-indent: 8px;
+padding-top: 3px;
+padding-bottom: 3px;
+border-top: 1px solid #FFFF99;
+border-bottom: 1px solid #996600;
+width: 155px;
+background-color: #FFCC00;
+display: block;
+}
+
+#category01 li a:hover,#category02 li a:hover,#category03 li a:hover{
+line-height: 16px;
+text-indent: 16px;
+margin: 0px;
+padding-top: 3px;
+padding-bottom: 3px;
+border-top: 1px solid #FFFF99;
+border-bottom: 1px solid #996600;
+width: 155px;
+background-color: #FFFF99;
+display: block;
+}
+
+
+BODY{
+  font-size : 12px;
+  margin-top : 0px;
+  margin-left : 0px;
+  margin-right : 0px;
+  margin-bottom : 0px;
+}
+TABLE{
+  font-size : 12px;
+}
+.menu{
+  font-size : 12px;
+  color : #ffffff;
+}
+.headmsg{
+  font-size : 15px;
+  font-weight : bold;
+  color : #ffffff;
+  padding : 5px;
+  line-height : 17px;
+}
+DIV.form{
+  background-color:#ffcc00;
+  padding:2px;
+  border-style:solid;
+  border-color:#666666;
+  border-width:1px;
+}
+TD.bor1{
+  border-width:1px 1px 0px;
+  border-color:#333333;
+  border-style:solid;
+  padding : 3px;
+  line-height : 15px;
+}
+TD.bor2{
+  border-width:1px;
+  border-color:#333333;
+  border-style:solid;
+  padding : 3px;
+  line-height : 15px;
+}
+TD.bor3{
+  border-style:double;
+  border-color:#666666;
+  border-width:3px 0px 0px 0px;
+  padding:4px;
+  margin:4px;
+  line-height : 15px;
+}
+TD.bor4{
+  border-style:double;
+  border-color:#666666;
+  border-width:3px 0px 3px 0px;
+  padding:4px;
+  margin:4px;
+  line-height : 15px;
+}
+

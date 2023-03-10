@@ -1,0 +1,22 @@
+# original .htaccess
+AddType text/html .htm
+AddOutputFilter INCLUDES .htm
+php_flag display_errors on
+php_value error_reporting 6133
+php_flag register_globals on
+php_flag short_open_tag on
+php_value default_charset EUCJP
+
+# rewrite rules
+RewriteEngine on
+
+# maintenance
+#RewriteCond %{REMOTE_ADDR} !^202\.171\.139\.14
+#RewriteCond %{REQUEST_URI} !/maintenance.html$ [NC]
+#RewriteCond %{REQUEST_URI} !\.(jpe?g?|png|gif) [NC]
+#RewriteRule .* /maintenance.html [R=302,L]
+
+# urls
+RewriteBase /
+RewriteRule "goods/(.*)$" "goods.php/$1"
+ErrorDocument 404 /notfound.htm

@@ -1,0 +1,29 @@
+AddHandler php53-script .php
+
+AddType text/html .htm
+AddOutputFilter INCLUDES .htm
+
+# rewrite
+RewriteEngine on
+RewriteBase /
+
+#http -> https
+RewriteCond %{HTTPS} =on
+RewriteCond %{REQUEST_URI} /pda2?/
+RewriteRule ^(.*)$ "http://ozzys.jp/$1" [R=301,L]
+RewriteCond %{HTTPS} =off
+RewriteCond %{REQUEST_URI} !/pda2?/
+RewriteRule ^(.*)$ "https://ozzys.jp/$1" [R=301,L]
+
+# maintenance
+#RewriteCond %{REMOTE_ADDR} !^202\.171\.139\.14
+#RewriteCond %{REQUEST_URI} !/maintenance.html$ [NC]
+#RewriteCond %{REQUEST_URI} !\.(jpe?g?|png|gif) [NC]
+#RewriteRule .* /maintenance.html [R=302,L]
+
+
+# goods rules
+RewriteBase /
+RewriteRule goods/(\.*)/(\.*)/$ goods
+#RewriteRule goods/(\.*)/$ goods.php
+ErrorDocument 404 /notfound.htm

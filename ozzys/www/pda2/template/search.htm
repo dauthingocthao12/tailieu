@@ -1,0 +1,128 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta name="viewport" content="width=360px, initial-scale=1, maximum-scale=2">
+<title>商品検索</title>
+<link rel="stylesheet" href="./style.css" type="text/css" />
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<script type="text/javascript" src="./pda.js"></script>
+</head>
+<body onload="document.search_form.s_words.focus();">
+<a name="top"></a>
+<div id="search">
+<table class="title_box">
+<tr>
+<th>商品検索</th>
+<td>[ <a href="./?mode=check">商品確認ページへ</a> ]</td>
+</tr>
+</table>
+<table class="search_box">
+<form action="./" method="POST" name="search_form">
+<input type="hidden" name="mode" value="<!--MODE-->" />
+<input type="hidden" name="action" value="search" />
+<input type="hidden" name="s_type" value="<!--SEARCHTYPE-->" />
+<tr>
+<th>検索</th>
+<th><input type="checkbox" name="s_kyoutu" value="1"<!--LISTKYOUTU--> />：共通商品表示</th>
+<th>検索表示数：<select name="s_view_num" OnChange="submit();"><!--LISTVIEWNUM--></select></th>
+</tr>
+<tr>
+<td colspan="3"><input type="text" size="15" name="s_words" value="<!--WORDS-->" /><input type="submit" value="検索" /><input type="submit" name="action" value="クリア" /><br /><!--WORDS2--></td>
+</tr>
+<!--SEARCHMAKER-->
+<tr>
+<th colspan="3">メーカー</th>
+</tr>
+<tr>
+<td colspan="3"><select name="s_maker"><!--LISTMAKER--></select></td>
+</tr>
+<!--/SEARCHMAKER-->
+
+<!--SEARCHCLASS-->
+<tr>
+<th colspan="3">分類</th>
+</tr>
+<tr>
+<td colspan="3"><select name="s_class"><!--LISTCLASS--></select></td>
+</tr>
+<!--/SEARCHCLASS-->
+
+<!--SEARCHGOODSNAME-->
+<tr>
+<th colspan="3">商品名</th>
+</tr>
+<tr>
+<td colspan="3"><select name="s_goods_name"><!--LISTGOODSNAME--></select></td>
+</tr>
+<!--/SEARCHGOODSNAME-->
+
+<tr>
+<td colspan="3">
+<!--SEARCHTYPED-->
+<input type="submit" name="s_type" value="詳細検索" />
+<!--/SEARCHTYPED-->
+<!--SEARCHTYPEE-->
+<input type="submit" name="s_type" value="簡単検索" />
+<!--/SEARCHTYPEE-->
+</td>
+</tr>
+
+</form>
+</table>
+<br />
+
+<!--GOODSD-->
+<!--NEXTVIEW1-->
+<form action="./" method="POST">
+<input type="hidden" name="mode" value="<!--MODE-->" />
+<input type="hidden" name="action" value="check" />
+<table class="goods_box">
+<!--
+  <tr>
+    <th rowspan="7">選<br />
+    択</th>
+    <th colspan="2">商品名</th>
+  </tr><tr>
+    <th colspan="2">メーカー名</th>
+  </tr><tr>
+    <th colspan="2">カテゴリー</th>
+  </tr><tr>
+    <th>ポス番号</th>
+    <th>商品番号</th>
+  </tr><tr>
+    <th>カラー</th>
+    <th>サイズ</th>
+  </tr><tr>
+    <th>在庫数</th>
+    <th>金額</th>
+  </tr><tr>
+    <th>当期実績_累計</th>
+    <th>前期実績_累計</th>
+  </tr>
+-->
+  <tr>
+    <th colspan="3" class="list_line"><input type="submit" value="追加" /></th>
+  </tr>
+<!--GOODSLIST-->
+  <tr>
+    <th colspan="3"><input type="submit" value="追加" /></th>
+  </tr>
+</table>
+</form>
+<!--NEXTVIEW2-->
+<!--/GOODSD-->
+<!--GOODSN-->
+該当する商品はございません。<br />
+<!--/GOODSN-->
+<table class="change_box">
+  <tr>
+    <td style="text-align:left;">[ <a href="#top">ページ上部へ</a> ]</td>
+    <td style="text-align:right;">[ <a href="./?mode=check">商品確認ページへ</a> ]</td>
+  </tr>
+</table>
+
+</div>
+</body>
+</html>

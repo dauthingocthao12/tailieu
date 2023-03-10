@@ -1,0 +1,169 @@
+/*	スタイルシート	*/
+
+/* リセット */
+* { margin : 0 ; padding : 0 ; }
+table,tr,td,th{ margin : 0 ; padding : 0 ; }
+/*初期値クリア*/
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,p,blockquote,th,td {
+	margin: 0;
+	padding: 0;
+}
+table {
+	border-collapse:collapse;border-spacing:0;
+}
+fieldset,img {
+	border:0;
+}
+address,caption,cite,code,dfn,em,strong,th,var {
+	font-style:normal;
+	font-weight:normal;
+}
+ol,ul {
+	list-style:none;
+}
+caption,th {
+	text-align:left;
+}
+h1,h2,h3,h4,h5,h6 {
+	font-size:100%;
+}
+q:before,q:after {
+	content:"";
+}
+
+input{
+	padding:5px;
+}
+
+/* TOPページ */
+H1#index {
+font-size : 20px;
+}
+
+#index_waku {
+text-align:center;
+font-size : 24px;
+}
+
+
+
+/* 共通タイトル */
+.title_box {
+font-size : 14px;
+width: 100%;
+}
+.title_box th{
+text-align:left;
+}
+.title_box td{
+text-align:right;
+}
+
+
+
+/* 検索ボックス */
+.search_box {
+font-size : 14px;
+width: 100%;
+}
+.search_box th{
+background: #cccccc;
+border: 1px #000000 solid;
+padding: 2px;
+}
+.search_box td{
+border: 1px #000000 solid;
+padding: 2px;
+}
+.search_change {
+text-align:right;
+}
+
+/* 候補ボタン */
+.candidacy-btn{
+padding: 4px;
+margin: 4px 2px;
+}
+
+.candidacy-btn img{
+margin: 0 4px;
+}
+/* 商品リスト */
+.goods_box-outer {
+width: auto;
+overflow-x:scroll;
+border: 1px #000000 solid;
+
+}
+
+.goods_box {
+font-size : 12px;
+width: 100%;
+border: 1px #000000 solid;
+}
+
+.goods_box th{
+background: #cccccc;
+border-top: 1px#000000 solid;
+border-bottom: 1px#000000 solid;
+text-align: center;
+padding: 2px;
+}
+
+.goods_box th.clear-btn-tb{
+text-align: left;
+}
+
+.goods_line1 {
+background: #ffffff;
+}
+
+.goods_line2 {
+background: #ffffcc;
+}
+
+/* add ookawara 2009/09/29*/
+.goods_line3 {
+background: #ff6666;
+}
+
+/* add ookawara 2013/02/18 */
+.goods_line4 {
+background: #ffff00;
+}
+
+.goods_box td{
+border-top: 1px#000000 solid;
+border-bottom: 1px#000000 solid;
+text-align: right;
+padding: 2px 4px;
+white-space: nowrap;
+border-right: 1px#000000 solid;
+}
+
+.goods_box td.check-box-tb {
+	border-right: 1px#000000 solid;
+	text-align: center;
+}
+.goods_box td.text-tb{
+	text-align: left;
+}
+/* ページ */
+.page_view {
+text-align: center;
+}
+
+
+/* 商品確認 */
+#check {
+font-size : 14px;
+}
+
+
+
+.change_box {
+font-size : 16px;
+width: 100%;
+}
+
+

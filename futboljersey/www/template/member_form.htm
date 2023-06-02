@@ -1,0 +1,192 @@
+<h2 class="title-nbs">会員登録
+	<!--PAGEHEADTITLE-->
+</h2>
+
+<div class="member_summary">
+	<!--TYUUIDEL-->
+	<section class="box-outline">
+		<h4 class="box-title box-title-big">ご注意ください</h4>
+			<div class="box-content">
+				<span>文字を入力する際、各項目で半角入力か全角入力か指定してありますので、それに従って入力してください。</span><br>
+				<span><b class="important">(必記)</b>と書いてある項目は、必ず入力してください。</span><br>
+				<span>必要事項を全て記入の上、画面下にある<b class="bold marking-color-3">確認画面へ</b>というボタンをクリックしてください。</span>
+			</div>
+	</section>
+	<!--/TYUUIDEL-->
+	<!--TYUUIKAKUNINDEL-->
+	<section class="box-outline">
+		<h4 class="box-title box-title-big">ご注意ください</h4>
+		<div class="box-content">
+			<span>お客様の情報が以下でよろしい場合は<b class="bold marking-color-3">登録する</b>ボタンをクリックしてください。</span>
+		</div>
+	</section>
+	<!--/TYUUIKAKUNINDEL-->
+  <form action="<!--PHP_SELF-->" method="post" id="member-form">
+    <section class="box-outline">
+  	<h4 class="box-title box-title-big">お客様情報登録フォーム </h4>
+  	<div class="member-form-area">
+		<!--ERRORMSG-->
+  	  <h4 class="box-title-form">漢字氏名 <span class="important">(必記)</span></h3>
+  	  <div class="box-content input-area flex-row">
+  		<div  class="input-full-length">
+  		  <!--NAMEDEL-->
+  		  <label>姓：</label>
+  		  <input type="text" class="input-full-length" name="name_s" value="<!--NAMES-->" placeholder="山田" required/>
+  		</div>
+  		<div  class="input-full-length">
+  		  <label>名：</label>
+  		  <input type="text"  class="input-full-length" name="name_n" value="<!--NAMEN-->" placeholder="太郎" required/>
+  		  <!--/NAMEDEL-->
+		  <!--NAMESNN-->
+  		</div>
+  	  </div>
+  	  <h4 class="box-title-form">ふりがな<span class="important">(必記)</span></h4>
+  	  <div class="box-content input-area flex-row">
+  		<div class="input-full-length">
+  		  <!--KANADEL-->
+  		  <label>姓：</label>
+  		  <input class="input-full-length" type="text" name="kana_s" value="<!--KANAS-->" placeholder="やまだ" required />
+  		</div>
+  		<div class="input-full-length">
+  		  <label>名：</label>
+  		  <input type="text" class="input-full-length" name="kana_n" value="<!--KANAN-->" placeholder="たろう" required/>
+  		  <!--/KANADEL-->
+  		  <!--KANASNN-->
+  		</div>
+  	  </div>
+  	  <h4 class="box-title-form">住所<span class="important">(必記)</span></h4>
+  	  <div class="box-content input-area flex-col">
+  		<div>
+  		  <div>
+  		  	<span class="bold">	郵便番号</span>（半角）：
+  		  </div>
+  		  <div>
+  		  	<!--ZIPDEL-->
+  		  	〒<input type="text" class="input-short" placeholder="999" name="zip1" pattern="[0-9]{3}"
+  		  	value="<!--ZIP1-->" required/>－<input type="text" class="input-short"  placeholder="9999" pattern="[0-9]{4}"
+  		  	name="zip2" value="<!--ZIP2-->" required/>
+  		  	<!--/ZIPDEL-->
+  		  	<!--ZIPN-->
+  		  </div>
+  		</div>
+  		<div>
+  		  <span class="bold">都道府県：</span>
+  		  <!--PRF-->
+  		  <!--PRFN-->
+  		</div>
+  		<div>
+  		  <div>
+  		  	<span class="bold">市区町村名</span>（全角）：
+  		  </div>
+  		  <!--CITYDEL-->
+  		  <input class="input-full-length" placeholder="千代田区" type="text" name="city" value="<!--CITY-->" />
+  		  <!--/CITYDEL-->
+  		  <!--CITYN-->
+  		</div>
+  		<div>
+  		  <div>
+  		  	<span class="bold">所番地</span>（全角）：
+  		  </div>
+  		  <!--ADD1DEL--><input class="input-full-length" placeholder="永田町９－９－９" type="text" name="add1" value="<!--ADD1-->" />
+  		  <!--/ADD1DEL-->
+  		  <!--ADD1N-->
+  		</div>
+  		<div>
+  		  <div>
+  		  	<span class="bold">マンション名など</span>（全角）：
+  		  </div>
+  		  <!--ADD2DEL-->
+  		  <input class="input-full-length" placeholder="ネイバーズマンション　１０１号室" type="text" name="add2" value="<!--ADD2-->" />
+  		  <!--/ADD2DEL-->
+  		  <!--ADD2N-->
+  		</div>
+  	  </div>
+  	  <h4 class="box-title-form">電話番号<span class="important">(必記)</span></h4>
+  	  <div class="box-content input-area flex-row">
+  		<div>
+  		  <!--TELDEL-->
+  		  <input type="text" name="tel1" placeholder="012" value="<!--TEL1-->" pattern="[0-9]+" class="input-short"/>－<input type="text" pattern="[0-9]+" placeholder="3456" name="tel2" class="input-short"
+  		    value="<!--TEL2-->" />－<input type="text" placeholder="6789" name="tel3" class="input-short" pattern="[0-9]+" value="<!--TEL3-->" />
+  		  <!--/TELDEL-->
+  		  <!--TELN-->
+  		</div>
+  	  </div>
+  	  <h4 class="box-title-form">FAX番号</h4>
+  	  <div class="box-content input-area flex-row">
+  		<div>
+  		  <!--FAXDEL-->
+  		  <input type="text" name="fax1" class="input-short" value="<!--FAX1-->" placeholder="012" pattern="[0-9]+"/>－<input type="text" pattern="[0-9]+" name="fax2"  class="input-short"
+  		  	value="<!--FAX2-->" placeholder="3456"/>－<input type="text" name="fax3" placeholder="6789" pattern="[0-9]+" class="input-short" value="<!--FAX3-->" />
+  		  <!--/FAXDEL-->
+  		  <!--FAXN-->
+  		</div>
+  	  </div>
+  	  <h4 class="box-title-form">メールアドレス<span class="important">(必記)</span></h4>
+  	  <div class="box-content input-area flex-row">
+  	    <!--EMAILDEL-->
+  	    <input type="email" class="input-full-length" name="email" placeholder="query@futboljersey.com"
+  	      value="<!--EMAIL-->" />
+  	    <!--/EMAILDEL-->
+  	    <!--EMAILN-->
+  	  </div>
+  	  <h4 class="box-title-form">パスワード<span class="important">(必記)</span></h4>
+  	  <div class="box-content input-area flex-row">
+  		<!--PASSDEL-->
+  		<input type="password" class="input-full-length" name="pass1" value="" maxlength="8" placeholder="半角英数字6文字以上8文字以内" required/>
+  	  </div>
+  	  <h4 class="box-title-form">パスワード確認<span class="important">(必記)</span></h4>
+  	  <div class="box-content input-area flex-row ">
+  		<input type="password" class="input-full-length" name="pass2" value="" maxlength="8" placeholder="半角英数字6文字以上8文字以内" required/>
+  		<!--/PASSDEL-->  
+  		<!--PASSN-->  
+  	  </div>
+  	  <h4 class="box-title-form">メールマガジン購読<span class="important">(必記)</span></h4>
+  	  <div class="box-content input-area flex-row">
+  		<div>
+  		  <!--MSRDEL-->
+  		  <input type="radio" name="meruma" value="1" id="meruma1-field" <!--MERUMA1--> required/>
+  		  <label for="meruma1-field">：購読する</label>
+  		</div>
+  		<div>
+  		  <input type="radio" name="meruma" value="2" id="meruma2-field" <!--MERUMA2--> />
+  		  <label for="meruma2-field">：購読しない</label>
+  		  <!--/MSRDEL-->
+  		  <!--MERUMAN-->
+  		</div>
+  	  </div>
+  	</div>
+    </section>
+  </form>
+<!--ORDERBUTTONDEL-->
+<div class="box-content input-area flex-row center">
+	<div>
+		<input type="hidden" name="modes" value="send" form="member-form" />
+		<input type="submit" class="btn-standard secondary" value="確認画面へ"  form="member-form"/>
+	</div>
+	<div>
+		<form action="<!--PHP_SELF-->" method="post">
+			<input type="submit"class="btn-standard" value="やり直す" />
+		</form>
+	</div>
+</div>
+<!--/ORDERBUTTONDEL-->
+<!--TOUROKUDEL-->
+<div class="box-content input-area flex-col center">
+	<!--以上でよろしければ”登録する”ボタンを押して下さい。確認メールが届きます。-->
+	<div>
+		<form action="<!--PHP_SELF-->" method="post">
+			<input type="hidden" name="modes" value="touroku" />
+			<input type="button"class="btn-standard secondary" value="　　登録する　　" OnClick="submit_disabled(this);" />
+		</form>
+	</div>
+
+	<!--もし上記の内容を訂正したい場合は下記の”修正する”ボタンを押して下さい。-->
+	<div>
+		<form action="<!--PHP_SELF-->" method="post">
+			<input type="hidden" name="modes" value="back" />
+			<input type="submit"  class="btn-standard" value="修正する" />
+		</form>
+	</div>
+</div>
+<!--/TOUROKUDEL-->
+</div><!--.member_summary-->

@@ -1,0 +1,20 @@
+<h2 class="title-nbs">パスワード忘れ</h2>
+<!--ERRORMSG-->
+	<div class="box-outline  pass-confirmation">
+		<h3 class="box-title box-title-big">ご注意ください</h3>
+		<div class="box-content">
+			<p><span class="important">※</span>会員登録時に登録したメールアドレスにパスワードを送信させて頂きます。</p>
+			<p><span class="important">※</span>登録時のメールアドレスを忘れた場合は、お手数ですがお問い合せのページからお問い合せ頂くか、新規に登録お願い致します。<br />（新規登録した場合は、獲得した割引ポイントがある場合無効になります。）</p>
+		</div>
+	</div>
+	<div class="box-outline pass-confirmation">
+		<h4 class="box-title box-title-big">会員登録時に登録したメールアドレスを入力しパスワード確認するを押して下さい。</h4>
+		<div class="box-content">		
+			<form action="<!--PHP_SELF-->" method="post" class="center">
+				<input type="hidden" name="modes" value="sub" />
+				<span class="bold">メールアドレス：</span><input type="text" name="email" class="input-full-length" placeholder="query@futboljersey.com" value="<!--EMAIL-->">
+				<input type="submit" class="btn-standard" value="パスワード確認する" />
+			</form>
+		</div>
+	</div>	
+

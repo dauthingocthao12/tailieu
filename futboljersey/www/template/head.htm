@@ -1,0 +1,126 @@
+<div id="header">
+	<h1 id="copy" class="pc-only">ユニフォーム、スパイク、フットサルシューズ、ボール、エナメルバッグ、プレイヤーから、コレクターまで、品揃え豊富なサッカーショップ「ネイバーズスポーツ」</h1>
+	<div id="header-main">
+		<div id="header-img">
+			<a href="/" title="サッカースパイク,ユニフォーム,フットサルシューズ,ネイバーズスポーツ" class="pc-only">
+				<img src="/img/header/title_nbs.gif" class="img-responsive" width="950" height="90"
+					alt="サッカースパイク,ユニフォーム,フットサルシューズ,ネイバーズスポーツ" />
+			</a>
+			<div class="mobile-only">
+				<img src="/img/header/title_nbs_sp.png" class="img-responsive" width="950" height="90"
+					alt="サッカースパイク,ユニフォーム,フットサルシューズ,ネイバーズスポーツ" />
+			</div>
+		</div>
+
+		<div id="navigation-header">
+			<div id="menu-box">
+				<nav id="menu">
+					<a href="/" title="ホーム">
+						ホーム
+					</a>
+					<a href="/cago.php?mode=check" title="買い物かご" class="btn-cart">
+						<img src="/img/header/cart_icon.png">
+						買い物かご
+					</a>
+					<a href="/affiliate.php" title="アフィリエイト">
+						アフィリエイト
+					</a>
+					<a href="/1-SHOP/" title="店舗情報">
+						店舗情報
+					</a>
+					<a href="mailto:query%40futboljersey.com?Subject=NBSお問い合わせ" title="お問い合わせ">
+						お問い合わせ
+					</a>
+					<a href="/1-NEWS/" title="新入荷情報">
+						新入荷情報
+					</a>
+				</nav>
+			</div>
+
+			<div id="login-menu-pc">
+				<!--menu-box-->
+				<div id="login_name">
+					<!--USERNAME-->
+				</div>
+				<div id="login_menu">
+					<!--LOGOUT-->
+					<a href="/logout.php?url=$burl_" title="ログアウト">ログアウト</a>
+					<a href="/kakunin.php" title="商品発送状況">商品発送状況</a>
+					<a href="/member/henkou.php" title="会員登録変更">会員登録変更</a>
+					<a href="/member/dakai.php" title="会員脱会">会員脱会</a>
+					<a href="/rireki.php" title="お買い物履歴">お買い物履歴</a>
+					<!--/LOGOUT-->
+					<!--LOGIN-->
+					<a href="/login.php?url=<!--BURL-->" title="ログイン">ログイン</a>
+					<a href="/kakunin.php" title="商品発送状況">商品発送状況</a>
+					<a href="/member/" title="会員登録">会員登録</a>
+					<a href="/member/pass.php" title="パスワード忘れ">パスワード忘れ</a>
+					<!--/LOGIN-->
+				</div>
+			</div>
+		</div>
+
+	</div>
+	<!--header-main-->
+	<p class="header-banner pc-only"><a href="/goods/23/"><img src="/img/header/buyonlin_201610.gif" width="950"
+				height="70" alt="BUY ONLINE" /></a></p>
+	<p class="header-banner pc-only"><a href="/goods/"><img src="/img/header/souryou_muryou_all.gif" width="950"
+				height="70" alt="日本国内全品送料無料" /></a></p>
+	<p class="header-banner pc-only "><a href="/goods/g21472/"><img src="/img/header/prepaid-point.gif" width="950"
+				height="70" alt="お得なプリペイドポイントはこちらから！" /></a></p>
+	<p class="header-banner pc-only"><img src="/img/header/no-to-phony-products.gif" width="950" height="70"
+			alt="コピー商品の取り扱いはありません。" /></p>
+</div>
+<!--header-->
+
+<!-- サイドバー -->
+<div class="vertical-banner _left"></div>
+<div class="vertical-banner _right"></div>
+
+<!-- モバイル版 左メニュー -->
+<div id="navigation-mobile" class="mobile-menu">
+	<div id="mobile-menu-overlay"></div>
+	<div id="hamburger-menu">
+		<span></span>
+		<span></span>
+		<span></span>
+	</div>
+</div>
+
+<!-- フッタバナー start -->
+<div id="footer_banner_area">
+	<div id="footer_banner">
+		<div id="footer_banner_closebtn"><a herf="javascript:void(0)" OnClick="close_banner();">×</a></div>
+		<a href="/goods/23/"><img src="/img/header/buyonlin_201610.gif" width="950" height="70" alt="BUY ONLINE" /></a>
+	</div>
+</div>
+<script type="text/javascript">
+	window.onload = function () {
+
+		// pathの取得
+		var url = location.pathname;
+
+		// TOPページのみ下部広告表示
+		if (url === "/") {
+
+			//ブラウザにあるクッキーの情報を取得
+			String = document.cookie;
+			//取得したクッキーに文字列「bncd」があるか確認
+			BooleanCheck = String.indexOf("bncd", 0);
+			//クッキーの有り無しで処理を分岐
+			if (BooleanCheck == -1) {
+				document.getElementById("footer_banner_area").style.visibility = "visible";
+			}
+		}
+	}
+
+	function close_banner() {
+		document.getElementById("footer_banner_area").style.visibility = "hidden";
+
+		document.cookie = 'bncd=close; domain=.futboljersey.com; path=/; max-age=60*60*24';
+
+		// フッターバナーの横のTOPへ戻るボタンのCSS変更
+		document.getElementById("TopArrowScrollBtn").style.bottom = "30px";
+	}
+</script>
+<!-- フッタバナー end -->

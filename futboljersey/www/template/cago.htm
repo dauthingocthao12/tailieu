@@ -1,0 +1,203 @@
+<h2 class="title-nbs">買い物かご</h2>
+<div class="member_summary cago">
+	<!--CAGOEMPTY-->
+
+	<h4 class="error-alert">
+		現在選択されている商品はありません。
+	</h4>
+
+	<section class="box-outline">
+		<div class="box-content">
+			<span>現在選択されている商品はありません。</span>
+			<span>もし、お買い物商品が買い物かごに入らない場合は、<b class="bold"> <a
+						href="/cautions.htm">問題解決方法</a></b>のページをご覧下さい。</span><br />
+			<!--
+						<span>それでもだめな場合はお手数ですが、ご注文されたい商品名と数量及び、お名前、ご住所、電話番号を明記の上、メールでご連絡下さい。</span><br />
+			<span>ご注文用メールアドレス：<b class="bold">
+					<a href="mailto:orders@futboljersey.com?Subject=order">orders@futboljersey.com</a></b></span>
+			-->
+	</section>
+	<!--/CAGOEMPTY-->
+
+	<!--CAGOGOODS-->
+	<!--ERRORMSG-->
+
+	<section class="box-outline">
+		<h4 class="box-title box-title-big">ご注意ください</h4>
+		<div class="box-content">
+			<span>同じ商品を複数ご購入される場合は数量を変更し<b class="bold marking-color-1">数量変更</b>ボタンを押して下さい。</span><br>
+			<spna>商品のみご購入の方は、<b class="bold marking-color-3">ご購入</b>ボタンを押して下さい。お客様情報の入力ページへ移ります。</spna><br>
+			<spna><b class="bold marking-color-2">マーキング</b>や<b class="bold marking-color-2">チームオーダー</b>ボタンを押しますと、背番号やネームなどの入力ページに移ります。</spna><br>
+			<spna>複数のマーキングを希望される方はマーキング操作を繰り返してください。</spna><br><br>
+			<spna class="important">商品在庫について</spna><br>
+			<spna>当店は実店舗と同一の在庫であります関係上、ご注文後に在庫切れが発生する場合がございます。</spna><br>
+			<spna>誠にご迷惑をお掛け致しますが、あらかじめご了承の頂きますようお願い申し上げます。</spna><br>
+		</div>
+	</section>
+
+	<div class="cago-form">
+		<div class="cago-goods">
+			<!--GOODS-->
+		</div>
+		<div class="cago-marking">
+			<!--MARKING-->
+		</div>
+	</div>
+
+	<!--WARIBIKIDEL-->
+	<h4 class="box-title-form text-center">諸経費・合計</h4>
+	<div class="box-dcontent">
+		<span class="important">特別会員割引(
+			<!--WARIBIKI-->% )
+		</span>
+		<span class="important">
+			<!--NEBIKI-->
+		</span>円
+	</div>
+	<!--/WARIBIKIDEL-->
+	<!--WARIBIKI2DEL-->
+	<h4 class="box-title-form text-center">諸経費・合計</h4>
+	<div class="box-dcontent">
+		<span class="important">割引(
+			<!--WARIBIKI2-->% )
+		</span>
+		<span class="important">
+			<!--NEBIKI-->
+		</span>円
+	</div>
+	<!--/WARIBIKI2DEL-->
+	<!--PAERSENTDEL-->
+	<h4 class="box-title-form text-center">諸経費・合計</h4>
+	<div class="box-dcontent">
+		<span class="important">割引(
+			<!--PAERSENT-->% )
+		</span>
+		<span class="important">
+			<!--NEBIKI-->
+		</span>円
+	</div>
+	<!--/PAERSENTDEL-->
+	<!--SOURYOUMURYOU-->
+	<div class="box-outline">
+		<h4 class="box-title-form text-center">諸経費・合計</h4>
+		<div class="box-content">
+			<span>送料</span>
+			<span class="important">サービス</span>
+		</div>
+		<div class="box-content">
+			<span>手数料</span>
+			<span>未定</span>
+		</div>
+		<div class="box-content">
+			<span>合計金額</span>
+			<span>
+				<!--PRICEALL--> 円 + 手数料
+			</span>
+		</div>
+	</div>
+	<!--/SOURYOUMURYOU-->
+	<!--SOURYOUARI-->
+	<div class="total-area">
+		<h4 class="bolder text-center ">諸経費・合計</h4>
+		<div class="box-content box-column flex-item-gap">
+			<div class="text-border"></div>
+			<div class="box-row flex-item-between bold-text">
+				<div>送料・手数料</div>
+				<div>未定</div>
+			</div>
+			<div class="text-border"></div>
+			<div class="box-row flex-item-between">
+				<div class="bolder">合計金額</div>
+				<span class="total-amount">
+					<!--PRICEALL--> 円 + 送料・手数料
+				</span>
+			</div>
+		</div>
+	</div>
+	<!--/SOURYOUARI-->
+
+
+	<div class="cago-purchase-section purchase-btn-group">
+
+		<div class="order-button box-outline">
+			<h4 class="bold text-center">
+				購入手続きはこちら
+			</h4>
+			<div class="purchase-area-border"></div>
+			<div class="box-row equally-spaced">
+				<!--KOUNYUU1-->
+				<div>
+					<form action="<!--PHP_SELF-->" method="post">
+						<input type="hidden" name="mode" value="user_data" />
+						<input type="hidden" name="action" />
+						<input type="submit" value="ご購入" class="btn-standard btn-login" />
+					</form>
+				</div>
+				<!--/KOUNYUU1-->
+				<!--KOUNYUU2-->
+				<div>
+					<form action="<!--PHP_SELF-->" method="post">
+						<input type="hidden" name="mode" value="user_data" />
+						<input type="hidden" name="action" value="idpass" />
+						<input type="submit" value="ログイン" class="btn-standard btn-login" />
+					</form>
+				</div>
+				<div>
+					<form action="<!--PHP_SELF-->" method="post">
+						<input type="hidden" name="mode" value="user_data" />
+						<input type="hidden" name="action" value="not_idpass" />
+						<input type="submit" value="ゲストとして購入" class="btn-standard btn-guest" />
+					</form>
+				</div>
+				<!--/KOUNYUU2-->
+			</div>
+		</div>
+
+
+
+		<div class="order-button box-outline">
+			<h4 class="bold text-center">マーキング・チームオーダーを利用する方はこちら</h4>
+			<div class="purchase-area-border"></div>
+			<div class="box-row equally-spaced">
+				<form action="marking.php" method="post">
+					<div>
+						<input type="submit" value="マーキング" class="btn-standard" />
+						<!-- <span class="red">注意:ネーム付きユニフォームをご注文の方は、<br>マーキングを指定する必要はございません。</span> -->
+					</div>
+				</form>
+				<form action="./team.php" method="post">
+					<input type="submit" value="チームオーダー" class="btn-standard" />
+				</form>
+			</div>
+		</div>
+
+		<!--TOUROKU-->
+		<div class="order-button  box-outline">
+			<h4 class="bold text-center">割引ポイントが貯まる、お得な会員になりませんか？</h4>
+			<div class="purchase-area-border"></div>
+			<div class="box-row equally-spaced">
+				<form action="./member/" method="post">
+					<!--今登録しても買い物中のかごの商品は消えません。<br />-->
+					<input type="submit" value="新規会員登録" class="btn-standard btn-outline" />
+				</form>
+			</div>
+		</div>
+		<!--/TOUROKU-->
+
+
+		<div class="order-button  box-outline">
+			<h4 class="bold text-center">買い物を続ける場合は、下のボタンをクリックして下さい。</h4>
+			<div class="purchase-area-border"></div>
+			<div class="box-row equally-spaced">
+				<form action="<!--REFERE-->">
+						<input type="submit" value="買い物をつづける" class="btn-standard continue-button" />
+						<!-- <span class="red">
+						買い物を続ける場合は、上のボタンをクリックして下さい。
+					</span> -->
+				</form>
+			</div>
+		</div>
+	</div>
+	<!--/CAGOGOODS-->
+</div>
+<!--.member_summary-->

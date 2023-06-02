@@ -1,0 +1,433 @@
+<h2 class="title-nbs">買い物かご
+	<!--PAGEHEADTITLE-->
+</h2>
+
+<div class="member_summary cago">
+	<!--ERRORMSG-->
+
+	<!--TYUUIDEL-->
+	<section class="box-outline">
+		<h4 class="box-title box-title-big">ご注意ください</h4>
+			<div class="box-content">
+				<span>文字を入力する際、各項目で半角入力か全角入力か指定してありますので、それに従って入力してください。</span><br>
+				<span><b class="important">(必記)</b>と書いてある項目は、必ず入力してください。</span><br>
+				<span>必要事項を全て記入の上、画面下にある<b class="bold marking-color-3">確認画面へ</b>というボタンをクリックしてください。</span>
+			</div>
+	</section>
+	<!--/TYUUIDEL-->
+
+	<!--PAYPALLASTMSG-->
+
+
+	<section class="box-outline">
+		<h4 class="box-title box-title-big">ご注意ください</h4>
+		<div class="box-content">
+			<span>オーダー内容とお客様の情報が以下でよろしい場合は<b class="bold marking-color-3">ご注文</b>ボタンをクリックしてください。</span>
+		</div>
+	</section>
+	<!--/PAYPALLASTMSG-->
+
+	<!--最終画面-->
+
+
+	<section>
+		<div class="cago-form">
+			<div class="cago-goods">
+				<!--GOODS-->
+			</div>
+			<div class="cago-marking">
+				<!--MARKING-->
+			</div>
+		</div>
+
+		<!--WARIBIKIDEL-->
+		<div>
+			<span><b class="bold">特別会員割引(
+					<!--WARIBIKI-->% )
+				</b></span>
+			<span><b>-
+					<!--NEBIKI-->
+				</b> 円</span>
+		</div>
+		<!--/WARIBIKIDEL-->
+		<!--WARIBIKI2DEL-->
+		<div>
+			<span><b class="bold">割引(
+					<!--WARIBIKI2-->% )
+				</b></span>
+			<span><b>-
+					<!--NEBIKI-->
+				</b> 円</span>
+		</div>
+		<!--/WARIBIKI2DEL-->
+		<!--PAERSENTDEL-->
+		<div>
+			<span><b class="bold">割引(
+					<!--PAERSENT-->% )
+				</b></span>
+			<span><b>-
+					<!--NEBIKI-->
+				</b> 円</span>
+		</div>
+		<!--/PAERSENTDEL-->
+
+		<!--SOURYOUSDEL-->
+		<div class="total-area">
+			<h4 class="bolder text-center">諸経費・合計</h4>
+			<div class="box-content box-column flex-item-gap">
+				<div class="text-border"></div>
+				<div class="box-row flex-item-between">
+					<span class="bold-text">送料</span>
+					<span class="bold-text">サービス </span>
+				</div>
+				<!--RPOINTDEL-->
+				<div class="box-row flex-item-between">
+					<span>割引ポイント利用</span>
+					<span><b class="text-bold">-
+							<!--RPOINTN-->
+						</b> 円</span>
+				</div>
+				<!--/RPOINTDEL-->
+				<!--/SOURYOUSDEL-->
+				<!--SOURYOUDEL-->
+				<div class="total-area">
+					<h4 class="bolder text-center">諸経費・合計</h4>
+					<div class="box-content box-column flex-item-gap">
+						<div class="text-border"></div>
+						<div class="box-row flex-item-between">
+							<span>送料</span>
+							<span>
+								<!--UNTINN--> 円
+							</span>
+						</div>
+						<!--RPOINTDEL-->
+						<div class="box-row flex-item-between">
+							<span>割引ポイント利用</span>
+							<span><b class="text-bold">-
+									<!--RPOINTN-->
+								</b> 円</span>
+						</div>
+						<!--/RPOINTDEL-->
+						<!--/SOURYOUDEL-->
+						<!--GOUKEI-->
+	</section>
+
+	<!--最終画面 ここまで-->
+
+	<form action="<!--PHP_SELF-->" method="post" id="cart_form">
+		<input type="hidden" name="mode" id="cart_mode" />
+		<input type="hidden" name="action" id="cart_action" />
+
+		<!--PAYPALLASTDEL-->
+		<section class="box-outline">
+			<h4 class="box-title box-title-big text-center">お客様の情報フォーム</h4>
+			<div class="address-form-area">
+				<h4 class="box-title-form">
+					漢字氏名（全角）：（例:山田　太郎）<span class="important">（必記）</span>
+				</h4>
+				<div class="enter-the-name box-content">
+					<div class="input-full-length">
+						<!--NAMEDEL-->
+						<label>姓：</label>
+						<input type="text" name="name_s" value="<!--NAMES-->" class="input-full-length"
+							placeholder="山田" required />
+					</div>
+					<div class="input-full-length">
+						<label>名：</label>
+						<input type="text" name="name_n" value="<!--NAMEN-->" class="input-full-length"
+							placeholder="太郎" required />
+						<!--/NAMEDEL-->
+						<!--NAMESNN-->
+					</div>
+				</div>
+				<h4 class="box-title-form">
+					ふりがな（全角）：（例:やまだ　たろう）<span class="important">（必記）</span>
+				</h4>
+				<div class="enter-the-name box-content">
+					<div  class="input-full-length">
+						<!--KANADEL-->
+						<label>姓：</label>
+						<input type="text" name="kana_s" value="<!--KANAS-->" class="input-full-length"
+							placeholder="やまだ" />
+					</div>
+					<div  class="input-full-length">
+						<label>名：</label>
+						<input type="text" name="kana_n" value="<!--KANAN-->" class="input-full-length"
+							placeholder="たろう" />
+						<!--/KANADEL-->
+						<!--KANASNN-->
+					</div>
+				</div>
+				<h4 class="box-title-form">
+					住所<span class="important">（必記）</span>
+				</h4>
+				<div class="address-info">
+					<div>
+						<span class="bold">
+							郵便番号
+						</span>
+						<div>
+							<!--ZIPDEL-->
+							〒<input type="text" class="input-length-3-letters" name="zip1" maxlength="3"
+								value="<!--ZIP1-->" placeholder="999" required />－<input type="text"
+								class="input-length-4-letters" maxlength="4" name="zip2" value="<!--ZIP2-->"
+								placeholder="9999" required />
+							<!--/ZIPDEL-->
+							<!--ZIPN-->
+						</div>
+					</div>
+					<div>
+						<span class="bold">都道府県</span>
+						<!--PRF-->
+						<!--PRFN-->
+					</div>
+					<div>
+						<div><span class="bold">市区町村名</span>（全角）</div>
+						<!--CITYDEL--><input class="input-full-length" type="text" name="city" value="<!--CITY-->"
+							placeholder="千代田区" required />
+						<!--/CITYDEL-->
+						<!--CITYN-->
+					</div>
+					<div>
+						<div><span class="bold">所番地</span>（全角）</div>
+						<!--ADD1DEL--><input class="input-full-length" type="text" name="add1" value="<!--ADD1-->"
+							placeholder="永田町９－９－９" required />
+						<!--/ADD1DEL-->
+						<!--ADD1N-->
+					</div>
+					<div>
+						<div><span class="bold">マンション名など</span>（全角）</div>
+						<!--ADD2DEL--><input class="input-full-length" type="text" name="add2" value="<!--ADD2-->"
+							placeholder="ネイバーズマンション１０１号室" required />
+						<!--/ADD2DEL-->
+						<!--ADD2N-->
+					</div>
+				</div>
+				<h4 class="box-title-form">
+					電話番号（半角）：（例:012-345-6789）<span class="important">（いずれか必須）</span>
+				</h4>
+				<div class="box-content box-column flex-item-gap">
+					<div class="box-row">
+						<!--TELDEL-->
+						<label class="label-width">固定電話：</label>
+						<div class="phone-number">
+							<input type="text" name="tel1" value="<!--TEL1-->" placeholder="012" />－<input
+								type="text" name="tel2" value="<!--TEL2-->" placeholder="345" />－<input type="text"
+								name="tel3" value="<!--TEL3-->" placeholder="6789" />
+						</div>
+						<!--/TELDEL-->
+						<!--TELN-->
+					</div>
+					<div class="box-row">
+						<!--KEIDEL-->
+						<label class="label-width">携帯電話：</label>
+						<div class="phone-number">
+							<input type="text" name="kei1" value="<!--KEI1-->" placeholder="012" />－<input
+								type="text" name="kei2" value="<!--KEI2-->" placeholder="345" />－<input type="text"
+								name="kei3" value="<!--KEI3-->" placeholder="6789" />
+						</div>
+						<!--/KEIDEL-->
+						<!--KEIN-->
+					</div>
+				</div>
+				<h4 class="box-title-form">
+					FAX番号（半角）：（例:012-345-6789）
+				</h4>
+				<div class="phone-number box-content">
+					<!--FAXDEL-->
+					<input type="text" name="fax1" value="<!--FAX1-->" placeholder="012" />－<input type="text"
+						name="fax2" value="<!--FAX2-->" placeholder="345" />－<input type="text" name="fax3"
+						value="<!--FAX3-->" placeholder="6789" />
+					<!--/FAXDEL-->
+					<!--FAXN-->
+				</div>
+				<h4 class="box-title-form">
+					メールアドレス（半角）：（例:query@futboljersey.com）<span class="important">（いずれか必須）</span>
+				</h4>
+				<div class="box-content box-column flex-item-gap">
+					<div class="box-column flex-item-gap">
+						<div>
+							<!--EMAIL1DEL-->E-mail1：<input type="text" class="input-full-length" name="email"
+								value="<!--EMAIL-->" placeholder="query@futboljersey.com" />
+							<!--/EMAIL1DEL-->
+							<!--MAIL1N-->
+						</div>
+						<div>
+							<!--EMAIL2DEL-->E-mail2：<input type="text" class="input-full-length" name="email2"
+								value="<!--EMAIL2-->" />
+							<!--/EMAIL2DEL-->
+							<!--MAIL2N-->
+						</div>
+					</div>
+					<div>
+						<!--TEXTDEL-->
+						誤入力でご連絡のメールが届かない場合がございますので、<br />
+						複数お持ちの方はE-mail2のご入力もお願いします。<br />
+						携帯のメールアドレスのご利用はなるべく控えてください。<br />
+						ご確認メールが届かない場合がございます。<br />
+						携帯のメールアドレスをどうしても利用する場合はドメイン指定解除など、<br />
+						orders@futboljersey.comが受信できるように設定してください。
+						<!--/TEXTDEL-->
+					</div>
+				</div>
+				<h4 class="box-title-form">
+					配達ご希望時間帯
+				</h4>
+				<div class="box-content">
+					<!--HAITATU-->
+					<!--HAITATUN-->
+				</div>
+				<h4 class="box-title-form">
+					在庫切れの場合<span class="important">（必記）</span>
+				</h4>
+				<div class="box-content">
+					<!--ZAIKO-->
+					<!--ZAIKON-->
+				</div>
+				<h4 class="box-title-form">
+					支払方法<span class="important">（必記）</span>
+				</h4>
+				<div class="box-content">
+					<!--SHIHARAI-->
+					<!--SHIHARAIN-->
+				</div>
+				<div>
+					<!--NOTPOINT-->
+					<div>
+						ポイント利用　保有割引ポイント：
+						<!--POINTALL--> 円
+					</div>
+					<div>
+						<span class="important bold">※
+							<!--MINPOINT-->ポイントからご利用可能です。
+						</span>
+					</div>
+					<!--/NOTPOINT-->
+				</div>
+				<div>
+					<!--POINT-->
+					<div class="box-content">
+						<div>
+							<input type="hidden" name="point" value="<!--POINTALL-->" />
+							ポイント利用　保有割引ポイント：
+							<b class="bold"><!--POINTALL--> 円</b>
+						</div>
+						<div>
+							<span class="important">注:商品代金のみ割引ポイントをご利用できます。(最低利用可能ポイントは、
+								<!--MINPOINT-->ポイントからです。）
+							</span><br />
+							<input type="radio" name="r_point" value="1" <!--CHECKED1--> />：利用する
+							<input type="radio" name="r_point" value="2" <!--CHECKED2-->
+							/>：利用しない<br />
+							利用割引ポイント：<input type="text" size="6" name="g_point" value="<!--GPOINT-->">
+						</div>
+					</div>
+					<!--/POINT-->
+				</div>
+				<h4 class="box-title-form">
+					ご意見・ご要望など
+				</h4>
+				<div class="box-content">
+					<!--MSRDEL--><textarea name="msr" rows="10" class="textarea100"><!--MSR--></textarea>
+					<!--/MSRDEL-->
+					<!--MSRN-->
+				</div>
+			</div>
+		</section>
+
+
+		<!--/PAYPALLASTDEL-->
+
+
+		<!--KAKUNINDEL-->
+		<div class="btn-group">
+			<input type="button" class="btn-standard btn-login" value="確認画面へ" OnClick="cart_form_submit('check', '');"
+				id="cart_mode_send" />
+			<input type="button" class="btn-standard" value="買い物かごへ戻る" OnClick="cart_form_submit('', '');"
+				id="cart_mode_retutrn" />
+		</div>
+		<!--/KAKUNINDEL-->
+
+		<!--TYUUMONHIDE-->
+		<table class="member_table cago_button">
+			<!--NOTPAYPAL-->
+
+			<div class="cago-purchase-section">
+				<div class="order-button">
+					<!--<span class="text-center">上記の内容でよろしい場合は”ご注文”ボタンを押して下さい。</span>-->
+					<div class="box-row equally-spaced">
+						<input type="button" class="btn-standard btn-login" value="　　ご注文　　"
+							OnClick="cart_form_submit('send', '');" id="cart_mode_check" />
+					</div>
+				</div>
+			</div>
+
+
+			<!--/NOTPAYPAL-->
+			<!--PAYPAL-->
+			<tr>
+				<td colspan="3">
+					上記の内容でよろしい場合は以下のPayPalのボタンをクリックしお支払い手続きをお願い致します。<br />
+				</td>
+			</tr>
+			<tr>
+				<td colspan="3">
+					<input type='image' name='button'
+						src='https://www.paypalobjects.com/digitalassets/c/website/marketing/apac/jp/developer/purchase_228_50.png'
+						border='0' align='top' alt='購入手続き PayPal' OnClick="cart_form_submit('send', 'paypal');"
+						id="cart_mode_paypal" />
+				</td>
+			</tr>
+			<!--/PAYPAL-->
+			<!--PAYJP-->
+			<tr>
+				<td colspan="3">
+					上記の内容でよろしい場合は以下のPAY.JPのボタンをクリックしお支払い手続きをお願い致します。<br />
+				</td>
+			</tr>
+			<tr>
+				<td colspan="3">
+					<script>
+						function payjp_callback() {
+							cart_form_submit('send', '')
+						}
+					</script>
+					<script type="text/javascript" src="<!--PAYJPSRC-->" class="payjp-button" data-key="<!--PAYJPKEY-->"
+						data-text="<!--PAYJPBUTTON-->" data-submit-text="<!--PAYJPSUBMIT-->"
+						data-on-created="payjp_callback" data-lang="<!--PAYJPLANG-->"
+						data-name-placeholder="<!--PAYJPPLACEHOLDER-->" data-partial="false"></script>
+				</td>
+			</tr>
+			<!--/PAYJP-->
+			<!--PAYPALLAST-->
+
+			<!-- 2022/12/7 レスポンシブ対応につき、コメントアウト uenishi -->
+			<!-- <tr>
+				<td colspan="3">
+					<input type="button" value="ご注文" OnClick="cart_form_submit('send', 'paypallast');"
+						id="cart_mode_check" />
+				</td>
+			</tr> -->
+
+			<!-- <div class="order-button">
+				<input type="button" class="submit" value="ご注文" OnClick="cart_form_submit('send', 'paypallast');"
+					id="cart_mode_check" />
+			</div> -->
+
+			<!--/PAYPALLAST-->
+
+
+			<div class="order-button">
+				<!--<span class="text-center">変更する場合は下記のボタンを押して下さい。</span>-->
+				<div class="btn-group">
+					<input type="button" class="btn-standard" value="買い物かごへ戻る" OnClick="cart_form_submit('', 'back');"
+						id="cart_mode_retutrn" />
+					<input type="button" class="btn-standard" value="お届け先情報へ戻る"
+						OnClick="cart_form_submit('user_data', 'back');" id="cart_mode_modoru" />
+				</div>
+			</div>
+		</table>
+		<!--/TYUUMONHIDE-->
+	</form>
+</div>
+<!--.member_summary-->

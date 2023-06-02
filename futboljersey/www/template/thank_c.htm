@@ -1,0 +1,42 @@
+<div id="inner">
+	<!--A8IMG-->
+	<h4 class="success-alert text-center">ご注文ありがとうございました</h4>
+
+	<div class="box-outline">
+		<div class="box-content">
+			<p>
+				ご注文ありがとうございました。<br /><br />
+				確認のメールを、お届け先情報で入力して頂いたメールアドレスにお送りしましたのでご確認下さい。<br /><br />
+				もし届かない場合や、内容に間違い、変更などがございましたら、お手数ですがご連絡下さい。
+			</p>
+		</div>
+	</div>
+
+	<!--CARDMSG-->
+	<form name="UserForm" action="https://payment.kuronekoyamato.co.jp/webcollect/settleSelectAction.gw" method="post"
+		target="_blank" accept-charset="UTF-8">
+		<input type="hidden" name="TRS_MAP" value="V_W02" />
+		<input type="hidden" name="trader_code" value="$code" />
+		<input type="hidden" name="order_no" value="$order_num" />
+		<input type="hidden" name="goods_name" value="$goods_name" />
+		<input type="hidden" name="settle_price" value="$price" />
+		<input type="hidden" name="buyer_name_kanji" value="$name" />
+		<input type="hidden" name="buyer_tel" value="$tel" />
+		<input type="hidden" name="buyer_email" value="$email" />
+		<table class="mail_send">
+			<tr>
+				<td>
+					<span class="bold">カード決済は以下の「クレジットカードお支払い手続きへ」のボタンをクリックして手続きをお願いします。</span>
+				</td>
+			</tr>
+		</table>
+		<table id="member_button" class="member_table">
+			<tr>
+				<td>
+					<input type="submit" class="btn-standard" value="クレジットカードお支払い手続きへ" />
+				</td>
+			</tr>
+		</table>
+	</form>
+	<!--/CARDMSG-->
+</div><!--inner-->

@@ -1,0 +1,250 @@
+<h2 class="title-nbs">チームオーダー</h2>
+<div class="team_order">
+
+	<!--NOTORDER-->
+	<div class="error-alert">
+		<span>買い物かごにチームオーダーする商品が入っていません。</sapn><br>
+	</div>
+
+	<div class="box-outline">
+		<div class="box-content">
+			<span>ご希望商品のサイズと枚数を買い物かごにお入れ頂いた後に、チームオーダー可能になります。</span><br>
+		</div>
+	</div>
+	<!--/NOTORDER-->
+
+	<!--ORDERKAKUNIN-->
+
+	<!--TYUUIDEL-->
+	<section class="box-outline">
+		<h4 class="box-title box-title-big">ご注意ください</h4>
+			<div class="box-content">
+				<span>ご依頼いただいたチームオーダーをお見積もりいたします。</span><br>
+				<span>マーキングタイプの指定とご連絡先を入力して下さい。</span><br>
+				<span>文字を入力する際、各項目で半角入力か全角入力か指定してありますので、それに従って入力してください。</span><br>
+				<span><b class="important">(必記)</b>と書いてある項目は、必ず入力してください。</span><br>
+				<span>必要事項を全て記入の上、画面下にある<b class="bold marking-color-3">確認画面へ</b>というボタンをクリックしてください。</span><br>
+				<span>こちらのフォームで見積依頼ができない場合は、<b class="bold">sales@futboljersey.com</b>まで、ご希望の商品名・数量・サイズ等をお知らせ下さい。</span>
+			</div>
+	</section>
+	<!--/TYUUIDEL-->
+	<!--TYUUIKAKUNINDEL-->
+	<section class="box-outline">
+		<h4 class="box-title box-title-big">ご注意ください</h4>
+		<div class="box-content">
+			<span>お見積りの依頼内容が以下でよろしい場合は<b class="bold marking-color-3">お見積り</b>ボタンをクリックしてください。</span><br>
+			<span>後日、お見積をメールで送付させていただきます。</span><br>
+		</div>
+	</section>
+	<!--/TYUUIKAKUNINDEL-->
+
+	<!--ERRORMSG-->
+	<form action="<!--PHP_SELF-->" method="POST">
+		<input type="hidden" name="modes" value="kaku">
+
+		<div class="box-outline">
+			<div class="box-title-big box-title-form text-center">
+				<span>
+					<!--ENTER-->マーキングのタイプ
+					<!--/ENTER-->
+					<!--CHECK-->お見積の依頼内容
+					<!--/CHECK-->
+				</span>
+			</div>
+
+			<div class="box-grid box-form no-gap">
+				<div class="team-order-title box-row">
+					<span class="first-item">
+						背番号タイプ
+					</span>
+					<span>
+						<!--SEBANL-->
+						<!--SEBANN-->
+					</span>
+				</div>
+				<div class="team-order-title box-row">
+					<span class="first-item">背ネームタイプ</span>
+					<span>
+						<!--SENAMEL-->
+						<!--SENAMEN-->
+					</span>
+				</div>
+				<div class="team-order-title box-row">
+					<span class="first-item">胸番号タイプ</span>
+					<span>
+						<!--MUNEBANL-->
+						<!--MUNEBANN-->
+					</span>
+				</div>
+				<div class="team-order-title box-row">
+					<span class="first-item">パンツ番号タイプ</span>
+					<span>
+						<!--PANTL-->
+						<!--PANTN-->
+					</span>
+				</div>
+				<div class="team-order-title box-row">
+					<span class="first-item">バッジタイプ</span>
+					<span>
+						<!--BACHL-->
+						<!--BACHN-->
+					</span>
+				</div>
+			</div> <!-- end box-grid-->
+		</div>
+
+		<div>
+			<div class="purchase-goods-list">
+				<!--GOODSLIST-->
+				<!--GOODSKAKUNIN-->
+			</div>
+		</div>
+
+
+		<div class="member_summary">
+			<div class="box-outline">
+				<div class="box-title box-title-big text-center">
+					<h4>ご連絡先</h4>
+				</div>
+				<div class="address-form-area">
+					<!--パンツ＆ソックスセット-->
+					<!--PANTSET-->
+					<!--SOCKSSET-->
+					<!--PANTSETN-->
+					<!--SOCKSSETN-->
+					<!--パンツ＆ソックスセットここまで-->
+					<h4 class="box-title-form">漢字氏名：（例　山田　太郎）<span class="important">（必記）</span></h4>
+					<div class="enter-the-name box-content">
+						<div class="input-full-length">
+							<!--NAMEDEL-->
+							<label>姓：</label>
+							<input type="text" name="name_s" value="<!--NAMES-->" class="input-full-length"
+								placeholder="山田" required />
+						</div>
+						<div class="input-full-length">
+							<label>名：</label>
+							<input type="text" name="name_n" value="<!--NAMEN-->" class="input-full-length"
+								placeholder="太郎" required />
+							<!--/NAMEDEL-->
+							<!--NAMESN-->
+							<!--NAMENN-->
+						</div>
+					</div>
+					<h4 class="box-title-form">ふりがな：（例　やまだ　たろう）<span class="important">（必記）</span></h4>
+					<div class="enter-the-name box-content">
+						<div class="input-full-length">
+							<!--KANADEL-->
+							<label>姓：</label>
+							<input type="text" name="kana_s" value="<!--KANAS-->" class="input-full-length"
+								placeholder="やまだ" required />
+						</div>
+						<div class="input-full-length">
+							<label>名：</label>
+							<input type="text" name="kana_n" value="<!--KANAN-->" class="input-full-length"
+								placeholder="たろう" required />
+							<!--/KANADEL-->
+							<!--KANASN-->
+							<!--KANANN-->
+						</div>
+					</div>
+					<h4 class="box-title-form">住所<span class="important">（必記）</span></h4>
+					<div class="address-info">
+						<div>
+							<span class="bold">郵便番号</span>
+							<div>
+								<!--ZIPDEL-->
+								〒<input type="text" class="input-length-3-letters" maxlength="3" name="zip1"
+									value="<!--ZIP1-->" placeholder="999" required />－<input type="text"
+									class="input-length-4-letters" maxlength="4" name="zip2" value="<!--ZIP2-->"
+									placeholder="9999" required />
+								<!--/ZIPDEL-->
+								<!--ZIPN-->
+							</div>
+						</div>
+						<div>
+							<span class="bold">都道府県</span>
+							<!--PRF-->
+							<!--PRFN-->
+						</div>
+						<div>
+							<div><span class="bold">市区町村名</span>（全角）</div>
+							<!--CITYDEL-->
+							<input type="text" class="input-full-length" name="city" value="<!--CITY-->" placeholder="千代田区"
+								required />
+							<!--/CITYDEL-->
+							<!--CITYN-->
+						</div>
+						<div>
+							<div><span class="bold">所番地</span>（全角）</div>
+							<!--ADD1DEL-->
+							<input type="text" class="input-full-length" name="add1" value="<!--ADD1-->"
+								placeholder="永田町９－９－９" required />
+							<!--/ADD1DEL-->
+							<!--ADD1N-->
+						</div>
+						<div>
+							<div><span class="bold">マンション名など</span>（全角）</div>
+							<!--ADD2DEL-->
+							<input type="text" class="input-full-length" name="add2" value="<!--ADD2-->"
+								placeholder="ネイバーズマンション　１０１号室" />
+							<!--/ADD2DEL-->
+							<!--ADD2N-->
+						</div>
+					</div>
+					<h4 class="box-title-form">電話番号<b class="important">（必記）</b></h4>
+					<div class="phone-number box-content">
+						<!--TELDEL--><input type="text" name="tel1" value="<!--TEL1-->" placeholder="012"
+							required />－<input type="text" name="tel2" value="<!--TEL2-->" placeholder="345"
+							required />－<input type="text" name="tel3" value="<!--TEL3-->" placeholder="6789" required />
+						<!--/TELDEL-->
+						<!--TELN-->
+					</div>
+					<h4 class="box-title-form">FAX番号</h4>
+					<div class="phone-number box-content">
+						<!--FAXDEL--><input type="text" name="fax1" value="<!--FAX1-->" placeholder="012" />－<input
+							type="text" name="fax2" value="<!--FAX2-->" placeholder="345" />－<input type="text" name="fax3"
+							value="<!--FAX3-->" placeholder="6789" />
+						<!--/FAXDEL-->
+						<!--FAXN-->
+					</div>
+					<h4 class="box-title-form">メールアドレス<b class="important">（必記）</b></h4>
+					<div class="box-content">
+						<!--EMAILDEL--><input type="email" class="input-full-length" name="email" value="<!--EMAIL-->"
+							placeholder="query@futboljersey.com" required />
+						<!--/EMAILDEL-->
+						<!--EMAILN-->
+					</div>
+					<h4 class="box-title-form">ご意見・ご要望など</h4>
+					<div class="box-content">
+						<!--MSRDEL--><textarea name="msr" rows="10" class="textarea100"><!--MSR--></textarea>
+						<!--/MSRDEL-->
+						<!--MSRN-->
+					</div>
+					</d>
+				</div>
+			</div>
+		</div>
+
+
+		<!--KAKUNIN-->
+		<div class="btn-group">
+			<input type="submit" value="　確認画面へ　" class="btn-standard btn-login" />
+		</div>
+	</form>
+	<!--/KAKUNIN-->
+
+	<!--OMITUMORI-->
+	<div class="btn-group">
+		<form action="<!--PHP_SELF-->" method="post">
+			<input type="hidden" name="modes" value="send" />
+			<input type="button" class="btn-standard btn-login" value="　　お見積り　　" OnClick="submit_disabled(this);" />
+		</form>
+		<form action="<!--PHP_SELF-->" method="post">
+			<input type="hidden" name="modes" value="back" />
+			<input type="submit" class="btn-standard" value="内容の修正" />
+		</form>
+	</div>
+	<!--/OMITUMORI-->
+	<!--/ORDERKAKUNIN-->
+</div>
+<!--.team_order-->

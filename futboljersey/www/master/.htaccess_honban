@@ -1,0 +1,12 @@
+AuthUserFile  /home/futbol/futbol00001/.htpasswd
+AuthGroupFile /dev/null
+AuthName "Please enter username and password"
+AuthType Basic
+
+require valid-user
+
+php_value post_max_size "512M"
+php_value upload_max_filesize "512M"
+php_value memory_limit "2048M"
+
+

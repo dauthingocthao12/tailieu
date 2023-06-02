@@ -1,0 +1,141 @@
+<div class="goods-detail-area">
+	<h2 class="box-title box-title-big"><!--GOODSNAME--></h2>
+	<div class="container-center">
+
+		<!-- PC表示用スライダー -->
+		<div class="slider-section">
+			<div class="slider slider-wrapper" id="slider">
+				<!--IMAGE00-->
+				<!--IMAGE01-->
+				<!--IMAGE02-->
+				<!--IMAGE03-->
+				<!--IMAGE04-->
+				<!--IMAGE05-->
+				<!--IMAGE06-->
+				<!--IMAGE07-->
+				<!--IMAGE08-->
+				<!--IMAGE09-->
+			</div>
+		</div>
+
+		<!-- モーダル表示 -->
+		<div class="modal-wrapper">
+			<img src="" class="modal-image">
+		</div>
+
+	</div>
+</div>
+
+<!-- カート -->
+<form action="<!--KAGOURL-->" method="post" class="product_form">
+	<input type="hidden" name="action" value="add">
+	<input type="hidden" name="code" value="<!--CODE-->">
+	<input type="hidden" name="name" value="<!--GOODSNAME-->">
+	<input type="hidden" name="kakaku" value="<!--SPRICE-->">
+
+	<div class="total-area cart-area">
+		<div class="box-content box-column flex-item-gap">
+			<div class="box-row flex-item-between">
+				<span class="character-size-big">価格</span>
+				<div class="price"><!--PRICE--></div>
+			</div>
+			<div class="text-border"></div>
+			<!--NOTSOLDOUT-->
+			<div class="box-row flex-item-between">
+				<span class="character-size-big">サイズ</span>
+				<select name="size">
+					<!--OPTION-->
+				</select>
+			</div>
+			<div class="text-border"></div>
+			<div class="box-row cart-controll-area">
+				<th>&nbsp;</th>
+				<input type="submit" class="btn-standard btn-cago" value="買い物かごに入れる" />
+			</div>
+			<!--/NOTSOLDOUT-->
+			<!--SOLDOUT-->
+			<div class="box-row cart-controll-area">
+				<span class="font-size important">SOLD OUT</span>
+			</div>
+			<!--/SOLDOUT-->
+		</div>
+	</div>
+</form>
+
+
+<!-- 商品詳細 -->
+<div class="box-content">
+	<div class="description-area">
+		<h3 id="description">商品説明</h3>
+		<div class="col-item">
+			<div class="box-row center-item">
+				<span class="bolder item-space">商品名</span>
+				<div class="sp-text-center"><!--SOURYOUMURYOU--><!--GOODSNAME--></div>
+			</div>
+			<div class="box-row center-item">
+				<span class="bolder item-space">ブランド名</span>
+				<div><!--BRAND--></div>
+			</div>
+			<div class="box-row center-item">
+				<span class="bolder item-space">価格</span>
+				<div class="price"><!--PRICE--></div>
+			</div>
+			<div class="box-row center-item">
+				<span class="bolder item-space">品番</span>
+				<div><!--CODE--></div>
+			</div>
+			<div class="box-row center-item">
+				<span class="bolder item-space">サイズ</span>
+				<div><!--SIZE--></div>
+			</div>
+			<div class="box-row center-item start-item">
+				<span class="bolder item-space">商品説明</span>
+				<div class="col-item">
+					<p><!--SETSUMEI--></p>
+				</div>
+			</div>
+			<div class="box-row center-item start-item">
+				<span class="bolder item-space">納期</span>
+				<div><!--NOUKI--></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<form action="<!--KAGOURL-->" method="post" class="product_form">
+	<input type="hidden" name="action" value="add">
+	<input type="hidden" name="code" value="<!--CODE-->">
+	<input type="hidden" name="name" value="<!--GOODSNAME-->">
+	<input type="hidden" name="kakaku" value="<!--SPRICE-->">
+
+	<div class="total-area cart-area">
+		<div class="box-content box-column flex-item-gap">
+			<div class="box-row flex-item-between">
+				<div class="character-size-big"><span class="character-size-big">価格</span></div>
+				<div class="price"><!--PRICE--></div>
+			</div>
+			<div class="text-border"></div>
+			<!--NOTSOLDOUT-->
+			<div class="box-row flex-item-between">
+				<div><span class="character-size-big">サイズ</span></div>
+				<div>
+					<select name="size">
+						<!--OPTION-->
+					</select>
+				</div>
+			</div>
+			<div class="text-border"></div>
+			<div class="box-row cart-controll-area">
+				<div>&nbsp;</div>
+				<div><input type="submit" class="btn-standard btn-cago" value="買い物かごに入れる" /></div>
+			</div>
+			<!--/NOTSOLDOUT-->
+			<!--SOLDOUT-->
+			<div class="box-row cart-controll-area">
+				<div>&nbsp;</div>
+				<div><span class="font-size important">SOLD OUT</span></div>
+			</div>
+			<!--/SOLDOUT-->
+		</div>
+	</div>
+</form>

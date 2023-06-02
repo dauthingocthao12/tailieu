@@ -1,0 +1,93 @@
+<h2 class="title-nbs">ネイバーズスポーツ アフィリエイトポイント変換申請</h2>
+
+<!--ERRORMSG-->
+<section class="point-conversion-table">
+<!--PAPPLICHANGE-->
+	<form action="<!--PHP_SELF-->" method="POST">
+		<input type="hidden" name="mode" value="p_update">
+		<input type="hidden" name="action" value="p_cancel">
+		<p  class="btn-edit"><span class="important">※</span>情報を変更し<span class="bold">「確認」</span>ボタンを押して下さい。<br />
+		   <span class="important">※</span>キャンセルする場合は、<span class="bold">「キャンセル」</span>ボタンを押して下さい。
+		   <input type="submit" class="btn-standard" value="キャンセル">
+		</p>
+	</form>
+	<form action="<!--PHP_SELF-->" method="POST">
+		<input type="hidden" name="mode" value="p_update">
+		<input type="hidden" name="action" value="p_update_check">
+<!--/PAPPLICHANGE-->
+<!--PAPPLI-->
+	<form action="<!--PHP_SELF-->" method="POST">
+		<input type="hidden" name="mode" value="p_apply">
+		<input type="hidden" name="action" value="p_apply_check">
+		<p class="increase-space">変換するポイントと、お振り込みする口座を入力し確認ボタンを押して下さい。</p>	
+
+<!--/PAPPLI-->
+	<div class="box-grid box-outline">
+		<div class="box-row">
+			<p class="item-name">変換ポイント<br />
+			（可能ポイント：<!--POINT-->pt）</p>
+			<div class="input-section">
+				<input size="10" type="text" name="point" value="<!--INPUTPOINT-->"><span class="bold"> pt</span><br/>
+			<span class="important">※</span><!--CHANGEPOINT-->pt以上から変換可能です。
+			</div>
+		</div>
+		<!--CHENGETYPEL-->
+	</div>
+</section>
+<section class="box-outline" style="display:<!--DISPLAY-->;" id="msg1">
+	<div class="point-conversion-table2">
+		<h4 class="item-name2">お振り込み口座</h4>
+		<div class="box-column">
+			<div class="box-row">
+				<div class="item-name">
+					金融機関名
+				</div>
+				<div class="input-section">
+					<input size="30" type="text" name="bank_name" value="<!--BANKNAME-->"><span class="red">※カタカナ</span>
+				</div>
+			</div>
+			<div class="box-row">
+				<div class="item-name">
+					支店名
+				</div>
+				<div class="input-section">
+					<input size="30" type="text" name="store_name" value="<!--STORENAME-->"><span class="red">※カタカナ</span>
+				</div>
+			</div>
+				<!--DEPOSIT-->
+			<div class="box-row">
+				<div class="item-name">
+					振込先口座番号
+				</div>
+				<div class="input-section">
+					<input size="30" type="text" name="account_num" value="<!--ACCONUTNUM-->">
+				</div>
+			</div>
+			<div class="box-row">
+				<div class="item-name">
+					受取人名
+				</div>
+				<div class="input-section">
+					<input size="30" type="text" name="account_name" value="<!--ACCOUNTNAME-->"><span class="red">※カタカナ</span>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<span class="red">※お振り込みさせて頂く金額は、お振り込み手数料を引いた金額とさせて頂きます。</span>
+<div class="btn-edit">
+		<input type="submit" class="btn-standard btn-edit" value="確認">
+</form>
+</div>
+<!--LISTBACK-->
+<div>
+	<form action="<!--PHP_SELF-->" method="POST" class="btn-edit">
+		<input type="hidden" name="mode" value="p_update">
+		<input type="submit" class="btn-standard" value="一覧に戻る">
+	</form>
+</div>
+<!--/LISTBACK-->
+<form action="<!--PHP_SELF-->" method="POST" class="btn-edit">
+	<input type="submit" class="btn-standard" value="アフィリエイトTOPに戻る">
+</form>
+

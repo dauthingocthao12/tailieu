@@ -1,0 +1,38 @@
+<h2 class="title-nbs">ログイン</h2>
+<form action="<!--PHP_SELF-->" method="POST">
+	<input type="hidden" name="mode" value="checkuser">
+	<!--ERROR-->
+	<p>会員登録時に登録したメールアドレスと、パスワードを入力しログインボタンを押してください。<br />
+	自動ログインにチェックを入れますと、ブラウザを終了してもログアウトしないように設定されます。</p>
+	<section class="login-content box-form">
+		<div class="box-grid box-outline">
+			<div class="box-row">
+				<h4 class="item-name">メールアドレス</h4>
+				<div class="input-section">
+					<input type="text" name="email" value="<!--EMAIL-->" id="reset_email" /><span class="login-comment"> (半角)</span>
+				</div>
+			</div>
+			<div class="box-row">
+				<h4 class="item-name">パスワード</h4>
+				<div class="input-section">
+					<input type="password" maxlength="8" name="pass" value="<!--PASS-->" id="reset_pass"/><span class="login-comment"> (半角)</span>
+				</div>
+			</div>
+			<div class="box-row">
+				<h4 class="item-name">自動ログイン</h4>
+				<div class="input-section">
+					<td><input type="checkbox" name="check" value="1" id="reset_checkbox" <!--CHECKED--> /><span>:自動ログインする</span></td>
+				</div>
+			</div>
+		</div>
+		<div class="button_gui increase-space">
+			<input type="submit" class="btn-standard btn-login" value="ログイン" />
+			<input type="button" class="btn-standard" value="リセット" onclick="form_reset(); return false;"/>
+		</div>
+		<div >
+			<a href="/member/" class="increase-space btn-text">新規会員登録はこちら</a>
+			<a href="/member/pass.php" class="increase-space btn-text">パスワードをお忘れの方はこちら</a>
+		</div>
+	</section>
+<!--login-->
+</form>

@@ -1,0 +1,64 @@
+version: "3.3"
+services:
+  app:
+    hostname: "azet"
+    build:
+      context: .
+      dockerfile: app.Dockerfile
+    container_name: "uranai_web"
+    depends_on:
+      - db
+    ports:
+      - 20000:80
+      - 9003:9003
+    networks:
+      - internal
+    restart: always
+    volumes:
+      - ".:/home/uranairank/uranairank00001/"
+      - "./.docker/php/xdebug.ini:/usr/local/etc/php/conf.d/xdebug.ini"
+      - "./.docker/app/server.php:/home/uranairank/uranairank00001/uranai_lib/libadmin/server.php"
+      - "./.docker/app/.htaccess:/home/uranairank/uranairank00001/www/.htaccess"
+
+  db:
+    build:
+      context: .
+      dockerfile: db.Dockerfile
+    container_name: "uranai_db"
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: uranairank00002
+      MYSQL_USER: uranairank00002
+      MYSQL_PASSWORD: local
+      TZ: "Asia/Tokyo"
+    command: mysqld --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
+    ports:
+      - "3306:3306"
+    networks:
+      - internal
+    restart: always
+    volumes:
+      - ./.docker/db/data:/var/lib/mysql
+      - ./.docker/scripts/table-dump.sh:/opt/scripts/table-dump.sh
+
+  phpmyadmin:
+    container_name: uranai_pma
+    image: phpmyadmin/phpmyadmin
+    environment:
+    - PMA_ARBITRARY=1
+    - PMA_HOSTS=uranai_db
+    - PMA_USER=uranairank00002
+    - PMA_PASSWORD=local
+    ports:
+    - 20001:80
+    networks:
+      - internal
+    restart: always
+    depends_on:
+      - db
+    volumes: 
+      - ./.docker/db/phpmyadmin-misc.ini:/usr/local/etc/php/conf.d/phpmyadmin-misc.ini
+
+networks:
+  internal:
+    driver: bridge

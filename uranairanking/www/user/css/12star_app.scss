@@ -1,0 +1,155 @@
+@charset "utf-8";
+
+$setSTAR: aquarius,pisces,aeris,taurus,gemini,cancer,leo,virgo,libra,scorpio,sagittarius,capricorn;
+$setMENU: defolt,love,contract,configuration;
+
+//キャラクター表示枠設定
+@mixin character_layout($img_size,$position_w,$position_h,$width_w,$width_h,$star_name){
+	background: url(../12star_app_img/#{$star_name}.png) no-repeat;
+	background-size:$img_size;
+	background-position:$position_w $position_h;
+	padding:$width_w 0 $width_h;
+}
+
+//テーマ別の基本テキストカラーと背景カラーの設定
+@mixin theme_color($main_text,$list_title,$background_color,$content_back_color,$shadow){
+	background:url(../12star_app_img/background_whitestar.png),$background_color;
+	color:$main_text;
+	.content{
+		background-color:$content_back_color;
+	}
+	h1
+	,.character small{
+		text-shadow:
+        0 1px 3px $shadow,
+        1px 0 3px $shadow,
+        0 -1px 3px $shadow,
+        -1px 0 3px $shadow,
+        -1px -1px 3px $shadow,
+        1px -1px 3px $shadow,
+        -1px 1px 3px $shadow,
+        1px 1px 3px $shadow
+    ;
+	}
+	.good-list
+	,.karakuchi-rank{
+		color:$list_title;
+	}
+
+	a{
+		color:$list_title;
+	}
+	.label-color{
+		color:$list_title;
+	}
+}
+
+//星座ごとのカラー変更部分
+@mixin star_color($title,$section_title,$good_list,$btn-back){
+	h1{
+		color:$title;
+	}
+	.section-title{
+		background-color:$section_title;
+	}
+	.good-list{
+		background-color:$good_list;
+		border:2px solid $section_title;
+	}
+	.day-btn{
+		background-color:$btn-back;
+		border:2px dotted $title;
+	}
+	.karakuchi-rank{
+		background-color:$good_list;
+		border-bottom:2px solid $section_title;
+	}
+	.sites .to-site{
+		background-color:#ffffff;
+		border-bottom:2px solid $section_title;
+	}
+	.label-color{
+		background-color:$btn-back;
+	}
+	.link-alert{
+		background-color:$section_title;
+	}
+
+
+}
+
+//キャラクターの背景の後ろにさらに画像があるとき
+@mixin star_background($star_name){
+	.bk-img{
+		background:url(../12star_app_img/#{$star_name}-backstar.png)no-repeat;
+		background-size:100% 100%;
+	}
+
+}
+
+/*テーマごとのカラーを出力*/
+.main{@include theme_color(#4d4d4d,#4d4d4d,#2e3192,#ffffff,#ffffff);}
+.chic{@include theme_color(#ffffff,#000000,#140f4b,#2a2a56,#140f4b);}
+
+
+/*各星座の背景・キャラクターを出力*/
+@each $i in $setSTAR{
+	.main .#{$i}{@include star_background(#{$i});}
+	.#{$i} .character{@include character_layout(250px,85%,20%,11%,9%,#{$i});}
+}
+ 
+
+/*各星座の色変更部分を出力*/
+.main{
+	.aquarius{@include star_color(#a1007e,#ceff9e,#e2ffc5,#9e9eff);}
+	.pisces{@include star_color(#009825,#ff9eff,#ffd8ff,#ceff9e);}
+	.aeris{@include star_color(#000c7a,#ffec9e,#fffee2,#9eceff);}
+	.taurus{@include star_color(#ef005a,#9effce,#d8ffeb,#ff9eff);}
+	.gemini{@include star_color(#f9e400,#9e9eff,#d8d8ff,#ffce9e);}
+	.cancer{@include star_color(#9ec700,#ce9eff,#ebd8ff,#ffec9e);}
+	.leo{@include star_color(#f00082,#9eff9e,#d8ffd8,#ce9eff);}
+	.virgo{@include star_color(#009e9f,#ff9ece,#ffd8eb,#ce9eff);}
+	.libra{@include star_color(#fca000,#9eceff,#d8ebff,#ff9e9e);}
+	.scorpio{@include star_color(#ef0000,#9effff,#d8ffff,#ff9ece);}
+	.sagittarius{@include star_color(#0072b6,#ffce9e,#ffebd8,#9effff);}
+	.capricorn{@include star_color(#00a3e7,#ff9e9e,#ffd8d8,#9effce);}
+
+}
+.chic{@include star_color(#cc99cc,#800080,#cc99cc,#ffffff);}
+
+
+/*メニュー(すべて共通)*/
+ul.menu{
+	@mixin menu_background($menu_name){
+		background:url(../12star_app_img/menu-#{$menu_name}.png)no-repeat;
+		background-size:40px;
+		padding:10px 0px;
+		background-position:50%;
+	}
+	@each $i in $setMENU{
+	.#{$i}{@include menu_background(#{$i});}
+	}
+}
+
+
+@media(max-width:991px){
+	@each $i in $setSTAR{
+	.#{$i} .character{@include character_layout(200px,85%,20%,14%,5%,#{$i});}
+	}
+
+}
+@media(max-width:767px){
+	
+	@each $i in $setSTAR{
+	.#{$i} .character{@include character_layout(180px,85%,20%,16%,7%,#{$i});}
+	}
+}
+@media(max-width:410px){
+	
+	@each $i in $setSTAR{
+	.#{$i} .character{@include character_layout(150px,85%,20%,20%,1%,#{$i});}
+	}
+	
+
+}
+

@@ -1,0 +1,2294 @@
+/*Global >>>*/
+@import url('https://fonts.googleapis.com/css?family=Bevan');
+
+* {
+	font-family:"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro",Osaka, "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+}
+html {
+	min-height:100%;
+}
+
+a:hover {
+	/*color:white;*/
+	text-decoration: underline;
+}
+
+.container {
+	padding:0;
+}
+
+/* titles! */
+.jumbotron
+{
+	margin:0;
+}
+
+.jumbotron
+,.navbar
+{
+	border-radius:0;
+}
+
+.jumbotron h1, .jumbotron small {
+	color:inherit;
+	font-weight:bold;
+}
+
+.star-icon {
+	position: relative;
+	display: inline-block;
+	margin: auto;
+/*	background-color: rgba(255, 255, 255, 0.2);*/
+	background-color: rgba(255, 255, 255, 0.4);	/* edit 2016/07/11 */
+	border-radius: 100px;
+	margin-bottom: 20px;
+}
+.star-icon-rank {
+	position: absolute;
+	top: 0;
+	right: 0;
+	font-size: 13px;
+	color: white;
+	padding: 8px;
+	/*background-color: #222;*/
+	/*border-bottom-right-radius: 10px;*/
+	/*border-top-left-radius: 10px;*/
+	border-radius: 10px;
+
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#45484d+0,000000+100;Black+3D+%231 */
+background: #45484d; /* Old browsers */
+background: -moz-linear-gradient(top,  #45484d 0%, #000000 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  #45484d 0%,#000000 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  #45484d 0%,#000000 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#45484d', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
+}
+/*<<<*/
+/* footer >>>*/
+footer {
+	padding:2em 0;
+}
+
+.social .fa {
+	font-size:30px;
+}
+/*<<<*/
+/* signs related >>>*/
+.top3 .sign {
+	display:block;
+}
+
+.top3,
+.top3-mobile {
+	padding:30px 0;
+	/*margin-bottom:10px;*/
+}
+
+.sign {
+	margin:auto;
+	/*border:1px solid white;
+	border-radius: 50%;
+	box-shadow:0 0 30px black;*/
+
+	width:200px;
+	height:200px;
+}
+.sign.place-2 {
+	margin-top:50px;
+	width:150px;
+	height:150px;
+}
+.sign.place-3 {
+	margin-top:100px;
+	width:100px;
+	height:100px;
+}
+.sign.place-4 {
+	width:50px;
+	height:50px;
+}
+/*<<<*/
+
+.ranking-index .ranking3-block {
+	padding-bottom: 11px;
+}
+
+/* listing for others than top3 >>>*/
+#listing-ranking {
+	padding:48px 0;
+}
+#listing-ranking th
+,#listing-ranking td {
+	border-color:white;
+	vertical-align: middle;
+}
+
+#listing-ranking td img {
+	/*border-radius:50%;*/
+	/*margin-right:1em;*/
+	display:inline;
+	margin-top:0;
+}
+
+#listing-ranking td {
+	/*color:grey;*/
+	line-height:50px;
+	font-size:20px;
+}
+#listing-ranking tr:last-of-type td {
+	border-bottom: none;
+}
+
+/* details */
+.ranking-all .panel-rank-details-sites {
+	border-top: none;
+	border-bottom: none;
+	margin-bottom: 0;
+	border-radius: 0;
+	cursor: pointer;
+}
+.panel-rank-details-sites .panel-heading:hover {
+	background-color: #eee;
+}
+.panel-rank-details-sites .panel-heading:after {
+	content:  "\f054";
+	font-family: FontAwesome;
+	display: block;
+	float: right;
+	line-height: 49px;
+}
+.panel-rank-details-sites .panel-heading.open:after {
+	content: "\f078";
+}
+.panel-rank-details-sites .panel-body {
+	padding: 0;
+}
+
+.panel-rank-details-sites .rank-number {
+	display: inline-block;
+	width: 3.5em;
+	height: 3.5em;
+	line-height: 3em;
+	background-color: grey;
+	color: white;
+	font-weight: bold;
+	border-radius: 100%;
+	text-align: center;
+	text-shadow: 0 -1px grey;
+	border: 4px solid white;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+.panel-rank-details-sites .panel-heading.open .rank-number {
+	border-color: #bfb;
+}
+.panel-rank-details-sites ul {
+	margin: 0;
+	padding: 0;
+}
+.panel-rank-details-sites li {
+	display: block;
+	/*margin: 0;*/
+	font-size: 16px;
+}
+.panel-rank-details-sites li a {
+	display: block;
+	padding: 10px 10px 10px 40px;
+	border-bottom: 1px solid #f5f5f5;
+}
+
+/* pictures */
+.top3 img,
+#listing-ranking td img
+{
+	display:block;
+	background:rgba(255, 255, 255, 0.3);
+	border-radius:50%;
+}
+/*<<<*/
+
+/* Misc. >>>*/
+dd
+{
+	margin: 1em;
+}
+
+.alert-default
+{
+	border: none;
+/*	background-color: lightgrey;*/
+	background-color: #e7d8bf;
+	color: grey;
+}
+
+.space
+{
+	margin: 5em;
+}
+
+nav.navbar {
+	margin-bottom: 0;
+}
+
+/* links in tables (listings) */
+.table a {
+	display: block;
+}
+
+.ad-container
+{
+	margin: 2em;
+}
+
+.ad {
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+	margin: 10px 0;
+	padding: 5px;
+	background: white;
+	color: grey;
+	text-align: center;
+	font-weight: normal;
+	font-size: 12px;
+	width:auto;
+}
+
+/* add okabe start 2016/05/25 */
+
+.ad1 {
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+	margin: 10px 0;
+	padding: 5px;
+	background: white;
+	color: grey;
+	text-align: center;
+	font-weight: normal;
+	font-size: 12px;
+	line-height: 1;
+}
+
+.top-ad-mid{
+	clear:both;
+	
+}
+
+.top-ad-mid .ad2 {
+	margin: 10px 0;
+	background: white;
+	color: grey;
+	text-align: center;
+	font-weight: normal;
+	font-size: 12px;
+	line-height: 1;
+}
+@media(max-width:767px){
+	.ninja{
+		padding:0;
+	}
+	.ad{
+		padding:0;
+	}
+	.ad1{
+		padding:0;
+	}
+
+}
+/* add okabe end 2016/05/25 */
+/*<<<*/
+/*Spaced container for other pages >>>*/
+.page-center {
+	margin-top: 40px;
+	margin-bottom: 40px;
+}
+/* <<< */
+/* Account >>> */
+.account form label {
+	color: #222;
+}
+form label.touch {
+	padding: 3px;
+	background-color: #eee;
+	/*border: 1px solid #aaa;*/
+	border-radius: 3px;
+	box-shadow: 0 1px 5px #aaa;
+	margin: 5px;
+	cursor: pointer;
+}
+/* <<< */
+
+/* add okabe start 2016/03/25 */
+.whatnew_top {
+	border-radius: 10px;
+	margin:0px 0px 25px 0px;
+	padding:10px;
+	background:white;
+	color:black;
+	font-weight:normal;
+	font-size:16px;
+	filter: alpha(opacity=60);
+	-moz-opacity: 0.6;
+	opacity: 0.6;
+	box-shadow: 0px 0px 25px -5px rgba(0, 0, 0, 0.8);
+}
+.whatnew_topmsg {
+	color:blue;
+	font-weight:strong;
+}
+.alert-whatnew
+{
+	border: none;
+/*	background-color: lightgrey;*/
+	background-color: #e7d8bf;
+	color: grey;
+}
+/* add okabe end 2016/03/25 */
+
+/* end of named whatnew add okabe 2016/03/25 move from app-theme.css 2016/03/28 */
+body.whatnew {
+/*  del okb 2016/07/19
+  background-color: #99CC66;
+  color: #CCFFCC;
+*/  /* add okb 2016/07/19 */	background-color: rgb(230, 234, 205);
+background: url(../img/mainbgtexture.jpg);
+  color: #F7DA9E;
+}
+
+.whatnew {
+  /* top 3 section for wide screens (tablets+) */ }
+  .whatnew .jumbotron
+  , .whatnew footer {
+/*  del okb 2016/07/19
+    background-color: #003300;
+*/
+/* add okb 2016/07/19 */
+background: url(../img/00000000-default.jpg);
+text-shadow: 0px 0px 15px black;
+-moz-background-size:cover;
+background-size:cover;
+background-repeat:no-repeat;
+background-color: black;
+    }
+  .whatnew footer {
+    color: #B5B5B5; }
+  .whatnew div.top3 {
+    position: relative;
+/*    background: url(../img/The-Bright-Sun-Blue-Sky-Clouds.jpg) -120px -100px;	*/ /*del 2016/07/19 */
+background-image:radial-gradient(at right bottom, #C6FAE3, #6AB3B9);
+    color: #c2c2c2; }
+  .whatnew div.top3 .filter {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+/*    background-color: rgba(101, 101, 101, 0.6);	*/	/* del 2016/07/19 */
+}
+  .whatnew #listing-ranking table {
+    background-color: #e5e5e5;
+    border-top: 1px solid #fefefe;
+    border-left: 1px solid #fefefe;
+    border-bottom: 1px solid #cbcbcb;
+    border-right: 1px solid #cbcbcb; }
+  .whatnew #listing-ranking th {
+    color: #B5B5B5;
+    background-color: #4c4c4c;
+    border: none; }
+  .whatnew #listing-ranking td {
+    color: #7f7f7f;
+    border-top: 1px solid #fefefe;
+    border-bottom: 1px solid #cbcbcb; }
+  .whatnew .jumbotron
+  , .whatnew .top3
+  , .whatnew footer
+   {
+    box-shadow: 0 0 20px #323232; }
+  .whatnew img.sign {
+    border: 2px solid rgba(181, 181, 181, 0.5); }
+  .whatnew footer .nav a {
+/*    color: #B5B5B5; */
+    color: #CFCFCF; }
+  .whatnew footer .nav a:hover {
+    color: #7f7f7f;
+/*   background-color: rgba(229, 229, 229, 0.6);*/
+    background-color: rgba(229, 229, 229, 0); }
+
+/* end of named whatnew */
+
+/* add okabe start 2016/06/06 */
+.link_seiza_50 {
+	line-height:50px;
+}
+.link_seiza_25 {
+	line-height:25px;
+}
+.link_seiza_gray {
+	color:gray;
+}
+.xmargin10 {
+	margin:10px;
+}
+.xmarginleft10 {
+	margin-left:10px;
+}
+.btn.btn-wrap {
+	white-space: normal;
+}
+/* add okabe end 2016/06/06 */
+
+/* add okabe start 2016/06/22 */
+#ovlInfo{
+display: none;
+z-index: 98;
+width: 101.5%;
+height: 100%;
+padding: 0;
+margin: 0;
+background-color: #dddddd;
+opacity:0.95;
+filter: alpha(opacity=95);        /* ie lt 8 */
+-ms-filter: "alpha(opacity=95)";  /* ie 8 */
+-moz-opacity:0.95;                 /* FF lt 1.5, Netscape */
+-khtml-opacity: 0.95;              /* Safari 1.x */
+position: fixed;
+top: 0;
+left: 0;
+}
+#ovl2Info{
+display: none;
+padding: 10px;
+z-index: 99;
+top: 5%;
+left: 50%;
+width: 360px;
+height: 90%;
+overflow: auto;
+background-color: #ffffff;
+margin: 0 0 0 -180px;
+border: 2px solid #666666;
+line-height: 1.5;
+position: absolute;
+opacity:1;
+filter: alpha(opacity=100);        /* ie lt 8 */
+-ms-filter: "alpha(opacity=100)";  /* ie 8 */
+-moz-opacity:1;                 /* FF lt 1.5, Netscape */
+-khtml-opacity: 1;              /* Safari 1.x */
+zoom:1;
+}
+.ovlInfo_close{
+text-align: center;
+margin-top: 5px;
+}
+#ovlInfo table {
+ margin-left: auto;
+ margin-right: auto;
+}
+.ovlInfo_intro_p {
+padding-left: 15px;
+}
+.ovlInfo_mail_ul {
+text-decoration: underline;
+}
+.ovlInfo_font_bold {
+font-weight: bold;
+}
+/* add okabe end 2016/06/22 */
+
+/* add okabe start 2016/07/05 */
+div#ranking_top1 {
+background-image: url('../img/ribons.png');
+width: 182px;
+height: 73px;
+margin: -22px auto;
+line-height: 100px;
+color: gray;
+font-weight: bold;
+}
+div#ranking_top2 {
+background-image: url('../img/ribons.png');
+background-position: 0px 148px;
+width: 182px;
+height: 73px;
+margin: -26px auto;
+line-height: 100px;
+color: gray;
+font-weight: bold;
+}
+div#ranking_top3 {
+background-image: url('../img/ribons.png');
+background-position: 0px 74px;
+width: 182px;
+height: 73px;
+margin: -28px auto;
+line-height: 100px;
+}
+div#ranklist_top1 {
+background-image: url('../img/crowns.png');
+text-align: center !important;
+height: 34px;
+color: rgb(238, 173, 48);
+text-shadow: 1px 1px 1px white;
+}
+div#ranklist_top2 {
+background-image: url('../img/crowns.png');
+text-align: center !important;
+background-position: 86px 0px;
+height: 34px;
+color: gray;
+text-shadow: 1px 1px 1px white;
+}
+div#ranklist_top3 {
+background-image: url('../img/crowns.png');
+text-align: center !important;
+background-position: 43px 0px;
+height: 34px;
+color: rgb(167, 85, 54);
+text-shadow: 1px 1px 1px white;
+}
+/* add okabe end 2016/07/05 */
+
+.site-count {
+float: right;
+padding: 5px;
+margin-top: 5px;
+margin-bottom: 5px;
+}
+
+/* add okba 2016/07/10 */
+.detail_msg_style {
+	background-image:radial-gradient(at center, white, rgb(216, 236, 246) );
+	text-shadow: 1px 1px 1px silver;
+	box-shadow: 3px 3px 3px 3px rgba(64,64,64, 0.3);
+}
+
+/* add okabe 2016/08/23 */
+.detail_default_graph {
+	box-shadow: 2px 2px 2px 2px rgba(64,64,64,0.3);
+}
+.detail_default_graph_title {
+	text-shadow: 1px 1px 1px gray;
+	margin-bottom: 5px;
+}
+.detail_default_graph_datetime {
+	font-size: 12px;
+	margin-top: 3px;
+	text-align: right;
+}
+.detail_default_graph_desc {
+	margin: 5px;
+	text-align: left;
+}
+.detail_default_graph_red {
+	color: #d02f2f;
+	font-weight: bold;
+}
+
+.detail_graph_panel {
+	background-color: rgba(0, 0, 0, 0.28);
+	margin-bottom: 10px;
+}
+
+/* 軸の文字色 */
+.detail_graph_panel .ct-label {
+	color: white;
+}
+
+
+/* グラフのバックグリッド */
+.ct-chart .ct-grid.ct-vertical,
+.ct-chart .ct-grid.ct-horizontal {
+  stroke: rgba(192, 192, 192, 1);
+  shape-rendering: crispEdges;
+}
+/* 折れ線の線 */
+.ct-chart .ct-series.ct-series-a .ct-line {
+	stroke:white;
+	stroke-width:3px;
+	stroke-linecap:round;
+}
+/* 折れ線のポイント部分 */
+.ct-chart .ct-series.ct-series-a .ct-area {
+  fill: yellow;
+}
+.year-banner-space{
+	height:30px;
+}
+.ranking-past #listing-ranking{
+	padding:0;
+}
+.personality{
+	font-size:20px;
+	margin:0;
+}
+
+/* お知らせ >>> */
+.news-list {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+.news-list li {
+	margin-bottom: 10px;
+	/*color: grey;*/
+}
+.news-date {
+	color: grey;
+	font-size: smaller;
+}
+.news-list li a {
+	color: #428bca;
+}
+/* <<< */
+
+/* 日付のランキングのリンク >>> */
+.rank-day-links {
+	display: block;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	height: 35px;
+}
+
+.rank-day-link-current,
+.rank-day-link-previous,
+.rank-day-link-next {
+	display: block;
+	color: white;
+}
+.rank-day-link-current {
+	text-align: center;
+}
+.rank-day-link-previous {
+	text-align: left;
+}
+.rank-day-link-next {
+	text-align: right;
+}
+
+.rank-day-links a:hover {
+	color: white;
+}
+
+/*add hirose 20170331*/
+.login-btn{
+	margin-top:60px;
+}
+.row{
+	margin-left:0;
+	margin-right:0;
+}
+.detail-ranking{
+	font-size:40px;
+}
+.detail-ranking small{
+	font-size:20px;
+}
+.date-input{
+	width:100%;
+	max-width:400px;
+	color:black;
+	margin-bottom:10px;
+}
+.star-comment{
+	color:black;
+}
+.ninja{
+	margin:16px 0;
+}
+.ninja:nth-child(2) {
+	margin-top: 5px;
+}
+.ninja:nth-child(2) .ad {
+	margin-top: 0;
+}
+
+.graph-comment{
+	padding:15px 0;
+}
+.graph{
+	padding:15px;
+}
+
+.margin-content{
+	margin:16px 0;
+}
+.btm-margin-L{
+	margin-bottom:15px;
+}
+.btm-margin-M{
+	margin-bottom:10px;
+}
+
+@media(max-width:767px){
+	h1{
+		font-size:30px;
+	}
+	h2{
+		font-size:25px;
+	}
+	.ninja{
+	margin:16px -15px;
+	overflow:hidden;
+	}
+
+}
+
+@media(min-width:768px){
+	.starimg{	
+		margin-left:-35px;
+		margin-top:10px
+	}
+}
+.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus{
+	background-color:yellow;
+}
+
+.datepicker{
+	padding:0;
+}
+
+/*menuボタン*/
+.gblnv_box {
+	margin: 15px 0px;
+	padding:5px;
+	border: 3px solid;
+	border-radius:6px;
+	height: 70px;
+}
+.gblnv_box_menu{
+	position: absolute;
+	margin-top: -25px;
+	font-weight: bold;
+	font-size: 14px;
+}
+.gblnv_block{
+	z-index:999;
+	position:absolute;
+	width:250px;
+	background-color: #ffffff;
+	color: #444444;
+	border-radius: 6px;
+	height: auto;
+	max-height:0px;
+	overflow: hidden;
+	transition: all .5s 0s ease;
+	box-shadow: 10px 10px 10px rgba(0,0,0,0.4);
+	margin-left: -200px;
+}
+.onanimation{
+	display: block;
+	max-height: 500px;
+}
+.gblnv_block ul{
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+	padding: 5px;
+}
+.gblnv_block ul li{
+	line-height: 180%;
+}
+.gblnv_block ul li a{
+	color:  #444444;
+	font-size: 15px;
+	line-height: 150%;
+	display: block;
+}
+
+.menu-trigger,
+.menu-trigger span {
+	display: inline-block; 
+	transition: all .4s;
+	 box-sizing: border-box;
+}
+.menu-trigger {
+	position: relative; 
+	width: 100%; 
+	height: 30px;
+}
+
+.menu-trigger span {
+	position:absolute;
+	left: 5%;
+	width: 90%;
+	max-width:50px;
+	height: 4px;
+	background-color: #fff;
+	border-radius: 4px;
+}
+.menu-trigger span:nth-of-type(1) {
+	top: 0;
+}
+.menu-trigger span:nth-of-type(2) {
+	top: 13px;
+}
+.menu-trigger span:nth-of-type(3) {
+	bottom: 0;
+}
+
+
+.menu-trigger.active span:nth-of-type(1) {
+	-webkit-transform: translateY(20px) rotate(-45deg);
+	transform: translateY(15px) rotate(-45deg);
+}
+.menu-trigger.active span:nth-of-type(2) {
+	left: 50%;
+	opacity: 0;
+	-webkit-animation: active-menu-bar02 .8s forwards;
+	animation: active-menu-bar02 .8s forwards;
+}
+@-webkit-keyframes active-menu-bar02 {
+	100% {
+		height: 0;
+	}
+}
+@keyframes active-menu-bar02 {
+	100% {
+		height: 0;
+	}
+}
+.menu-trigger.active span:nth-of-type(3) {
+	-webkit-transform: translateY(-20px) rotate(45deg);
+	transform: translateY(-11px) rotate(45deg);
+}
+/*ページTOPへ*/
+#page-top {
+	position: fixed;
+	right: 20px;
+	font-size: 77%;
+	bottom: -100px;
+}
+#page-top a {
+	background: rgba(9, 5, 54, 0.85);
+	text-decoration: none;
+	color: #fff;
+	padding: 10px 10px;
+	text-align: center;
+	outline:none;
+	border-radius: 5px 5px 0 0;
+}
+
+
+
+/*パンくずリスト*/
+
+/*カレンダー*/
+
+.warning{
+	color:red;
+
+}
+
+/*フッター*/
+footer{
+	padding:2em 0 0 0;
+	margin-bottom: 50px;
+}
+footer .navbar-nav.navbar-right{
+	margin-right:5px;
+	padding-top:10px;
+}
+
+.ft-menu2{
+	position:fixed;
+	right:0;
+	bottom:-2px;
+	left:0;
+	margin-bottom:0;
+	z-index: 99;
+}
+.tanabata .ft-menu2{
+	background-color:rgba(46, 49, 146, 0.85);
+	min-height: 40px;
+}
+.tanabata .ft-menu2 a{
+	color:white;
+	padding:0;
+}
+.tanabata .ft-menu2 .icon-title{
+	font-size: x-small;
+	margin-top: -5px;
+	display:block;
+	padding:0px 10px;
+}
+.tanabata .ft-menu2 i{
+	font-size:20px;
+}
+.ft-menu2 .navbar-nav{
+	float:left;
+	margin:0;
+}
+.ft-menu2 .navbar-right{
+	float:right;
+	margin:0;
+}
+.ft-menu2 .navbar-nav>li {
+	float:left;
+	padding:2.5px 3px;
+}
+
+/*-------------- global --------------*/
+.reset{
+	margin:0;
+	padding:0;
+}
+
+.inline-elm{
+	display:inline;
+}
+
+.base-bg{
+	background-color:white;
+}
+
+.force-wrap {
+	white-space: pre-wrap; /* css-3 */
+	white-space: -moz-pre-wrap; /* Mozilla, since 1999 */
+	white-space: -pre-wrap; /* Opera 4-6 */
+	white-space: -o-pre-wrap; /* Opera 7 */
+	word-wrap: break-word; /* Internet Explorer 5.5+ */
+}
+/*-------------- ranking-past.tpl --------------*/
+
+.container-ranking-past{
+	color:black;
+	font-weight:bold;
+	font-size:16px;
+}
+
+.container-ranking-past h2{
+	color: #1b1464;
+	font-size: 20px;
+	margin-bottom: 25px;
+}
+
+.container-ranking-past h3{
+	color:#1b1464;
+	font-weight:bold;
+	font-size:18px;
+	margin:3px 0;
+}
+
+.r-past-tabs{
+  width: 100%;
+  text-align: center;
+  white-space: nowrap;
+  margin:-1px 0;
+}
+
+.r-past-tabs li{
+	width:50%;
+  overflow: hidden;
+}
+
+.r-past-tabs li a{
+	border-radius: 3px 3px 0 0;
+	-moz-border-radius: 3px 3px 0 0;
+	-webkit-border-radius: 3px 3px 0 0;
+
+	color:black;
+	display:block;
+	padding: 10px 0;
+	text-decoration:none;
+}
+
+.r-past-tabs li.active a{
+	background-color: white  !important;
+	cursor:default;
+}
+
+.r-past-tabs li a{
+	background-color: #f5f5f5;
+}
+
+.r-past-tabs .col-xs-6{
+	padding-right:0;
+	padding-left:0;
+}
+
+#yearly_tab:hover,
+#monthly_tab:hover{
+	background:yellow;
+}
+
+.r-past-tabs li:first-child{
+	padding-left:0;
+	padding-right:10px;
+}
+
+.r-past-tabs li:last-child{
+	padding-right:0;
+}
+
+.outer-li{
+	list-style:none;
+}
+
+.outer-li .caret {
+	margin-left:6px;
+}
+
+.ranking-wrapper{
+	padding-bottom:20px;
+	border-radius:0 0 3px 3px;
+	-webkit-border-bottom-right-radius:3px;
+	-webkit-border-bottom-left-radius:3px;
+	-moz-border-radius-bottomright:3px;
+	-moz-border-radius-bottomleft:3px;
+}
+
+.star-card{
+	padding-top:10px;
+	padding-bottom:10px;
+}
+
+.star-card img{
+	display:inline;
+	max-width:200px;
+}
+
+.star-card-rank{
+	color:white;
+	height:40px;
+	line-height:56px;
+	font-size: 20px;
+	background:url('../img_re/rank_crown.png');
+	background-position: center center;
+	background-repeat: no-repeat;
+	font-family: "Bevan","ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro",Osaka, "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+}
+
+.select-area{
+	padding:20px 0;
+}
+
+.koukoku{
+	background:inherit;
+	width:100%;
+	float:left;
+	padding:20px 15px;
+}
+
+
+/*-------------- main.tpl --------------*/
+.login-btn{
+	max-width: 480px;
+}
+/*-------------- sidebar --------------*/
+.sidebar .panel{
+	border-radius:0;
+}
+
+/*-------------- responsive --------------*/
+/*-------------- ranking-past.tpl --------------*/
+@media (max-width: 992px) {
+	.star-card img{
+		max-width:100%;
+	}
+	
+	.ranking-wrapper div:nth-child(-n+4) img {
+		max-width:200px;
+	}
+	
+
+	.container-ranking-past .dropdown-menu{
+		padding:0;
+	}
+
+	.container-ranking-past .months li{
+		border-bottom:1px solid #ebebeb;
+	}
+
+	.container-ranking-past .months li a{
+		padding-top:20px;
+		padding-bottom:20px;
+	}
+}
+/*-------------- main.tpl --------------*/
+@media (max-width: 767px) {
+	.sitename{
+		text-align: center;
+		margin-left: 15px;
+	}
+
+	.gblnv_outer{
+		position:absolute;
+		z-index:1000;
+		right:15px;
+		top:5px;
+		width:60px;
+	}
+
+	#twitter-widget-0{
+	 width: 100% !important;  
+	}
+	
+}
+
+@media (max-width: 992px) {
+	.navbar-nav .dropdown-menu {
+		padding: 0;
+	}
+
+	.navbar-nav .dropdown li a {
+		padding-top: 10px;
+		padding-bottom: 10px;
+	}
+
+	.navbar-nav .dropdown li{
+		border-bottom: 1px solid #ebebeb;
+	}
+}
+
+
+.star_rank1,.star_rank2,.star_rank3,.star_rank_other{
+	display:inline-block;
+	line-height:45px;
+	width:40px;
+	height:40px;
+	margin:2px;
+	text-indent:2px;
+	text-align:center;
+}
+.rank1 h3{
+	font-weight:900;
+	font-size:25px;
+	display:block;
+	max-width:180px;
+}
+
+.rank2 h4,.rank3 h4,.rankother-color h4{
+	font-weight:900;
+	font-size:18px;
+	display:block;
+    width: 140px;
+
+}
+.rankother-color h4{
+	line-height:70px;
+    margin:auto;
+}
+.rank1 h3,.rank2 h4,.rank3 h4{
+	float:right;
+}
+
+.rank1 .rankimg,
+.rank2 .rankimg,
+.rank3 .rankimg{
+	text-align:center;
+}
+.title-indent{
+	padding-left:1em;
+	text-indent:-1em;
+}
+.rank1-color .small{
+	padding:5px 10px;
+	border-radius:10px;
+
+}
+.ranking-index a,.site-list li a{
+	color:inherit;
+}
+
+.panel-body,.site-list,.kiyaku,.policy,
+.company,.about,.account-intro,.whatnew,
+.whatnew_detal{
+	color:black;
+}
+.br{
+	display:block;
+}
+.tecen{
+	text-align:center;
+}
+.spadding-top{
+	padding-top: 5px;
+}
+.spadding{
+	padding:5px;
+}
+.smpadding{
+	padding:10px;
+}
+.mlpadding-h{
+	padding:20px 0px;
+}
+.clear-padding{
+	padding:0px;
+}
+.smmargin-h{
+	margin:8px 0px;
+}
+.base-bg-margin{
+	margin-top:30px;
+}
+.otherrank-height{
+	padding:5px 0px;
+	height:80px;
+}
+.font_bold{
+	font-weight:bold;
+}
+.banner{
+	min-width:200px;
+}
+.sidebar .panel-info{
+	margin-bottom:0;
+}
+.aki{
+	margin-top:10px;
+}
+/*pc*/
+
+.tabl{
+	display:table;
+
+	width:100%;
+	
+}
+.tabl-cell{
+	display:table-cell;
+	width:50%;
+	vertical-align: middle;
+/*	text-align: center;*/
+}
+.table-padding{
+	padding-left:10px;
+}
+.imgsize{
+	margin:0px;
+	max-width:210px;
+	max-height:210px;
+	min-height:100px;
+	text-align:center;
+}
+.imgsize2{
+	margin:0px;
+	max-width:100px;
+	max-height:100px;
+}
+
+.itiran-pg li{
+	margin:15px 0;
+}
+.site-list ul{
+	list-style:none;
+	padding: 0;
+}
+.contents-space{
+	padding:40px 30px;
+}
+.betline{
+	line-height:40px;
+	margin-top:10px;
+}
+.wn_detal_spase{
+	padding:20px 10px;
+}
+.h_mar_none{
+	margin-top:0px;
+	margin-bottom:0px;
+}
+footer .navbar a:hover{
+	background-color:#1b1464;
+}
+.pile_up{
+	position:absolute;
+	top:7px;
+	left:21px;
+	font-size:50px;
+}
+.pile_up2{
+	position:absolute;
+}
+.calendar_box{
+	max-width:100%;
+	text-align:center;
+}
+.calendar{
+	overflow:hidden;
+	background-color:white;
+	padding:3px;
+	color:black;
+}
+.calendar a:link,
+.calendar a:visited,
+.cal_btn,
+.fcolor-black{
+	color:black;
+}
+.calendar a:active{
+	background-color:red;
+}
+
+.calendar span:nth-child(7n+1){
+	background-color:#fa8072;
+	clear:both;
+}
+.calendar span:nth-child(7n){
+	background-color:#73b6fa;
+}
+.calendar span{
+	float:left;
+	width:-webkit-calc(100%/7);
+	width:14.285%;
+	border:1px solid white;
+	height:40px;
+	text-align:center;
+	line-height:40px;
+}
+.calendar span.future_day{
+	opacity: 0.5;
+}
+.calendar_description{
+	font-size:16px;
+}
+.link_day a{
+	display:block;
+}
+.calendar_box .calendar .link_day_current {
+	background: yellow;
+}
+.cal_btn{
+	margin:6px;
+}
+.clear{
+	clear:both;
+}
+.calendar span.current_holidays{
+	background-color:#fa8072;
+}
+.ninja_sep{
+	clear:both;
+	visibility:hidden;
+	margin:0px;
+	border: none;
+}
+.nav.social li{
+	padding:5px;
+}
+.months li a:active,
+.gblnv_block li:active,
+.navbar-nav .dropdown-menu li a:active{
+	background-color:#ffff53;
+}
+.year_pd:active{
+	background-color:#ebebeb;
+}
+#bookmark a,
+#url_mv_cnfrmtn a{
+	color:white;
+	text-decoration:none;
+}
+#bookmark .modal-footer .btn{
+	margin-top:8px;
+	margin-bottom:8px;
+}
+.bm_subtitle{
+	font-size:14px;
+}
+.modalurl{
+	display:inline-block;
+}
+.modalblock{
+	display:block;
+}
+.disp_dsgn{
+	margin:10px 0px;
+	color:#428bca;
+	border:1px solid #428bca;
+	font-weight:bold;
+	
+}
+/*.bookmark-key{
+	display:inline-block;
+	width:50px;
+	height:50px;
+	background-color:red;
+	border:solid 1px black;
+	margin:15px;
+	text-align: center;
+	line-height:50px;
+
+}*/
+.manner{
+	display:block;
+	margin:10px;
+}
+#alertModal .modal-header,
+#alertModal .modal-footer{
+	border:0px;
+}
+#alertModal .modal-footer{
+	margin-top:0px;
+	padding-top:0px;
+}
+.howtouse .sub_title{
+	padding:5px 0px;
+}
+.useimg{
+	max-width:460px;
+	width:100%;
+	background-color:red;
+}
+.m-margin-h{
+	margin:20px 0px;
+}
+.nomal_text{
+	color:black;
+	margin:10px;
+}
+.backbutton{
+	text-align:right;
+	padding-right:10px;
+}
+.n-title{
+	border-left:solid 3px;
+	display:inline-block;
+	margin:0px 5px;
+	padding-left:5px;
+	color:black;
+	font-weight:900;
+}
+.use-title{
+	padding:0px 0px 0px 20px;
+	margin:10px 15px;
+	border-radius:10px;
+	font-weight:900;
+	line-height: 50px;
+}
+.use-title-img{
+	float:right;
+}
+.use-mokuzi-img{
+	max-width:80px;
+	border-radius:10px;
+}
+.mokuzi-button{
+	border-radius:10px;
+	margin:15px 0px;
+	height:80px;
+	display:table;
+	width:100%;
+}
+.mokuzi-button a{
+	display:block;
+}
+.button-cell{
+	display:table-cell;
+	vertical-align: middle;
+}
+.mokuzi-button img{
+	/*float:left;*/
+	margin-left:15px;
+}
+.howtouse h3{
+	display:inline;
+	font-size:15px;
+	color:black;
+	font-weight:900;
+	padding-left:10px;
+}
+.mokuzi-color1{
+	background-color:#e5ccff;
+	border: 2px dashed #7f00ff;
+	border-radius: 12px;
+	box-shadow: 0 0 0 5px #e5ccff;
+}
+.mokuzi-color2{
+	background-color:#f5f5f5;
+	border: 2px dashed #616161;
+	border-radius: 12px;
+	box-shadow: 0 0 0 5px #f5f5f5;
+}
+.mokuzi-color3{
+	background-color:#ffe5cc;
+	border: 2px dashed #ff7f00;
+	border-radius: 12px;
+	box-shadow: 0 0 0 5px #ffe5cc;
+}
+.mokuzi-color4{
+	background-color:#ccccff;
+	border: 2px dashed #0000ff;
+	border-radius: 12px;
+	box-shadow: 0 0 0 5px #ccccff;
+}
+.mokuzi-color5{
+	background-color:#ffffcc;
+	border: 2px dashed #ff9900;
+	border-radius: 12px;
+	box-shadow: 0 0 0 5px #ffffcc;
+}
+.mokuzi-color6{
+	background-color:#ccffe5;
+	border: 2px dashed #006633;
+	border-radius: 12px;
+	box-shadow: 0 0 0 5px #ccffe5;
+}
+#usemenu .touch-clr :active{
+	opacity: 0.7;
+    filter: alpha(opacity=70);
+}
+.howtouse .section1,
+.section1 .n-title{
+	background-color:#e5ccff;
+	border-color:#7f00ff;
+}
+.howtouse .section2,
+.section2 .n-title{
+	background-color:#f5f5f5;
+	border-color:#616161;
+}
+.howtouse .section3,
+.section3 .n-title{
+	background-color:#ffe5cc;
+	border-color:#ff7f00;
+}
+.howtouse .section4,
+.section4 .n-title{
+	background-color:#ccccff;
+	border-color:#0000ff;
+}
+.howtouse .section5,
+.section5 .n-title{
+	background-color:#ffffcc;
+	border-color:#ff9900;
+}
+.howtouse .section6,
+.section6 .n-title{
+	background-color:#ccffe5;
+	border-color:#006633;
+}
+.t-section1{
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#efe0ff+0,bf7fff+100 */
+	background: #efe0ff; /* Old browsers */
+	background: -moz-linear-gradient(top, #efe0ff 0%, #bf7fff 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top, #efe0ff 0%,#bf7fff 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom, #efe0ff 0%,#bf7fff 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#efe0ff', endColorstr='#bf7fff',GradientType=0 ); /* IE6-9 */
+	color:#7f00ff;
+}
+.t-section2{
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f8f8f8+0,c8c8c8+100 */
+	background: #f8f8f8; /* Old browsers */
+	background: -moz-linear-gradient(top, #f8f8f8 0%, #c8c8c8 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top, #f8f8f8 0%,#c8c8c8 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom, #f8f8f8 0%,#c8c8c8 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f8f8f8', endColorstr='#c8c8c8',GradientType=0 ); /* IE6-9 */
+	color:#616161;
+}
+.t-section3{
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#fff2e5+0,ffbf7f+100 */
+	background: #fff2e5; /* Old browsers */
+	background: -moz-linear-gradient(top, #fff2e5 0%, #ffbf7f 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top, #fff2e5 0%,#ffbf7f 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom, #fff2e5 0%,#ffbf7f 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fff2e5', endColorstr='#ffbf7f',GradientType=0 ); /* IE6-9 */
+	color:#ff7f00;
+}
+.t-section4{
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#e0e0ff+0,7f7fff+100 */
+	background: #e0e0ff; /* Old browsers */
+	background: -moz-linear-gradient(top, #e0e0ff 0%, #7f7fff 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top, #e0e0ff 0%,#7f7fff 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom, #e0e0ff 0%,#7f7fff 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e0e0ff', endColorstr='#7f7fff',GradientType=0 ); /* IE6-9 */
+	color:#0000ff;
+}
+.t-section5{
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffe0+0,ffff7f+100 */
+	background: #ffffe0; /* Old browsers */
+	background: -moz-linear-gradient(top, #ffffe0 0%, #ffff7f 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top, #ffffe0 0%,#ffff7f 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom, #ffffe0 0%,#ffff7f 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffe0', endColorstr='#ffff7f',GradientType=0 ); /* IE6-9 */
+	color:#ff9900;
+}
+.t-section6{
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#e0ffef+0,7fffbf+100 */
+	background: #e0ffef; /* Old browsers */
+	background: -moz-linear-gradient(top, #e0ffef 0%, #7fffbf 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top, #e0ffef 0%,#7fffbf 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom, #e0ffef 0%,#7fffbf 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e0ffef', endColorstr='#7fffbf',GradientType=0 ); /* IE6-9 */
+	color:#006633;
+}
+@media (min-width:991px){
+	.row-eq-height {
+  display: flex;
+	}
+	.imgsize{
+		margin:40px 0px;
+	}
+	.imgsize2{
+		margin:20px 0px;
+	}
+}
+@media (max-width:991px){
+	.rank1 h3,.rank2 h4,.rank3 h4{
+	margin:auto;
+	float:none;
+	}
+}
+
+@media (max-width:767px){
+	.imgsize{
+
+	width:100%;
+	}
+	.imgsize2{
+	width:100%;
+	max-width:150px;
+	max-height:150px;
+	}
+}
+
+@media (max-width:579px){
+	
+	.rank1 h3{
+	font-size:18px;
+	max-width:140px;
+	}
+}
+@media(max-width:360px){
+	.koukoku{
+		display:none;
+	}
+}
+/*********************星座**************************/
+.panel-detail{
+	padding:15px;
+	border-radius:4px;
+}
+/*みずがめ*/
+.aquarius .panel-detail{
+	border:3px solid #ceff9e;
+}
+
+
+/*うお*/
+.pisces .panel-detail{
+	border:3px solid #ff9eff;
+}
+
+
+/*おひつじ*/
+.aeris .panel-detail{
+	border:3px solid #ffff9e;
+}
+
+/*おうし*/
+
+.taurus .panel-detail{
+	border:3px solid #9effce;
+}
+
+
+/*ふたご*/
+.gemini .panel-detail{
+	border:3px solid #9e9eff;
+}
+
+
+/*かに*/
+.cancer .panel-detail{
+	border:3px solid #ce9eff;
+}
+
+
+/*しし*/
+.leo .panel-detail{
+	border:3px solid #9eff9e;
+}
+
+
+/*おとめ*/
+.virgo .panel-detail{
+	border:3px solid #ff9ece;
+}
+
+
+/*てんびん*/
+.libra .panel-detail{
+	border:3px solid #9eceff;
+}
+
+
+/*さそり*/
+.scorpio .panel-detail{
+	border:3px solid #9effff;
+}
+
+
+/*いて*/
+.sagittarius .panel-detail{
+	border:3px solid #ffce9e;
+}
+
+
+/*やぎ*/
+.capricorn .panel-detail{
+	border:3px solid #ff9e9e;
+}
+
+a{
+	cursor:pointer;
+}
+
+
+
+/* <<< */
+
+/* vim: set foldmethod=marker */
+/*****************サイト説明文**********************/
+.site_descript{
+	color:white;
+	text-align:center;
+	font-size:10px;
+	margin:30px 15px;
+}
+.site_descript .panel-body .imgs{
+	max-width:200px;
+	
+}
+.site_descript .panel-body .serif{
+	max-width:400px;
+	display:inline-block;
+	background: #FFF;
+    border: solid 3px #ffa8ff;
+    border-radius:20px;
+    color: #ff7fbf;
+    padding: 10px;
+    position: relative;
+}
+.serif:before, .serif:after {
+    border-left: solid 5px transparent;
+    border-right: solid 10px transparent;
+    border-top: solid 15px #ffa8ff;
+    bottom: -15px;
+    content: "";
+    left: 50%;
+    position: absolute;
+}
+
+.site_descript .panel-detail{
+	color: #fff;
+	padding: 10px;
+	font-size: 12px;
+	background-color: #adadff;
+	border: 4px dashed #ffffad;
+	border-radius: 12px;
+	box-shadow: 0 0 0 15px #adadff;
+}
+.site_descript .panel-body .font_bold{
+	color:#ff7fbf;
+}
+/* <<< */
+
+.ad_sep{
+	clear:both;
+	visibility:hidden;
+	margin:0px;
+}
+
+.ad-bg{
+	background:white;
+}
+
+.ad-rpast img{
+	max-width:100% !important;
+}
+
+.adg{
+	padding:0 5px;
+}
+
+.adg-past-bottom{
+	margin-top:5px;
+}
+
+.adg-news{
+	margin:5px 0;
+}
+
+@media (max-width:380px){
+	.modal-ad{
+		margin:5px -20px;
+	}
+	.modal-dialog{
+		margin:10px 0px;
+	}
+}
+
+@media(min-width:728px){
+	.modal-body .modal-ad{
+		margin:5px -20px;
+	}
+	.modal-dialog{
+		width:728px;
+	}
+}
+
+/*******************七夕********************/
+body.tanabata_top{
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f29de5+0,7f2be5+42,2c2e77+100 */
+background: url("../img_re/background_whitestar.png"),#f29de5; /* Old browsers */
+background: url("../img_re/background_whitestar.png"),-moz-linear-gradient(top, #f29de5 0%, #7f2be5 42%, #2c2e77 100%); /* FF3.6-15 */
+background: url("../img_re/background_whitestar.png"),-webkit-linear-gradient(top, #f29de5 0%,#7f2be5 42%,#2c2e77 100%); /* Chrome10-25,Safari5.1-6 */
+background: url("../img_re/background_whitestar.png"),linear-gradient(to bottom, #f29de5 0%,#7f2be5 42%,#2c2e77 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f29de5', endColorstr='#2c2e77',GradientType=0 ); /* IE6-9 */;
+background-repeat:
+	repeat,
+	no-repeat;
+}
+body.tanabata{
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#8611ff+0,6b07ff+49,4100d3+99 */
+background: url("../img_re/background_whitestar.png"),#8611ff; /* Old browsers */
+background: url("../img_re/background_whitestar.png"),-moz-linear-gradient(top, #8611ff 0%, #6b07ff 49%, #4100d3 99%); /* FF3.6-15 */
+background: url("../img_re/background_whitestar.png"),-webkit-linear-gradient(top, #8611ff 0%,#6b07ff 49%,#4100d3 99%); /* Chrome10-25,Safari5.1-6 */
+background: url("../img_re/background_whitestar.png"),linear-gradient(to bottom, #8611ff 0%,#6b07ff 49%,#4100d3 99%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8611ff', endColorstr='#4100d3',GradientType=0 ); /* IE6-9 */;
+background-repeat:
+	repeat,
+	no-repeat;
+}
+.event_background{
+	position:fixed;
+	top:0;
+	left:0;
+	z-index:-1;
+}
+.tanabata_top .rank1 .small,
+.tanabata_top .rank2 .small,
+.tanabata_top .rank3 .small{
+	color:#1b1464;
+	
+}
+
+.tanabata_top .rankother-color{
+	border:solid 3px white;
+	color:white;
+	background-color:rgba(255, 255, 255, 0.12);
+	border-radius:12px;
+	box-shadow:1px 2px 12px 1px rgba(75, 75, 75, 0.65);
+	-moz-box-shadow:1px 2px 12px 1px rgba(75, 75, 75, 0.65);
+	-webkit-box-shadow:1px 2px 12px 1px rgba(75, 75, 75, 0.65);
+}
+.tanabata_top .rankother-color:active{
+	background-color:rgba(255, 255, 255, 0.4);
+}
+.tanabata_top .title .font-color
+,.tanabata .title .font-color{
+	color:white;
+	text-shadow:
+        0 1px 7px #3b0188,
+        1px 0 7px #3b0188,
+        0 -1px 7px #3b0188,
+        -1px 0 7px #3b0188,
+        -1px -1px 7px #3b0188,
+        1px -1px 7px #3b0188,
+        -1px 1px 7px #3b0188,
+        1px 1px 7px #3b0188
+    ;
+}
+.tanabata_top .calendar a:link
+,.tanabata_top .calendar a:visited
+,.tanabata_top .cal_btn, .fcolor-black
+,.tanabata .calendar a:link
+,.tanabata .calendar a:visited
+,.tanabata .cal_btn, .fcolor-black{
+	font-weight:bold;
+	text-shadow:
+		0 1px 0px #fff,
+		1px 0 0px #fff,
+		0 -1px 0px #fff,
+		-1px 0 0px #fff,
+		-1px -1px 0px #fff,
+		1px -1px 0px #fff,
+		-1px 1px 0px #fff,
+		1px 1px 0px #fff
+	;
+}
+.tanabata .font-color
+,.tanabata_top .font-color{
+	color:white;
+}
+.tanabata .fontw-backb{
+	color:white;
+	background-color:#1b1464;
+}
+.tanabata .fcolor_blue,.tanabata .ranking-index{
+	color:#1b1464;
+}
+.tanabata_top .ranking-index .star_rank1{
+	background:url(../img_re/top-rank.png);
+	background-position:0px 0px;
+	color:#ffea00;
+}
+.tanabata_top .ranking-index .star_rank2{
+	background:url(../img_re/top-rank.png);
+	background-position:120px 0px;
+	color:white;
+}
+.tanabata_top .ranking-index .star_rank3{
+	background:url(../img_re/top-rank.png);
+	background-position:80px 0px;
+	color:white;
+}
+
+.tanabata_top .ranking-index .star_rank_other{
+	background:url(../img_re/top-rank.png);
+	background-position:40px 0px;
+	color:#993399;
+}
+.tanabata_top .tabl{
+	background-color:rgba(255, 255, 255, 0.25);
+	border-radius:12px;
+	box-shadow:0px 0px 10px 4px rgba(75, 75, 75, 0.65);
+	-moz-box-shadow:0px 0px 10px 4px rgba(75, 75, 75, 0.65);
+	-webkit-box-shadow:0px 0px 10px 4px rgba(75, 75, 75, 0.65);
+	
+}
+/*みずがめ*/
+.tanabata_top .aquarius{
+	box-shadow: 0 0 0 4px #bcff7a inset;
+}
+
+.tanabata_top .aquarius:active{
+	background-color:#bcff7a;
+}
+
+
+/*うお*/
+.tanabata_top .pisces{
+	box-shadow: 0 0 0 4px #ff7aff inset;
+}
+
+.tanabata_top .pisces:active{
+	background-color:#ff7aff;
+}
+
+
+/*おひつじ*/
+.tanabata_top .aeris{
+	box-shadow: 0 0 0 4px #ffff7a inset;
+}
+
+.tanabata_top .aeris:active{
+	background-color:#ffff7a;
+}
+
+/*おうし*/
+.tanabata_top .taurus{
+	box-shadow: 0 0 0 4px #7affbc inset;
+}
+
+.tanabata_top .taurus:active{
+	background-color:#7affbc;
+}
+/*ふたご*/
+.tanabata_top .gemini{
+	box-shadow: 0 0 0 4px #0000ff inset;
+}
+
+.tanabata_top .gemini:active{
+	background-color:#7a7aff;
+}
+
+/*かに*/
+.tanabata_top .cancer{
+	box-shadow: 0 0 0 4px #bf7fff inset;
+}
+
+.tanabata_top .cancer:active{
+	background-color:#bc7aff;
+}
+
+/*しし*/
+.tanabata_top .leo{
+	box-shadow: 0 0 0 4px #7aff7a inset;
+}
+
+.tanabata_top .leo:active{
+	background-color:#7aff7a;
+}
+
+/*おとめ*/
+.tanabata_top .virgo{
+	box-shadow: 0 0 0 4px #ff7abc inset;
+}
+
+.tanabata_top .virgo:active{
+	background-color:#ff7abc;
+}
+
+/*てんびん*/
+.tanabata_top .libra{
+	box-shadow: 0 0 0 4px #7abcff inset;
+}
+
+.tanabata_top .libra:active{
+	background-color:#7abcff;
+}
+
+
+/*さそり*/
+.tanabata_top .scorpio{
+	box-shadow: 0 0 0 4px #7affff inset;
+}
+
+.tanabata_top .scorpio:active{
+	background-color:#7affff;
+}
+
+
+/*いて*/
+.tanabata_top .sagittarius{
+	box-shadow: 0 0 0 4px #ffbc7a inset;
+}
+
+.tanabata_top .sagittarius:active{
+	background-color:#ffbc7a;
+}
+
+/*やぎ*/
+.tanabata_top .capricorn{
+	box-shadow: 0 0 0 4px #ff7a7a inset;
+}
+
+.tanabata_top .capricorn:active{
+	background-color:#ff7a7a;
+}
+/*-------top title-------*/
+.tanabata .sitename a{
+	color:#ffffff;
+	text-shadow:
+    0 1px 7px #7f2ea8,
+    1px 0 7px #7f2ea8,
+    0 -1px 7px #7f2ea8,
+    -1px 0 7px #7f2ea8,
+    -1px -1px 7px #7f2ea8,
+    1px -1px 7px #7f2ea8,
+    -1px 1px 7px #7f2ea8,
+    1px 1px 7px #7f2ea8
+    ;
+
+}
+.tanabata_top .sitename a{
+	color:#7f2ea8;
+	text-shadow:
+        0 1px 7px #fff,
+        1px 0 7px #fff,
+        0 -1px 7px #fff,
+        -1px 0 7px #fff,
+        -1px -1px 7px #fff,
+        1px -1px 7px #fff,
+        -1px 1px 7px #fff,
+        1px 1px 7px #fff
+    ;
+}
+.tanabata_top .sitename a:hover
+,.tanabata .sitename a:hover{
+	text-decoration:none;
+}
+/*-------menue-----------*/
+.tanabata_top .gblnv_box{
+	color:#7f2ea8;
+	box-shadow:0px 0px 2px 3px #fff;
+	background-color:rgba(255, 255, 255, 0.5);
+}
+.tanabata_top .gblnv_box_menu{
+	color:#7f2ea8;
+}
+.tanabata_top .menu-trigger span {
+	background-color: #7f2ea8;
+}
+.tanabata .gblnv_box{
+	color:#ffffff;
+	box-shadow:0px 0px 2px 3px #7f2ea8;
+	background-color:rgba(127, 46, 168, 0.7);
+}
+.tanabata .gblnv_box_menu{
+	color:#ffffff;
+}
+.tanabata .menu-trigger span {
+	background-color: #ffffff;
+}
+.tanabata_top .navbar-default{
+	background-color:rgba(96, 77, 255, 0.57);
+	border:none;
+}
+.tanabata .navbar-default{
+	background-color:rgba(255, 74, 253, 0.67);
+	border:none;
+}
+.tanabata_top .navbar-default .navbar-brand
+,.tanabata_top .navbar-default .navbar-nav>li>a
+,.tanabata .navbar-default .navbar-brand
+,.tanabata .navbar-default .navbar-nav>li>a{
+	color:#ffffff;
+}
+/*------パンくずリスト-----*/
+.tanabata_top .breadcrumb,
+.tanabata .breadcrumb{
+	font-size:10px;
+	background-color:transparent;
+}
+
+.tanabata_top .breadcrumb a,
+.tanabata .breadcrumb a{
+	color:white;
+	text-decoration: underline;
+}
+
+
+.tanabata_top .breadcrumb>li+li:before
+,.tanabata .breadcrumb>li+li:before{
+	color:white;
+}
+.tanabata_top .breadcrumb>.active
+,.tanabata .breadcrumb>.active{
+	color:white;
+}
+.tanabata_top .breadcrumb{
+	background-color:rgba(235, 150, 229, 0.7);
+}
+.tanabata .breadcrumb{
+	background-color:rgba(133, 16, 255, 0.7);
+}
+@media (max-width: 767px) {
+	.tanabata_top .breadcrumb
+	,.tanabata .breadcrumb{
+		font-size:15px;
+	}
+}
+
+/*-----footer-------*/
+.tanabata_top footer .navbar
+,.tanabata footer .navbar{
+	background-color:rgba(46, 49, 146, 0.9);
+}
+.tanabata_top footer .navbar a
+,.tanabata footer .navbar a{
+	color:white;
+}
+/*--------カレンダー---------*/
+.tanabata_top .calendar
+,.tanabata .calendar{
+	background:url("../img_re/sasa.png"),white;
+	background-repeat:no-repeat;
+	background-position:50% 50%;
+}
+/*-------topname---------*/
+.tanabata_top .ranking-index .title{
+	padding-top:160px;
+	background:url("../img_re/orihime_hikobosi.png");
+	background-repeat:no-repeat;
+	background-size:auto;
+	background-position:50% 50%;
+}
+.tanabata .ranking-details .title{
+	padding-top:160px;
+	background:url("../img_re/kodomotachi.png");
+	background-repeat:no-repeat;
+	background-size:auto;
+	background-position:50% 50%;
+}
+.tanabata .eventimg{
+	max-width:254px;
+	margin:auto;
+}
+.tanabata .ranking-details .ranking-all .panel{
+	background-color:rgba(255, 255, 255, 0.8);
+}
+.tanabata .ranking-details .panel-default>.panel-heading{
+	background-color:rgba(14, 203, 213, 0.4);
+}
+.tanabata .ranking-details .panel-body a{
+	color:#024279;
+}
+.tanabata .detail-ranking{
+	color:#ffff00;
+	font-weight:bold;
+	text-shadow:
+    0 1px 5px #3b0188,
+    1px 0 5px #3b0188,
+    0 -1px 5px #3b0188,
+    -1px 0 5px #3b0188,
+    -1px -1px 5px #3b0188,
+    1px -1px 5px #3b0188,
+    -1px 1px 5px #3b0188,
+    1px 1px 5px #3b0188
+    ;
+
+}
+span.questionnaire {
+    display: block;
+    text-align: center;
+    background-color: #eeb3ff;
+    padding: 10px 0px;
+    font-weight: bold;
+    border-radius: 5px;
+    margin: 10px 0px;
+}
+.ev_message{
+	margin:25px 5px;
+	line-height:30px;
+	color: #1b1464;
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0px 0px 8px 4px #FFF;
+    border-radius:5px;
+}
+.ev_img{
+	margin-top:25px;
+}
+
+
+/* sidebar SNS START */
+
+.social-btn{
+	display:inline-block;
+}
+
+.social-btn,
+.social-btn img{
+	width:48px;
+	height:48px;
+}
+
+.social-btn:hover{
+	opacity:0.5;
+}
+
+.social-btn-circle,
+.social-btn-circle img{
+	border-radius:50%;
+}
+
+.mst-new-heading{
+	width:100%;
+	display:block;
+	background:#fcde65;
+	padding:10px;
+	text-align:center;
+	margin-top:10px;
+}
+
+@media (max-width: 992px) {
+	.social-btn,
+	.social-btn img{
+		width:96px;
+		height:96px;
+	}
+	
+	.sns-area{
+		padding:10px 0;
+	}
+	
+}
+
+@media (max-width: 350px) {
+	.social-btn,
+	.social-btn img{
+		width:64px;
+		height:64px;
+	}
+}
+/* sidebar SNS END */

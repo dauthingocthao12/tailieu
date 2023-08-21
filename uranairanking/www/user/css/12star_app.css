@@ -1,0 +1,658 @@
+@charset "UTF-8";
+/*テーマごとのカラーを出力*/
+.main {
+  background: url(../12star_app_img/background_whitestar.png), #2e3192;
+  color: #4d4d4d; }
+  .main .content {
+    background-color: #ffffff; }
+  .main h1
+  , .main .character small {
+    text-shadow: 0 1px 3px #ffffff, 1px 0 3px #ffffff, 0 -1px 3px #ffffff, -1px 0 3px #ffffff, -1px -1px 3px #ffffff, 1px -1px 3px #ffffff, -1px 1px 3px #ffffff, 1px 1px 3px #ffffff; }
+  .main .good-list
+  , .main .karakuchi-rank {
+    color: #4d4d4d; }
+  .main a {
+    color: #4d4d4d; }
+  .main .label-color {
+    color: #4d4d4d; }
+
+.chic {
+  background: url(../12star_app_img/background_whitestar.png), #140f4b;
+  color: #ffffff; }
+  .chic .content {
+    background-color: #2a2a56; }
+  .chic h1
+  , .chic .character small {
+    text-shadow: 0 1px 3px #140f4b, 1px 0 3px #140f4b, 0 -1px 3px #140f4b, -1px 0 3px #140f4b, -1px -1px 3px #140f4b, 1px -1px 3px #140f4b, -1px 1px 3px #140f4b, 1px 1px 3px #140f4b; }
+  .chic .good-list
+  , .chic .karakuchi-rank {
+    color: #000000; }
+  .chic a {
+    color: #000000; }
+  .chic .label-color {
+    color: #000000; }
+
+/*各星座の背景・キャラクターを出力*/
+.main .aquarius .bk-img {
+  background: url(../12star_app_img/aquarius-backstar.png) no-repeat;
+  background-size: 100% 100%; }
+
+.aquarius .character {
+  background: url(../12star_app_img/aquarius.png) no-repeat;
+  background-size: 250px;
+  background-position: 85% 20%;
+  padding: 11% 0 9%; }
+
+.main .pisces .bk-img {
+  background: url(../12star_app_img/pisces-backstar.png) no-repeat;
+  background-size: 100% 100%; }
+
+.pisces .character {
+  background: url(../12star_app_img/pisces.png) no-repeat;
+  background-size: 250px;
+  background-position: 85% 20%;
+  padding: 11% 0 9%; }
+
+.main .aeris .bk-img {
+  background: url(../12star_app_img/aeris-backstar.png) no-repeat;
+  background-size: 100% 100%; }
+
+.aeris .character {
+  background: url(../12star_app_img/aeris.png) no-repeat;
+  background-size: 250px;
+  background-position: 85% 20%;
+  padding: 11% 0 9%; }
+
+.main .taurus .bk-img {
+  background: url(../12star_app_img/taurus-backstar.png) no-repeat;
+  background-size: 100% 100%; }
+
+.taurus .character {
+  background: url(../12star_app_img/taurus.png) no-repeat;
+  background-size: 250px;
+  background-position: 85% 20%;
+  padding: 11% 0 9%; }
+
+.main .gemini .bk-img {
+  background: url(../12star_app_img/gemini-backstar.png) no-repeat;
+  background-size: 100% 100%; }
+
+.gemini .character {
+  background: url(../12star_app_img/gemini.png) no-repeat;
+  background-size: 250px;
+  background-position: 85% 20%;
+  padding: 11% 0 9%; }
+
+.main .cancer .bk-img {
+  background: url(../12star_app_img/cancer-backstar.png) no-repeat;
+  background-size: 100% 100%; }
+
+.cancer .character {
+  background: url(../12star_app_img/cancer.png) no-repeat;
+  background-size: 250px;
+  background-position: 85% 20%;
+  padding: 11% 0 9%; }
+
+.main .leo .bk-img {
+  background: url(../12star_app_img/leo-backstar.png) no-repeat;
+  background-size: 100% 100%; }
+
+.leo .character {
+  background: url(../12star_app_img/leo.png) no-repeat;
+  background-size: 250px;
+  background-position: 85% 20%;
+  padding: 11% 0 9%; }
+
+.main .virgo .bk-img {
+  background: url(../12star_app_img/virgo-backstar.png) no-repeat;
+  background-size: 100% 100%; }
+
+.virgo .character {
+  background: url(../12star_app_img/virgo.png) no-repeat;
+  background-size: 250px;
+  background-position: 85% 20%;
+  padding: 11% 0 9%; }
+
+.main .libra .bk-img {
+  background: url(../12star_app_img/libra-backstar.png) no-repeat;
+  background-size: 100% 100%; }
+
+.libra .character {
+  background: url(../12star_app_img/libra.png) no-repeat;
+  background-size: 250px;
+  background-position: 85% 20%;
+  padding: 11% 0 9%; }
+
+.main .scorpio .bk-img {
+  background: url(../12star_app_img/scorpio-backstar.png) no-repeat;
+  background-size: 100% 100%; }
+
+.scorpio .character {
+  background: url(../12star_app_img/scorpio.png) no-repeat;
+  background-size: 250px;
+  background-position: 85% 20%;
+  padding: 11% 0 9%; }
+
+.main .sagittarius .bk-img {
+  background: url(../12star_app_img/sagittarius-backstar.png) no-repeat;
+  background-size: 100% 100%; }
+
+.sagittarius .character {
+  background: url(../12star_app_img/sagittarius.png) no-repeat;
+  background-size: 250px;
+  background-position: 85% 20%;
+  padding: 11% 0 9%; }
+
+.main .capricorn .bk-img {
+  background: url(../12star_app_img/capricorn-backstar.png) no-repeat;
+  background-size: 100% 100%; }
+
+.capricorn .character {
+  background: url(../12star_app_img/capricorn.png) no-repeat;
+  background-size: 250px;
+  background-position: 85% 20%;
+  padding: 11% 0 9%; }
+
+/*各星座の色変更部分を出力*/
+.main .aquarius h1 {
+  color: #a1007e; }
+.main .aquarius .section-title {
+  background-color: #ceff9e; }
+.main .aquarius .good-list {
+  background-color: #e2ffc5;
+  border: 2px solid #ceff9e; }
+.main .aquarius .day-btn {
+  background-color: #9e9eff;
+  border: 2px dotted #a1007e; }
+.main .aquarius .karakuchi-rank {
+  background-color: #e2ffc5;
+  border-bottom: 2px solid #ceff9e; }
+.main .aquarius .sites .to-site {
+  background-color: #ffffff;
+  border-bottom: 2px solid #ceff9e; }
+.main .aquarius .label-color {
+  background-color: #9e9eff; }
+.main .aquarius .link-alert {
+  background-color: #ceff9e; }
+.main .pisces h1 {
+  color: #009825; }
+.main .pisces .section-title {
+  background-color: #ff9eff; }
+.main .pisces .good-list {
+  background-color: #ffd8ff;
+  border: 2px solid #ff9eff; }
+.main .pisces .day-btn {
+  background-color: #ceff9e;
+  border: 2px dotted #009825; }
+.main .pisces .karakuchi-rank {
+  background-color: #ffd8ff;
+  border-bottom: 2px solid #ff9eff; }
+.main .pisces .sites .to-site {
+  background-color: #ffffff;
+  border-bottom: 2px solid #ff9eff; }
+.main .pisces .label-color {
+  background-color: #ceff9e; }
+.main .pisces .link-alert {
+  background-color: #ff9eff; }
+.main .aeris h1 {
+  color: #000c7a; }
+.main .aeris .section-title {
+  background-color: #ffec9e; }
+.main .aeris .good-list {
+  background-color: #fffee2;
+  border: 2px solid #ffec9e; }
+.main .aeris .day-btn {
+  background-color: #9eceff;
+  border: 2px dotted #000c7a; }
+.main .aeris .karakuchi-rank {
+  background-color: #fffee2;
+  border-bottom: 2px solid #ffec9e; }
+.main .aeris .sites .to-site {
+  background-color: #ffffff;
+  border-bottom: 2px solid #ffec9e; }
+.main .aeris .label-color {
+  background-color: #9eceff; }
+.main .aeris .link-alert {
+  background-color: #ffec9e; }
+.main .taurus h1 {
+  color: #ef005a; }
+.main .taurus .section-title {
+  background-color: #9effce; }
+.main .taurus .good-list {
+  background-color: #d8ffeb;
+  border: 2px solid #9effce; }
+.main .taurus .day-btn {
+  background-color: #ff9eff;
+  border: 2px dotted #ef005a; }
+.main .taurus .karakuchi-rank {
+  background-color: #d8ffeb;
+  border-bottom: 2px solid #9effce; }
+.main .taurus .sites .to-site {
+  background-color: #ffffff;
+  border-bottom: 2px solid #9effce; }
+.main .taurus .label-color {
+  background-color: #ff9eff; }
+.main .taurus .link-alert {
+  background-color: #9effce; }
+.main .gemini h1 {
+  color: #f9e400; }
+.main .gemini .section-title {
+  background-color: #9e9eff; }
+.main .gemini .good-list {
+  background-color: #d8d8ff;
+  border: 2px solid #9e9eff; }
+.main .gemini .day-btn {
+  background-color: #ffce9e;
+  border: 2px dotted #f9e400; }
+.main .gemini .karakuchi-rank {
+  background-color: #d8d8ff;
+  border-bottom: 2px solid #9e9eff; }
+.main .gemini .sites .to-site {
+  background-color: #ffffff;
+  border-bottom: 2px solid #9e9eff; }
+.main .gemini .label-color {
+  background-color: #ffce9e; }
+.main .gemini .link-alert {
+  background-color: #9e9eff; }
+.main .cancer h1 {
+  color: #9ec700; }
+.main .cancer .section-title {
+  background-color: #ce9eff; }
+.main .cancer .good-list {
+  background-color: #ebd8ff;
+  border: 2px solid #ce9eff; }
+.main .cancer .day-btn {
+  background-color: #ffec9e;
+  border: 2px dotted #9ec700; }
+.main .cancer .karakuchi-rank {
+  background-color: #ebd8ff;
+  border-bottom: 2px solid #ce9eff; }
+.main .cancer .sites .to-site {
+  background-color: #ffffff;
+  border-bottom: 2px solid #ce9eff; }
+.main .cancer .label-color {
+  background-color: #ffec9e; }
+.main .cancer .link-alert {
+  background-color: #ce9eff; }
+.main .leo h1 {
+  color: #f00082; }
+.main .leo .section-title {
+  background-color: #9eff9e; }
+.main .leo .good-list {
+  background-color: #d8ffd8;
+  border: 2px solid #9eff9e; }
+.main .leo .day-btn {
+  background-color: #ce9eff;
+  border: 2px dotted #f00082; }
+.main .leo .karakuchi-rank {
+  background-color: #d8ffd8;
+  border-bottom: 2px solid #9eff9e; }
+.main .leo .sites .to-site {
+  background-color: #ffffff;
+  border-bottom: 2px solid #9eff9e; }
+.main .leo .label-color {
+  background-color: #ce9eff; }
+.main .leo .link-alert {
+  background-color: #9eff9e; }
+.main .virgo h1 {
+  color: #009e9f; }
+.main .virgo .section-title {
+  background-color: #ff9ece; }
+.main .virgo .good-list {
+  background-color: #ffd8eb;
+  border: 2px solid #ff9ece; }
+.main .virgo .day-btn {
+  background-color: #ce9eff;
+  border: 2px dotted #009e9f; }
+.main .virgo .karakuchi-rank {
+  background-color: #ffd8eb;
+  border-bottom: 2px solid #ff9ece; }
+.main .virgo .sites .to-site {
+  background-color: #ffffff;
+  border-bottom: 2px solid #ff9ece; }
+.main .virgo .label-color {
+  background-color: #ce9eff; }
+.main .virgo .link-alert {
+  background-color: #ff9ece; }
+.main .libra h1 {
+  color: #fca000; }
+.main .libra .section-title {
+  background-color: #9eceff; }
+.main .libra .good-list {
+  background-color: #d8ebff;
+  border: 2px solid #9eceff; }
+.main .libra .day-btn {
+  background-color: #ff9e9e;
+  border: 2px dotted #fca000; }
+.main .libra .karakuchi-rank {
+  background-color: #d8ebff;
+  border-bottom: 2px solid #9eceff; }
+.main .libra .sites .to-site {
+  background-color: #ffffff;
+  border-bottom: 2px solid #9eceff; }
+.main .libra .label-color {
+  background-color: #ff9e9e; }
+.main .libra .link-alert {
+  background-color: #9eceff; }
+.main .scorpio h1 {
+  color: #ef0000; }
+.main .scorpio .section-title {
+  background-color: #9effff; }
+.main .scorpio .good-list {
+  background-color: #d8ffff;
+  border: 2px solid #9effff; }
+.main .scorpio .day-btn {
+  background-color: #ff9ece;
+  border: 2px dotted #ef0000; }
+.main .scorpio .karakuchi-rank {
+  background-color: #d8ffff;
+  border-bottom: 2px solid #9effff; }
+.main .scorpio .sites .to-site {
+  background-color: #ffffff;
+  border-bottom: 2px solid #9effff; }
+.main .scorpio .label-color {
+  background-color: #ff9ece; }
+.main .scorpio .link-alert {
+  background-color: #9effff; }
+.main .sagittarius h1 {
+  color: #0072b6; }
+.main .sagittarius .section-title {
+  background-color: #ffce9e; }
+.main .sagittarius .good-list {
+  background-color: #ffebd8;
+  border: 2px solid #ffce9e; }
+.main .sagittarius .day-btn {
+  background-color: #9effff;
+  border: 2px dotted #0072b6; }
+.main .sagittarius .karakuchi-rank {
+  background-color: #ffebd8;
+  border-bottom: 2px solid #ffce9e; }
+.main .sagittarius .sites .to-site {
+  background-color: #ffffff;
+  border-bottom: 2px solid #ffce9e; }
+.main .sagittarius .label-color {
+  background-color: #9effff; }
+.main .sagittarius .link-alert {
+  background-color: #ffce9e; }
+.main .capricorn h1 {
+  color: #00a3e7; }
+.main .capricorn .section-title {
+  background-color: #ff9e9e; }
+.main .capricorn .good-list {
+  background-color: #ffd8d8;
+  border: 2px solid #ff9e9e; }
+.main .capricorn .day-btn {
+  background-color: #9effce;
+  border: 2px dotted #00a3e7; }
+.main .capricorn .karakuchi-rank {
+  background-color: #ffd8d8;
+  border-bottom: 2px solid #ff9e9e; }
+.main .capricorn .sites .to-site {
+  background-color: #ffffff;
+  border-bottom: 2px solid #ff9e9e; }
+.main .capricorn .label-color {
+  background-color: #9effce; }
+.main .capricorn .link-alert {
+  background-color: #ff9e9e; }
+
+.chic h1 {
+  color: #cc99cc; }
+.chic .section-title {
+  background-color: #800080; }
+.chic .good-list {
+  background-color: #cc99cc;
+  border: 2px solid #800080; }
+.chic .day-btn {
+  background-color: #ffffff;
+  border: 2px dotted #cc99cc; }
+.chic .karakuchi-rank {
+  background-color: #cc99cc;
+  border-bottom: 2px solid #800080; }
+.chic .sites .to-site {
+  background-color: #ffffff;
+  border-bottom: 2px solid #800080; }
+.chic .label-color {
+  background-color: #ffffff; }
+.chic .link-alert {
+  background-color: #800080; }
+
+/*メニュー(すべて共通)*/
+ul.menu .defolt {
+  background: url(../12star_app_img/menu-defolt.png) no-repeat;
+  background-size: 40px;
+  padding: 10px 0px;
+  background-position: 50%; }
+ul.menu .love {
+  background: url(../12star_app_img/menu-love.png) no-repeat;
+  background-size: 40px;
+  padding: 10px 0px;
+  background-position: 50%; }
+ul.menu .contract {
+  background: url(../12star_app_img/menu-contract.png) no-repeat;
+  background-size: 40px;
+  padding: 10px 0px;
+  background-position: 50%; }
+ul.menu .configuration {
+  background: url(../12star_app_img/menu-configuration.png) no-repeat;
+  background-size: 40px;
+  padding: 10px 0px;
+  background-position: 50%; }
+
+@media (max-width: 991px) {
+  .aquarius .character {
+    background: url(../12star_app_img/aquarius.png) no-repeat;
+    background-size: 200px;
+    background-position: 85% 20%;
+    padding: 14% 0 5%; }
+
+  .pisces .character {
+    background: url(../12star_app_img/pisces.png) no-repeat;
+    background-size: 200px;
+    background-position: 85% 20%;
+    padding: 14% 0 5%; }
+
+  .aeris .character {
+    background: url(../12star_app_img/aeris.png) no-repeat;
+    background-size: 200px;
+    background-position: 85% 20%;
+    padding: 14% 0 5%; }
+
+  .taurus .character {
+    background: url(../12star_app_img/taurus.png) no-repeat;
+    background-size: 200px;
+    background-position: 85% 20%;
+    padding: 14% 0 5%; }
+
+  .gemini .character {
+    background: url(../12star_app_img/gemini.png) no-repeat;
+    background-size: 200px;
+    background-position: 85% 20%;
+    padding: 14% 0 5%; }
+
+  .cancer .character {
+    background: url(../12star_app_img/cancer.png) no-repeat;
+    background-size: 200px;
+    background-position: 85% 20%;
+    padding: 14% 0 5%; }
+
+  .leo .character {
+    background: url(../12star_app_img/leo.png) no-repeat;
+    background-size: 200px;
+    background-position: 85% 20%;
+    padding: 14% 0 5%; }
+
+  .virgo .character {
+    background: url(../12star_app_img/virgo.png) no-repeat;
+    background-size: 200px;
+    background-position: 85% 20%;
+    padding: 14% 0 5%; }
+
+  .libra .character {
+    background: url(../12star_app_img/libra.png) no-repeat;
+    background-size: 200px;
+    background-position: 85% 20%;
+    padding: 14% 0 5%; }
+
+  .scorpio .character {
+    background: url(../12star_app_img/scorpio.png) no-repeat;
+    background-size: 200px;
+    background-position: 85% 20%;
+    padding: 14% 0 5%; }
+
+  .sagittarius .character {
+    background: url(../12star_app_img/sagittarius.png) no-repeat;
+    background-size: 200px;
+    background-position: 85% 20%;
+    padding: 14% 0 5%; }
+
+  .capricorn .character {
+    background: url(../12star_app_img/capricorn.png) no-repeat;
+    background-size: 200px;
+    background-position: 85% 20%;
+    padding: 14% 0 5%; } }
+@media (max-width: 767px) {
+  .aquarius .character {
+    background: url(../12star_app_img/aquarius.png) no-repeat;
+    background-size: 180px;
+    background-position: 85% 20%;
+    padding: 16% 0 7%; }
+
+  .pisces .character {
+    background: url(../12star_app_img/pisces.png) no-repeat;
+    background-size: 180px;
+    background-position: 85% 20%;
+    padding: 16% 0 7%; }
+
+  .aeris .character {
+    background: url(../12star_app_img/aeris.png) no-repeat;
+    background-size: 180px;
+    background-position: 85% 20%;
+    padding: 16% 0 7%; }
+
+  .taurus .character {
+    background: url(../12star_app_img/taurus.png) no-repeat;
+    background-size: 180px;
+    background-position: 85% 20%;
+    padding: 16% 0 7%; }
+
+  .gemini .character {
+    background: url(../12star_app_img/gemini.png) no-repeat;
+    background-size: 180px;
+    background-position: 85% 20%;
+    padding: 16% 0 7%; }
+
+  .cancer .character {
+    background: url(../12star_app_img/cancer.png) no-repeat;
+    background-size: 180px;
+    background-position: 85% 20%;
+    padding: 16% 0 7%; }
+
+  .leo .character {
+    background: url(../12star_app_img/leo.png) no-repeat;
+    background-size: 180px;
+    background-position: 85% 20%;
+    padding: 16% 0 7%; }
+
+  .virgo .character {
+    background: url(../12star_app_img/virgo.png) no-repeat;
+    background-size: 180px;
+    background-position: 85% 20%;
+    padding: 16% 0 7%; }
+
+  .libra .character {
+    background: url(../12star_app_img/libra.png) no-repeat;
+    background-size: 180px;
+    background-position: 85% 20%;
+    padding: 16% 0 7%; }
+
+  .scorpio .character {
+    background: url(../12star_app_img/scorpio.png) no-repeat;
+    background-size: 180px;
+    background-position: 85% 20%;
+    padding: 16% 0 7%; }
+
+  .sagittarius .character {
+    background: url(../12star_app_img/sagittarius.png) no-repeat;
+    background-size: 180px;
+    background-position: 85% 20%;
+    padding: 16% 0 7%; }
+
+  .capricorn .character {
+    background: url(../12star_app_img/capricorn.png) no-repeat;
+    background-size: 180px;
+    background-position: 85% 20%;
+    padding: 16% 0 7%; } }
+@media (max-width: 410px) {
+  .aquarius .character {
+    background: url(../12star_app_img/aquarius.png) no-repeat;
+    background-size: 150px;
+    background-position: 85% 20%;
+    padding: 20% 0 1%; }
+
+  .pisces .character {
+    background: url(../12star_app_img/pisces.png) no-repeat;
+    background-size: 150px;
+    background-position: 85% 20%;
+    padding: 20% 0 1%; }
+
+  .aeris .character {
+    background: url(../12star_app_img/aeris.png) no-repeat;
+    background-size: 150px;
+    background-position: 85% 20%;
+    padding: 20% 0 1%; }
+
+  .taurus .character {
+    background: url(../12star_app_img/taurus.png) no-repeat;
+    background-size: 150px;
+    background-position: 85% 20%;
+    padding: 20% 0 1%; }
+
+  .gemini .character {
+    background: url(../12star_app_img/gemini.png) no-repeat;
+    background-size: 150px;
+    background-position: 85% 20%;
+    padding: 20% 0 1%; }
+
+  .cancer .character {
+    background: url(../12star_app_img/cancer.png) no-repeat;
+    background-size: 150px;
+    background-position: 85% 20%;
+    padding: 20% 0 1%; }
+
+  .leo .character {
+    background: url(../12star_app_img/leo.png) no-repeat;
+    background-size: 150px;
+    background-position: 85% 20%;
+    padding: 20% 0 1%; }
+
+  .virgo .character {
+    background: url(../12star_app_img/virgo.png) no-repeat;
+    background-size: 150px;
+    background-position: 85% 20%;
+    padding: 20% 0 1%; }
+
+  .libra .character {
+    background: url(../12star_app_img/libra.png) no-repeat;
+    background-size: 150px;
+    background-position: 85% 20%;
+    padding: 20% 0 1%; }
+
+  .scorpio .character {
+    background: url(../12star_app_img/scorpio.png) no-repeat;
+    background-size: 150px;
+    background-position: 85% 20%;
+    padding: 20% 0 1%; }
+
+  .sagittarius .character {
+    background: url(../12star_app_img/sagittarius.png) no-repeat;
+    background-size: 150px;
+    background-position: 85% 20%;
+    padding: 20% 0 1%; }
+
+  .capricorn .character {
+    background: url(../12star_app_img/capricorn.png) no-repeat;
+    background-size: 150px;
+    background-position: 85% 20%;
+    padding: 20% 0 1%; } }
+
+/*# sourceMappingURL=12star_app.css.map */

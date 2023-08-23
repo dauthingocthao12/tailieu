@@ -1,0 +1,4 @@
+User-agent: *
+Sitemap: https://uranairanking.jp/sitemap-index.xml
+Disallow: /12star_app.php
+Disallow: /12star_app_ajax.php

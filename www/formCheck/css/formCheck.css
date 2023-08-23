@@ -1,0 +1,15 @@
+
+/* forms related */
+span.required,
+.form-group.required>label::after {
+	/*content: "\2605";*/
+	content: "※";
+	font-weight: bold;
+	padding: 0 5px;
+	color: #dc322f;
+	font-size: large;
+	/*line-height: 1em;*/
+}
+.form-check.alert-danger {
+	display: inline-block;
+}

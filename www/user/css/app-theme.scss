@@ -1,0 +1,134 @@
+@mixin makeUranaiTheme($name_, $back_color_, $txt_color_) {
+
+	$table_bgcolor: lighten($back_color_, 30%);
+	$footer_bgcolor: darken($back_color_, 10%);
+
+	body.#{$name_} {
+		background-color:$back_color_;
+		color:$txt_color_;
+	}
+
+	.#{$name_} {
+
+		.jumbotron
+		,footer {
+			background-color:$footer_bgcolor;
+		}
+
+		footer {
+			color:$txt_color_;
+		}
+
+		/* top 3 section for wide screens (tablets+) */
+		div.top3 {
+			position:relative;
+			// background: darken($back_color_, 20%);
+			background:url(../img/The-Bright-Sun-Blue-Sky-Clouds.jpg) -120px -100px;
+			color:lighten($txt_color_, 5%);
+		}
+
+		div.top3 .filter {
+			position:absolute;
+			top:0;
+			left:0;
+			right:0;
+			bottom:0;
+			background-color: rgba( darken($back_color_, 20%), 0.6);
+		}
+
+
+		#listing-ranking table {
+			background-color: $table_bgcolor;
+
+			border-top:1px solid lighten($table_bgcolor, 10%);
+			border-left:1px solid lighten($table_bgcolor, 10%);
+
+			border-bottom:1px solid darken($table_bgcolor, 10%);
+			border-right:1px solid darken($table_bgcolor, 10%);
+		}
+
+		#listing-ranking th {
+			color: $txt_color_;
+			background-color: darken($back_color_, 30%);
+			border:none;
+		}
+
+		#listing-ranking td {
+			color: darken($back_color_, 10%);
+			border-top:1px solid lighten($table_bgcolor, 10%);
+			border-bottom:1px solid darken($table_bgcolor, 10%);
+		}
+
+		//色付け日陰
+		.jumbotron
+		,.top3
+		,footer
+		// ,#listing-ranking table
+		{
+			box-shadow:0 0 20px darken($back_color_, 40%);
+		}
+
+		//sign
+		img.sign {
+			border:2px solid rgba($txt_color_, 0.5);
+		}
+
+		//footer links
+		footer .nav a {
+			color:$txt_color_;
+		}
+		footer .nav a:hover {
+			color:$footer_bgcolor;
+			background-color:rgba($table_bgcolor, 0.6);
+		}
+	}
+	/* end of named closure */
+}
+
+////////////////// common things ////////////////
+
+//table
+#listing-ranking table {
+	border-collapse:separate;
+	padding:5px;
+}
+#listing-ranking th:first-child {
+	text-align:center;
+}
+#listing-ranking td:first-child {
+	text-align: right;
+	white-space: nowrap;
+	font-weight:bold;
+}
+//signs icons
+#listing-ranking td img {
+	// box-shadow:inset 5px 5px 10px rgba(white, 0.6);
+	margin:auto;
+}
+
+/* position sign 3 colors */
+#listing-ranking td .fa-arrow-up {
+	color:green;
+}
+#listing-ranking td .fa-minus {
+	color:orange;
+}
+#listing-ranking td .fa-arrow-down {
+	color:red;
+}
+
+
+/* specific things */
+@include makeUranaiTheme(aeris, #D97400, #F7DA9E);
+@include makeUranaiTheme(taurus, #F7DA9E, #F9FFBA);
+@include makeUranaiTheme(gemini, #995CA9, #E9D2FC);
+@include makeUranaiTheme(cancer, #D6523B, #FFCAA4);
+@include makeUranaiTheme(leo, #D96100, #D4C9BB);
+@include makeUranaiTheme(virgo, #6D9DC5, white);
+@include makeUranaiTheme(libra, #AA5A9F, #F6D4E5);
+@include makeUranaiTheme(scorpio, #C74D35, #FBB4A2);
+@include makeUranaiTheme(sagittarius, #7783D9, #D9DBFF);
+@include makeUranaiTheme(capricorn, #D97492, #FEDBC8);
+@include makeUranaiTheme(aquarius, #6F88FF, #C5D2FF);
+@include makeUranaiTheme(pisces, #6AB3B9, #C6FAE3);
+@include makeUranaiTheme(default, #989898, #B5B5B5);

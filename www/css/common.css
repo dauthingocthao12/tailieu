@@ -1,0 +1,359 @@
+* {
+	font-size: 12pt;
+}
+
+body {
+	padding-bottom: 2em;
+}
+
+form {
+	margin-bottom: 0;
+}
+
+form.button {
+	display: inline;
+}
+
+.right {
+	text-align: right;
+}
+
+hr {
+	clear: both;
+}
+
+table, tr, td {
+	border-collapse: collapse;
+	/*border: 1px solid black;*/
+	padding: 0.2em;
+}
+th {
+	vertical-align: middle;
+	color: white;
+	background-color: #226688;
+}
+th.narrow {
+	white-space: nowrap;
+	width: 1%;
+}
+
+table hr {
+	margin: 2px;
+}
+
+.clear {
+	clear: both;
+}
+
+.nowrap {
+	white-space: nowrap;
+}
+
+.flex {
+	display:flex;
+}
+
+.flex-space > * {
+	margin-right:5px;
+}
+
+.text-bold {
+	font-weight:bold;
+}
+
+.text-14 *{
+	font-size:14px;
+}
+
+.radio-label {
+	border: 1px solid #ddd;
+	background-color: #eee;
+	border-radius: 5px;
+	color: black;
+	cursor: pointer;
+	/*mimmic btn-sm format*/
+	padding: 5px 10px;
+	font-size: 12px;
+	line-height: 1.5;
+}
+.radio-label input {
+	vertical-align: middle;
+	margin: 0;
+}
+.radio-label.bg-success {
+	background-color: #5cb85c;
+	color: white;
+}
+.radio-label.bg-warning {
+	background-color: #fcf8e3;
+}
+.radio-label.bg-danger {
+	background-color: #d9534f;
+	color: white;
+}
+
+label[disabled] {
+	color: gray;
+}
+
+#message {
+	float: right;
+	display: block;
+	color: white;
+	background-color: #226688;
+	width: 20em;
+	height: 4em;
+	text-align: center;
+	padding-top: 1.5em;
+}
+
+.btn-fa {
+	font-family: FontAwesome, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.text-success {
+	color: #5cb85c;
+}
+
+.text-failed {
+	color: #d9534f;
+}
+
+/* Pre blocks >>>*/
+pre {
+	word-break: break-all;
+	white-space: pre-wrap;
+}
+/*<<<*/
+
+/* Log table >>> */
+#log-table td.batch-group1 {
+	border-left: 4px solid #ddd;
+}
+#log-table td.batch-group2 {
+	border-left: 4px solid #bbb;
+}
+#log-table td {
+	word-break: break-word;
+}
+/* <<< */
+
+/* 取得状況 >>>*/
+#batch-status-container .status-card {
+	width:100%;
+	margin-right:20px;
+}
+
+#batch-status-container tr.off {
+	background-color: #d1d1d1;
+	color : gray;
+}
+
+#batch-status-container .hi {
+	font-size:20px;
+	font-weight:bold;
+}
+
+#batch-status-container .lighter {
+	font-size:20px;
+	color:#ababab;
+}
+/* <<< */
+
+/* コメント管理 >>> */
+.sitecomment .memo{
+	height: 150px;
+}
+.sitecomment .title-width{
+	width: 250px;
+}
+
+.comment-status-pending {
+	color: red;
+}
+.comment-status-rejected {
+	color: orange;
+}
+.comment-status-published {
+	color: green;
+}
+.comment-status-hidden {
+	color: lightgray;
+}
+
+/* 一覧テーブル */
+.sitecomment-listing .status {
+	width: 6%;
+}
+
+.sitecomment-listing .revision {
+	width: 5%;
+}
+
+.sitecomment-listing .user-data {
+	width: 15%;
+}
+
+.sitecomment-listing .site-data {
+	width: 12%;
+}
+
+.sitecomment-listing .evaluation {
+	width: 5%;
+}
+
+.sitecomment-listing .date {
+	width: 1%;
+	white-space: nowrap;
+}
+
+.sitecomment-listing .buttons {
+	width: 1%;
+	white-space: nowrap;
+}
+
+.sitecomment-detail .mail-select {
+	text-align: right;
+	margin-top:10px;
+}
+
+.table-sitecomment-details th {
+	width: 25%;
+}
+
+.parent_revision {
+	color: #999;
+}
+
+.sitecomment-detail .admin-history {
+	margin-top: 20px;
+}
+
+dl.sitecomment-report {
+	background: #eee;
+	border-radius: 5px;
+	padding: 5px;
+	margin: 0 5px 5px 5px;
+	cursor: pointer;
+}
+.sitecomment-report[data-status=read] {
+	background: #c2fff4;
+}
+
+.sitecomment-report dt.date,
+.sitecomment-report dd.date,
+.sitecomment-report dt.category,
+.sitecomment-report dd.category {
+	width: 48%;
+	display: inline-block;
+	margin-bottom: 5px;
+}
+.sitecomment-report dt.comment {
+	clear: both;
+}
+.sitecomment-report dd.comment {
+	margin: 5px 5px 15px 5px;
+	padding: 5px;
+	background: white;
+}
+.sitecomment-report  dt.reporter-details,
+.sitecomment-report  dd.reporter-details {
+	float: left;
+	width: calc(25% - 5px);
+	padding-left: 5px;
+	font-size: 12px;
+}
+
+.sitecomment-report:hover {
+	transform: translate(-2px, -2px);
+	box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.admin-history .history-entry {
+	margin: 10px;
+	padding: 5px;
+	border: 1px solid lightgrey;
+	background: white;
+	box-shadow: 0 1px 5px #ccc;
+}
+
+.history-entry table {
+	width: 100%;
+}
+
+.history-entry .left-column {
+	width: 30%;
+}
+
+.admin-sep-vert {
+	margin: 0 10px;
+	border-right: 1px solid grey;
+}
+/* <<< */
+
+/* alerts >>> */
+.alert-debug {
+	margin: 10px;
+	background: #e8b000;
+	color: white;
+}
+/* <<< */
+
+/* ページング >>> */
+.navigation-admin-comments-container {
+	text-align: center;
+}
+
+.navigation-admin-comments-container .navigation {
+	display: inline-block;
+}
+/* <<< */
+
+
+/* 相互ライク管理画面 */
+#confirm_popup, #delete_popup, #update_popup{
+	background: rgba(0, 0, 0, 0.6);
+	width: 100%;
+	height:100%;
+	position:fixed;
+	top:0;
+	left:0;
+	display: none;
+	justify-content: center;
+	align-items: center;
+}
+
+
+.confirm_popup_content , .delete_popup_content, .update_popup_content{
+	min-height: 200px;
+	min-width: 500px;
+	background: #fff;
+	padding: 30px;
+	border-radius: 5px;
+	position: relative;
+}
+.btn_confirm,.btn_delete, .btn_update , .btn_cancer {
+	font-size: 16px;
+	width: 150px;
+	height: 40px;
+	margin: 30px 32px;
+	
+}
+.confirm:hover, .btn_confirm:hover {
+	font-weight: bold;
+	color:#4cae4c;
+	background-color: white;
+}
+.delete:hover, .btn_delete:hover {
+	font-weight: bold;
+	color:red;
+	background-color: white;
+}
+.update:hover, .btn_update:hover {
+	font-weight: bold;
+	color:#39b3d7;
+	background-color: white;
+}
+.update_popup_content {
+	height: 350px;
+}

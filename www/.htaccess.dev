@@ -1,0 +1,60 @@
+# Deny specific IP
+# add 2019/02/13
+# AZET TEST zoot.jp
+#Deny from .static.zoot.jp
+Deny from .bc.googleusercontent.com
+# add 2020/01/16
+Deny from .your-server.de
+Deny from .amazonaws.com
+# add 2020/01/22
+Deny from .semrush.com 
+# add 2020/02/18
+Deny from 216.244.66.247
+Deny from .ahrefs.com
+Deny from .grapeshot.co.uk
+
+Options +FollowSymLinks
+
+# cache
+<FilesMatch "\.(gif|jpe?g|png|css|js)$"> [NC]
+# ETag settings (load balancer proof)
+FileETag MTime Size
+# instead of the defaults FileETag INode MTime Size
+
+# Because ETag cause problems with Last-Modified, we clear it
+# so we clear the last-modified header so we can rollback in time
+Header unset Last-Modified
+</FilesMatch>
+
+# compression
+<ifModule mod_deflate.c>
+<IfModule mod_filter.c>
+	AddOutputFilterByType DEFLATE text/plain
+	AddOutputFilterByType DEFLATE text/html
+	AddOutputFilterByType DEFLATE text/css
+	AddOutputFilterByType DEFLATE text/javascript
+	AddOutputFilterByType DEFLATE application/x-javascript
+</ifModule>
+</ifModule>
+
+RewriteEngine on
+RewriteBase /
+
+# DEV ONLY! >>>
+php_flag display_startup_errors on
+php_flag display_errors on
+php_flag html_errors on
+php_flag  log_errors on
+# <<<
+
+# maintenance rules
+#RewriteCond %{REMOTE_ADDR} !=202.171.139.14
+#RewriteCond %{REQUEST_URI} !/maintenance.html$ [NC]
+#RewriteCond %{REQUEST_URI} !\.(jpe?g?|png|gif) [NC]
+#RewriteRule .* /maintenance.html [R=302,L]
+
+RewriteCond %{HTTP_HOST} ^www [NC]
+RewriteRule ^(.*)$ http://uranairanking.jp/$1 [R=301,L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule (.+)$ index.php?q=$1 [NC,L]

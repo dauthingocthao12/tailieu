@@ -1,0 +1,68 @@
+/*
+ sidebar menu  howto
+ ===================
+ The main menu is the tag with the ID main-menu.
+ The elements that are only required on mobile 
+ can have the class "mobile-menu-only" so they won't appear on PC.
+*/
+
+
+body.mobile-menu-open {
+	overflow: hidden;
+	position: fixed;
+	left: 0;
+	right: 0;
+}
+
+.mobile-menu-open-btn span {
+	display: none;
+}
+
+.mobile-menu-only {
+	display: none;
+}
+
+.mobile-menu-container {
+	background-color: white;
+	box-shadow: 0 0 5px #00000088;
+	position: fixed;
+	overflow-y: auto;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 109;
+}
+
+
+/* Mobile width */
+@media (max-width: 1199px) {
+	.mobile-menu-open .mobile-menu-only {
+		display: block;
+	}
+
+	.mobile-menu-open-btn {
+		display: block;
+		position: fixed;
+		top: 0;
+		right: 0;
+		width: 70px;
+		height: 70px;
+		background: #8C343A url(ico-mobile-menu.png) center center no-repeat;
+		z-index: 110;
+		transition: background 0.2s ease;
+	}
+
+	.mobile-menu-open .mobile-menu-open-btn {
+		background: black url(ico-mobile-menu_close.png) center center no-repeat;
+	}
+
+	.mobile-menu-close-btn {
+		display: block;
+		padding: 1em;
+		text-align: right;
+		color: #8C343A;
+		text-decoration: none;
+	}
+}
+
+

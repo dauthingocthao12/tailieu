@@ -1,0 +1,34 @@
+services:
+  mysql:
+    image: mysql:5.7
+    volumes:
+      - ./mysql_data:/var/lib/mysql:z
+    ports:
+      - "3307:3306"
+    restart: "no"
+    environment:
+      MYSQL_ROOT_PASSWORD: somewordpress
+      MYSQL_DATABASE: wordpress
+      MYSQL_USER: wordpress
+      MYSQL_PASSWORD: wordpress
+
+  wordpress:
+    depends_on:
+      - mysql
+    image: wordpress:latest
+    volumes:
+      - ./wordpress_data/wp-content/themes:/var/www/html/wp-content/themes:z
+      - ./wordpress_data/wp-content/plugins:/var/www/html/wp-content/plugins:z
+      - ./wordpress_data/wp-content/uploads:/var/www/html/wp-content/uploads:z
+    ports:
+      - "88:80"
+    restart: "no"
+    environment:
+      WORDPRESS_DB_HOST: mysql
+      WORDPRESS_DB_USER: wordpress
+      WORDPRESS_DB_PASSWORD: wordpress
+      WORDPRESS_DB_NAME: wordpress
+
+volumes:
+  mysql_data: {}
+  # wordpress_data: {}

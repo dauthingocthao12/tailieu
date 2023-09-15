@@ -1,0 +1,982 @@
+@media (min-width: 840px) AND (max-width: 1190px) {
+	.content-container-md {
+		margin-right: 120px;
+	}
+	/* about */
+	.top-header-about-bg {
+		background-position: center 25%;
+	}
+}
+
+@media (max-width: 1070px) {
+	.header-logo-info-container {
+		flex-direction: column;
+		flex: 0 1 295px;
+		padding: var(--mobilemenu-padding) 16px;
+	}
+	.header-shop-info {
+		align-self: flex-end;
+		margin: 0 -10px 0 0;
+		/* padding: 10px 51px 10px 15px; */
+		padding: 10px 12px 10px 20px;
+		text-align: justify;
+	}
+}
+
+@media (max-width: 1100px) {
+	/* header */
+	.header-nav a, .has-submenu {
+		letter-spacing: 0px;
+	}
+	.top-image-content .image-left {
+		top: 10px;
+		left: auto;
+		right: 40%;
+	}
+
+	.top-image-content .image-center {
+		width: 20rem;
+		max-width: 54%;
+		left: 40%;
+		top: 20%;
+	}
+
+	.top-image-content .image-right {
+		margin-top: 335px;
+		width: 20rem;
+		position: static;
+		margin-right: 0;
+	}
+
+	.top-header {
+		padding-right: 0;
+	}
+
+
+	/* about */
+	.top-header-about-bg {
+		background-position: center top;
+	}	
+}
+
+@media (max-width: 975px) {
+
+	/* header-slick */
+	.gg-arrow-right-o {
+		margin: auto;
+		left: 50px;
+	}
+
+	.gg-arrow-left-o {
+		margin: auto;
+		left: -60px;
+	}
+
+	.slick-dots {
+		width: 100%;
+		margin: 0 auto;
+	}
+	/* header */
+	/* .header-nav a, .has-submenu {
+		font-size: 15px;
+	} */
+}
+@media (min-width: 501px) {
+	footer .menu-list li:not(:first-child){
+		margin: 10px 0 0;
+	}
+}
+@media (min-width: 801px) AND (max-width: 1000px) {
+	.header-nav .has-submenu .sub-menu {
+		top: 4em;
+	}
+}
+@media (max-width: 900px) {
+	.pc-top {
+		display: none;
+	}
+
+	body:not(.home) .rounded-right {
+		border-top-right-radius: 75px;
+	}
+
+	h2.top-header-title {
+		left: 0;
+		top: unset;
+		bottom: 20px;
+		transform: unset;
+		font-size: 10pt;
+	}
+	   
+	.menu-title {
+		display: block;
+	}
+
+	.top-title {
+		margin-top: 45px;
+	}
+
+	.top-image-content .image-left {
+		max-width: 54%;
+	}
+
+	.top-left {
+		width: 100%;
+		order: 2;
+	}
+
+	.time-information {
+		display: none;
+	}
+
+	.home .instagram-list li {
+		width: 45%;
+	}
+
+	/* section-leaf-pink service */
+
+	.increase-spacing-card {
+		transform: none;
+	}
+
+	/* section 3 */
+	.section-rt-pink .flex-box {
+		--space: 5px;
+		--count: 3;
+	}
+
+	/* card */
+	.card {
+		width: 40%;
+	}
+
+	.slick-initialized .slick-slide,
+	.top-slide .section-padding {
+		aspect-ratio: 1.3;
+		height: 22rem;
+	}
+
+	/* blog content */
+	.top-header-blog-bg {
+		background-position: right 35% center;
+		background-size: cover;
+	}
+
+	/* QA */
+	.top-header-qa-bg {
+		background-position: right 10% center;
+		background-size: cover;
+	}
+
+	/* about */
+	.top-header-about-bg {
+		background-position: center 75%;
+	}
+}
+@media (max-width: 875px) {
+	.col-6 {
+		flex: 0 1 calc(100% / 3);
+		margin: 15px 0;
+	}
+	.footer-nav a:not(.footer-privacy-policy){
+		max-width: 150px;
+		margin: 0 auto;
+	}
+	.arrow .mobile-nav-title::after {
+		position: absolute;
+		top: 12px;
+		left: 72%;
+		content: "";
+		width: 0.4em;
+		height: 0.4em;
+		border-right: 2px solid #ffffff;
+		border-bottom: 2px solid #ffffff;
+		transform: rotate(45deg);
+		transition: all 0.2s ease;
+	}
+	.arrow.open .mobile-nav-title::after {
+		top: 8px;
+		transform: rotate(225deg);
+	}
+}
+@media (max-width: 800px) {
+	body {
+		padding-top: 64px;
+	}
+
+	body.locked {
+		overflow: hidden;
+	}
+
+	body.locked .overlay {
+		display: block;
+		position: fixed;
+		z-index: 9;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background-color: #00000088;
+	}
+
+	header {
+		background-color: white;
+		position: fixed;
+		z-index: 10;
+		top: 0;
+		left: 0;
+		right: 0;
+		height: 74px;
+		box-shadow: var(--shadow-setting2);
+	}
+
+	/* header */
+	.header-nav {
+		display: none;
+	}
+
+	.header-logo-info-container {
+		padding: 0 var(--mobilemenu-padding);
+		align-self: center;
+	}
+
+	header .logo-image {
+		max-width: unset;
+		margin: 0;
+		padding: 0;
+	}
+
+	.header-shop-info {
+		display: none;
+	}
+
+	header .mobile-menu-container {
+		padding: var(--mobilemenu-padding) 0;
+		align-self: flex-start;
+		display: flex;
+		align-items: center;
+	}
+	header .mobile-menu-container>a {
+		padding-right: var(--mobilemenu-padding);
+	}
+	header .mobile-menu-pane {
+		--bgcolor-mobilemenu: #998675;
+		--bgcolor-mobilemenu-alt: #e0dad5;
+		display: block;
+		position: fixed;
+		z-index: 10;
+		top: 0;
+		right: 0;
+		background-color: var(--bgcolor-mobilemenu);
+		color: white;
+		transition: all 0.3s ease;
+		transform: translateX(100%);
+		max-height: 100vh;
+		overflow-y: auto;
+		box-shadow: -1px 1px 2px rgb(0 0 0 / 30%);
+		border-bottom-left-radius: 40px;
+	}
+	header .mobile-menu-pane.open {
+		transform: translateX(0);
+	}
+	header .mobile-menu-close {
+		padding: var(--mobilemenu-padding);
+		background-color: var(--bgcolor-mobilemenu-alt);
+		text-align: right;
+	}
+	header .mobile-menu-hours {
+		padding: 0 1em 1em 1em;
+		color: var(--primary);
+		background-color: var(--bgcolor-mobilemenu-alt);
+		font-size: 18px;
+	}
+	header .mobile-menu-hours dl {
+		margin: 0;
+	}
+	header .mobile-menu-hours dl div {
+		display: flex;
+		font-family: var(--font-serif);
+	}
+	header .mobile-menu-hours dl div dt {
+		min-width: 80px;
+	}
+	header .mobile-menu-hours dl div dd {
+		margin: 0;
+	}
+	.header-container {
+		align-items: center;
+	}
+	.top-header {
+		margin-top: 16px;
+	}
+
+	.home .top-netshop-layout img {
+		max-width: 70%;
+	}
+	/* header */
+	.header-nav a, .has-submenu {
+		letter-spacing: 0px;
+	}
+	.mobile-menu-entries a {
+		color: white;
+		text-decoration: none;
+		padding-left: 20px;
+		position: relative;
+		font-size: 18px;
+		font-family: var(--font-serif);
+	}
+	.mobile-menu-entries li>a::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		margin: auto;
+		display: block;
+		width: 15px;
+		height: 15px;
+		background: #ffffff;
+		border-radius: 50%;
+	}
+	.mobile-menu-entries li>a::after {
+		content: "";
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 4px;
+		margin: auto;
+		width: 4px;
+		height: 4px;
+		border-bottom: 1px solid var(--bg-dark);
+		border-right: 1px solid var(--bg-dark);
+		transform: translateX(0) rotate(-45deg);
+	}
+	.mobile-menu-entries {
+		padding: 1em;
+	}
+	.mobile-menu-entries a:hover {
+		opacity: 0.7;
+	}
+	.mobile-menu-entries li._sep {
+		border-bottom: 1px solid white;
+	}
+	.mobile-menu-entries .mobile-nav-title {
+		display: block;
+		padding-bottom: 0.8em;
+	} 
+	.menu-list li{
+		padding: 3px 0px;
+	}
+	/* .mobile-menu-entries .arrow .mobile-nav-title::after {
+		top: calc(8px + 0.8em);
+		left: unset;
+		right: 8px;
+	}
+	.mobile-menu-entries .arrow.open .mobile-nav-title::after {
+		top: calc(8px + 0.8em);
+	}
+	
+
+	.mobile-menu-entries .sub-menu {
+		padding-left: 1em;
+	}
+
+	.mobile-menu-entries .sub-menu li {
+		padding-top: 0.4em;
+		padding-bottom: 0.4em;
+	} */
+
+	.mobile-menu-entries ._sep {
+		padding: 12px 7px;	
+	}
+	.mobile-menu-entries .sublink {
+		padding: 12px 7px;	
+	}
+	.mobile-menu-entries .mobile-menu-social {
+		margin-top: 1em;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.mobile-menu-entries .mobile-menu-social .sep {
+		display: block;
+		width: 1em;
+	}
+
+	header .logo-image a{
+		margin-top: -8px;
+	}
+	/* 投稿情報 */
+
+	.blog-cols {
+		flex-direction: column;
+	}
+
+	.blog-cols .post-categories {
+		flex: 1;
+		justify-content: flex-end;
+		flex-direction: row;
+		margin-right: 0;
+		margin-bottom: 1em;
+		padding-right: 0;
+		padding-bottom: 1em;
+		width: 100%;
+		border-right: none;
+		border-bottom: var(--blog-categories-border);
+	}
+
+	.empty-box {
+		display: block;
+	}
+
+	.pc-nav {
+		display: none;
+	}
+
+	.menu-title {
+		display: none;
+	}
+	.sp-nav {
+		display: none;
+	}
+
+	/* コンテナー　サイズ */
+	
+	.hotel .content-container-md,
+	.trimming .content-container-md,
+	.taxi .content-container-md {
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	/* ペットタクシー */
+
+	.taxi-intro {
+		flex-direction: column-reverse;
+	}
+
+	.taxi .intro-pic {
+		margin: auto auto 1em auto;
+		padding-left: 0;
+	}
+
+	.taxi .content-flow dd {
+		margin-left: 0;
+	}
+	/* shampoo-car */
+	.col-2 {
+		flex-direction: column;
+	}
+	.shampoo-car .col-text {
+		width: auto;
+		font-size: 1.1rem;
+	}
+	.shampoo-car .col-image {
+		width: 80%;
+		margin: auto;
+	}
+	.col-text .line-colored {
+		width: auto;
+	}
+	.col-image-2>li {
+		width: 80%;
+		margin: auto;
+	}
+	.col-image-2>li:nth-child(odd){
+		margin: auto;
+	}
+	.base-cost .line-nocolored {
+		width: auto;
+	}
+	.col-image-2 div {
+		margin-bottom: 8px;
+	}
+	.pc {
+		display: none;
+	}
+	.sp {
+		display: block;
+	}
+
+
+/* trimmingトリミングページ */
+/* 料金表の組み方を変更 */
+	.trimming .price-autoline .price-title{
+		display: flex;
+		flex-flow: column;
+		/* width: 30%; */
+	}
+	.price-title>:first-child, .price-content>:first-child {
+		flex-basis: 0em;
+		text-align: center;
+	}
+	.trimming .price-autoline .price-content{
+		display: flex;
+		flex-flow: column;
+		width: 68%;
+	}
+	.price-content>* {
+		text-align: center;
+	}
+	.trimming .price-autoline .price-flex{
+		display: flex;
+	}
+	.trimming .price-content{
+		text-align: center;
+	}
+	.trimming .option-menu > * {
+		margin: 0 10px;
+	}
+	.trimming .senior-price .price-content>:first-child{
+		text-align: left;
+	}
+	.trimming .senior-price .price-content>:nth-child(2){
+		text-align: right;
+	}
+
+	/* net-shop */
+	.net-shop .col-image,
+	.net-shop .col-text {
+		width: auto;
+	}
+	.net-shop .col-2{
+		padding: var(--padding-default);
+	}
+
+}
+
+@media (max-width: 700px) {
+	.fa-stack {
+		vertical-align: text-bottom;
+	}
+
+	/* header  */
+	.top-image-content {
+		min-height: 24rem;
+		min-height: inherit;
+	}
+
+	.top-image-content .image-left {
+		left: 10%;
+		right: unset;
+	}
+	.top-image-content .image-center {
+		right: 10%;
+		left: unset;
+	}
+	.top-image-content .image-right {
+		margin-top: 60vw;
+		max-width: 64%;
+	}
+
+	h2>img {
+		max-width: 80%;
+	}
+
+	.social-media-content div {
+		display: block;
+		margin: 0 auto;
+		text-align: center;
+	}
+
+	.social-media-content div.facebook {
+		display: none;
+	}
+
+	.col-lg {
+		width: 100%;
+	}
+
+	/* section-image */
+	.section-image-1,
+	.section-image-2 {
+		min-height: 19rem;
+		aspect-ratio: inherit;
+	}
+
+	/* iframe  */
+	.facebook div {
+		margin: 0 auto;
+	}
+
+	/* section 3 */
+	.section-rt-pink .flex-box {
+		display: block;
+	}
+
+	.section-rt-pink h2 {
+		width: 100%;
+	}
+
+	.home-posts .post-categories {
+		margin: 10px 0;
+		width: 100%;
+	}
+
+	.h2-span-right>span {
+		margin: 0 auto;
+	}
+
+	.h2-span-right>img {
+		display: block;
+	}
+
+	/* バナー部分 */
+	.banner {
+		width: auto;
+		float: none;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	/* 企業情報 */
+	.about .map {
+		height: 300px;
+	}
+
+	/* ドッグホテル */
+
+	.hotel-intro {
+		flex-direction: column-reverse;
+	}
+	.hotel-intro .intro-pic {
+		margin: 0 auto 1em auto;
+		padding: 0;
+	}
+
+	.hotel-pics {
+		/* flex-direction: column; */
+		max-width: 580px;
+		margin: auto;
+		justify-content: flex-start;
+	}
+
+	.hotel-pics figure{
+		width: 45%;
+	}
+
+	.hotel-pics figcaption {
+		font-size: 15px;
+	}
+
+	.hotel-belongings {
+		flex-direction: column;
+	}
+	.belongings-pic {
+		margin: auto auto 20px auto;
+	}
+
+	.hotel-prices thead {
+		display: none;
+	}
+	.hotel-prices,
+	.hotel-prices tbody,
+	.hotel-prices tr,
+	.hotel-prices th {
+		display: block;
+		border: none;
+	}
+	.hotel-prices tr {
+		margin-bottom: 10px;
+		border: 1px solid black;
+	}
+
+	.hotel-prices tbody th {
+		background-color: var(--bg-dark);
+		color: white;
+	}
+
+	.hotel-prices td {
+		border: none;
+		display: flex;
+		justify-content: space-between;
+	}
+	.hotel-prices td::before {
+		content: attr(title);
+	}
+
+	/* トリミングメニュー */
+	.posts-list.trimming-menu>.post-entry {
+		flex: 0 1 30%;
+	}
+
+	.post-trimming-menu {
+		flex-direction: column;
+	}
+
+	.post-trimming-menu .post-thumbnail {
+		margin: 0 auto 1em auto;
+		flex: 1;
+	}
+
+	/* トリミングページ */
+	.trimming .fs-2 {
+		font-size: 1.8rem;
+	}
+
+	.trimming .cource-menu,
+	.trimming .option-menu {
+		flex-direction: column;
+		font-size: 85%;
+	}
+
+	.trimming .cource-menu>:first-child {
+		margin-bottom: 15px;
+	}
+
+	.table-trimming-course,
+	.table-trimming-course thead,
+	.table-trimming-course tbody,
+	.table-trimming-course tr,
+	.table-trimming-course th {
+		display: block;
+	}
+	.table-trimming-course thead {
+		display: none;
+	}
+	.table-trimming-course tr {
+		margin-bottom: 10px;
+	}
+	.table-trimming-course th,
+	.table-trimming-course td {
+		margin-bottom: 2px;
+	}
+	.table-trimming-course tbody th {
+		background-color: var(--primary);
+		color: white;
+		text-align: center;
+	}
+	.table-trimming-course td {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+	}
+	.table-trimming-course td::before {
+		content: attr(title);
+	}
+	.trimming .senior {
+		flex-direction: column;
+	}
+	.trimming .senior-price {
+		width: 100%;
+		margin-bottom: 15px;
+	}
+	.trimming .section-padding .content-box {
+		padding: 10px;
+	}
+}
+
+@media (max-width: 600px) {
+	footer li .mobile-nav-title {
+		max-width: 140px;
+	}
+	footer .footer-privacy-policy li {
+		margin: 0;
+	}
+	.slick-list {
+    border-radius: 0 90px 0 0;
+	}
+	.section-padding {
+		padding: 50px var(--padding-default);
+	}
+	/* service-content */
+	.card {
+		width: 85%;
+	}
+
+	/* instagram共有部品 */
+	.instagram-container-subpages .instagram-list {
+		justify-content: center;
+	}
+
+	.instagram-container-subpages .instagram-list>* {
+		flex: 0 1 42%;
+	}
+
+	/* 企業情報 */
+	/* about */
+	.top-header-about-bg {
+		background-position: center 75%;
+	}
+	
+	/* outline-content */
+	.about .shop-infor>dt {
+		width: 100%;
+		padding: 7px 20px;
+		margin: 0;
+	}
+
+	.about .shop-infor>dd {
+		padding: 10px 20px;
+		width: 100%;
+		margin: 0;
+	}
+    .shampoo-car .top-header-shampoo-car-bg br {
+		display: block;
+	}
+	.shampoo-car .content-box dd,
+	.shampoo-car .content-box dt {
+		margin: 0;
+	}
+	.shampoo-car-prices>.pc {
+		display: none;
+	}
+	.shampoo-car-prices>.sp .bg-primary-color {
+		flex: 1;
+	}
+	.shampoo-car-prices>div {
+		flex-direction: column;
+		margin-bottom: 10px;
+		border: 1px solid var(--primary);
+	}
+	.shampoo-car-prices .prices {
+		display: flex;
+    	justify-content: space-between;
+	}
+	.shampoo-car-prices .prices::before {
+		content: attr(title);
+	}
+	.base-cost .shampoo-car-prices>div>div {
+		flex: 1;
+		margin: 0;
+		width: auto;
+	}
+	.base-cost .shampoo-car-prices>div>div:not(.prices) {
+		background-color: var(--bg-dark);
+		color: #ffffff;
+	}
+}
+
+@media (max-width: 500px) {
+	.col-6 {
+		flex: 0 1 100%;
+		margin: auto;
+		border-bottom: 1px solid;
+		padding: 0 10px;
+	}
+	.footer-nav a:not(.footer-privacy-policy){
+		margin: 0;
+	}
+    .footer-nav .col-6 a {
+		text-decoration: none;
+		padding: 15px 20px;
+	}
+	.footer-nav .menu-list ul {
+		padding: 10px 0;
+	}
+	.footer-nav .menu-list a {
+		padding: 0 20px;
+	}
+	.footer-container {
+		padding: 35px 25px;
+	}
+	footer .arrow .mobile-nav-title::after {
+		right: 5px;
+		left: inherit;
+	}
+	footer .footer-privacy-policy li {
+		text-align: left;
+		margin: 0;
+		padding: 0 10px;
+	}
+	footer .footer-privacy-policy li>a {
+		padding: 15px 20px;
+	}
+	/* contact-area */
+	.home .contact-area .contact-content {
+		display: block;
+	}
+
+	.home .contact-text {
+		min-height: 50px;
+	}
+
+	.mail-contact,
+	.tel-contact {
+		width: 100%;
+	}
+	.col-image-2>li {
+		width: 100%;
+	}
+
+	.table-2col-hl,
+	.table-2col-hl tbody,
+	.table-2col-hl tr,
+	.table-2col-hl th,
+	.table-2col-hl td {
+		display: block;
+		border: none;
+	}
+
+	.table-2col-hl tr {
+		margin-bottom: 10px;
+		border: 1px solid black;
+	}
+
+	/* トリミングメニュー */
+	.posts-list.trimming-menu>.post-entry {
+		flex: 0 1 48%;
+	}
+	.bothsides-line::before, .bothsides-line::after {
+		width: 3em;
+		margin-right: 10px;
+		margin-left: 10px;
+	}
+
+	.home .instagram-list li {
+		flex: 0 1 50%;
+	}
+
+	/* dog hotel */
+	.hotel-pics figure {
+		width: 100%;
+	}
+}
+@media (max-width: 480px) {
+	.recruit .recruit-message {
+		width: auto;
+		padding: 10px;
+	}
+	.posts-list .post-entry {
+		display: block;
+	}
+
+	.posts-list .post-title {
+		display: block;
+		padding-top: 10px;
+		font-size: 15px;
+	}
+	.break-word{
+		display: block;
+	}
+}
+@media (max-width: 420px) {
+	.home .top-netshop-layout img {
+		max-width: 82%;
+	}
+
+	.home .net-shop-title-sp {
+		display: block;
+	}
+	.home .net-shop-title-sp img {
+		max-width: 51%;
+	}
+	.home .net-shop-title-pc {
+		display: none;
+	}
+}
+
+@media (max-width: 375px) {
+	.home .top-netshop-layout {
+		margin: clamp(3%,13vw,31%) 0 15px;
+	}
+	.home .top-netshop-layout img:not(.net-shop-title-sp img) {
+		max-width: 83%;
+	}
+	.slick-slide img {
+		width: 100%;
+		height: 150%;
+		object-fit: cover;
+	}
+}
